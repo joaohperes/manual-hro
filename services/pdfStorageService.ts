@@ -1,8 +1,11 @@
+import { storage } from './firebaseConfig';
+import { ref, uploadBytes, getDownloadURL, deleteObject } from 'firebase/storage';
+
 /**
- * Upload um PDF para localStorage (sem CORS issues)
+ * Upload um PDF para Firebase Storage usando REST API
  * @param file - Arquivo PDF
  * @param protocolId - ID único do protocolo
- * @returns URL de download do arquivo armazenado (blob URL)
+ * @returns URL de download do arquivo armazenado
  */
 export const uploadPdfToStorage = async (file: File, protocolId: string): Promise<string> => {
   try {
@@ -15,25 +18,25 @@ export const uploadPdfToStorage = async (file: File, protocolId: string): Promis
       throw new Error('Arquivo deve ser um PDF');
     }
 
-    // Converter arquivo para Base64
-    const base64 = await fileToBase64(file);
-
-    // Armazenar no localStorage
+    // Criar referência no Firebase Storage
     const timestamp = Date.now();
-    const storageKey = `pdf_${protocolId}_${timestamp}`;
-    const pdfData = {
-      protocolId,
-      fileName: file.name,
-      fileSize: file.size,
-      base64: base64,
-      uploadedAt: new Date().toISOString(),
-    };
+    const fileName = `${protocolId}_${timestamp}.pdf`;
+    const fileRef = ref(storage, `protocols/${fileName}`);
 
-    localStorage.setItem(storageKey, JSON.stringify(pdfData));
-    console.log(`📤 PDF stored locally: ${storageKey}`);
+    // Fazer upload
+    console.log(`📤 Uploading PDF: ${fileName}`);
+    await uploadBytes(fileRef, file, {
+      customMetadata: {
+        originalName: file.name,
+        uploadedAt: new Date().toISOString(),
+      }
+    });
 
-    // Retornar um identificador que será usado para recuperar depois
-    return `local://${storageKey}`;
+    // Obter URL de download
+    const downloadUrl = await getDownloadURL(fileRef);
+    console.log('✅ PDF uploaded successfully:', downloadUrl);
+
+    return downloadUrl;
   } catch (error) {
     console.error('❌ Error uploading PDF:', error);
     throw error;
@@ -41,16 +44,24 @@ export const uploadPdfToStorage = async (file: File, protocolId: string): Promis
 };
 
 /**
- * Deletar um PDF do localStorage
- * @param storageUrl - URL local (formato: local://pdf_protocolId_timestamp)
+ * Deletar um PDF do Firebase Storage pela URL
+ * @param downloadUrl - URL de download do arquivo
  */
-export const deletePdfFromStorage = async (storageUrl: string): Promise<void> => {
+export const deletePdfFromStorage = async (downloadUrl: string): Promise<void> => {
   try {
-    if (storageUrl.startsWith('local://')) {
-      const storageKey = storageUrl.replace('local://', '');
-      localStorage.removeItem(storageKey);
-      console.log('✅ PDF deleted successfully');
+    // Extrair o caminho do arquivo da URL
+    const urlPath = downloadUrl.split('/o/')[1]?.split('?')[0];
+    if (!urlPath) {
+      throw new Error('Invalid download URL');
     }
+
+    // Decodificar o caminho
+    const decodedPath = decodeURIComponent(urlPath);
+    const fileRef = ref(storage, decodedPath);
+
+    // Deletar arquivo
+    await deleteObject(fileRef);
+    console.log('✅ PDF deleted successfully');
   } catch (error) {
     console.error('❌ Error deleting PDF:', error);
     // Não lançar erro para não quebrar a aplicação
@@ -58,34 +69,14 @@ export const deletePdfFromStorage = async (storageUrl: string): Promise<void> =>
 };
 
 /**
- * Obter URL de download de um arquivo armazenado localmente
- * @param storageUrl - URL local (formato: local://pdf_protocolId_timestamp)
- * @returns Blob URL para download
+ * Obter URL de download de um arquivo no Firebase Storage
+ * @param fileName - Nome do arquivo
+ * @returns URL de download
  */
-export const getPdfDownloadUrl = async (storageUrl: string): Promise<string> => {
+export const getPdfDownloadUrl = async (fileName: string): Promise<string> => {
   try {
-    if (storageUrl.startsWith('local://')) {
-      const storageKey = storageUrl.replace('local://', '');
-      const pdfDataJson = localStorage.getItem(storageKey);
-
-      if (!pdfDataJson) {
-        throw new Error('PDF não encontrado no armazenamento local');
-      }
-
-      const pdfData = JSON.parse(pdfDataJson);
-      const base64Data = pdfData.base64.split(',')[1] || pdfData.base64;
-      const binaryString = atob(base64Data);
-      const bytes = new Uint8Array(binaryString.length);
-
-      for (let i = 0; i < binaryString.length; i++) {
-        bytes[i] = binaryString.charCodeAt(i);
-      }
-
-      const blob = new Blob([bytes], { type: 'application/pdf' });
-      return URL.createObjectURL(blob);
-    }
-
-    throw new Error('URL de armazenamento inválida');
+    const fileRef = ref(storage, `protocols/${fileName}`);
+    return await getDownloadURL(fileRef);
   } catch (error) {
     console.error('❌ Error getting download URL:', error);
     throw error;
@@ -93,24 +84,12 @@ export const getPdfDownloadUrl = async (storageUrl: string): Promise<string> => 
 };
 
 /**
- * Verificar se o localStorage está disponível
+ * Verificar se a configuração do Firebase está disponível
  */
 export const isFirebaseConfigured = (): boolean => {
   try {
-    return typeof localStorage !== 'undefined';
+    return !!storage;
   } catch {
     return false;
   }
-};
-
-/**
- * Converter arquivo para Base64
- */
-const fileToBase64 = (file: File): Promise<string> => {
-  return new Promise((resolve, reject) => {
-    const reader = new FileReader();
-    reader.onload = () => resolve(reader.result as string);
-    reader.onerror = reject;
-    reader.readAsDataURL(file);
-  });
 };
