@@ -13,8 +13,8 @@ const MarkdownRenderer: React.FC<MarkdownRendererProps> = ({ content }) => {
     gfm: true,
   });
 
-  // Convert markdown to HTML
-  const rawHtml = marked(content);
+  // Convert markdown to HTML (marked now returns Promise, so use parseInline for sync)
+  const rawHtml = marked.parse(content) as string;
 
   // Sanitize the HTML to prevent XSS
   const cleanHtml = DOMPurify.sanitize(rawHtml, {

@@ -1,13 +1,13 @@
-import { GoogleGenerativeAI, ContentRole, GenerateContentResponse } from "@google/generative-ai";
+import { GoogleGenerativeAI } from "@google/generative-ai";
 import { MOCK_PROTOCOLS, MOCK_CONTACTS } from '../data/mockContent';
 
 // Initialize the client with proper Vite environment variable
-const apiKey = import.meta.env.VITE_GEMINI_API_KEY || '';
+const apiKey = (import.meta.env.VITE_GEMINI_API_KEY as string) || '';
 if (!apiKey) {
   console.warn('⚠️ VITE_GEMINI_API_KEY not configured in .env.local');
 }
 
-const genAI = new GoogleGenerativeAI({ apiKey });
+const genAI = new GoogleGenerativeAI(apiKey);
 
 // Construct a system prompt that includes the context of the manual
 const SYSTEM_INSTRUCTION = `
@@ -81,20 +81,20 @@ export interface GeneratedProtocolData {
 }
 
 const PROTOCOL_SCHEMA = {
-  type: "object" as const,
+  type: "object",
   properties: {
     id: { type: "string", description: "A unique slug ID (e.g., 'normativa-uso-uniforme')" },
     title: { type: "string", description: "The official title" },
     category: { type: "string", description: "Category (e.g., Emergência, Administrativo, RH, Normativa)" },
     tags: {
-      type: "array" as const,
+      type: "array",
       items: { type: "string" },
       description: "3-5 relevant tags"
     },
     content: { type: "string", description: "The content in Markdown. Organize nicely with headers, bullet points, and bold text for rules/deadlines." }
   },
   required: ["id", "title", "category", "tags", "content"],
-};
+} as any;
 
 export const generateProtocolFromPdf = async (base64Pdf: string): Promise<GeneratedProtocolData | null> => {
   try {
