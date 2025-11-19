@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { ArrowLeftIcon, CalendarDaysIcon, PrinterIcon } from '@heroicons/react/24/outline';
+import { ArrowLeftIcon, CalendarDaysIcon, PrinterIcon, ArrowDownTrayIcon } from '@heroicons/react/24/outline';
 import MarkdownRenderer from '../components/MarkdownRenderer';
 import { useProtocols } from '../contexts/ProtocolContext';
 
@@ -18,6 +18,30 @@ const ProtocolDetail: React.FC = () => {
     );
   }
 
+  const handleDownloadPdf = () => {
+    if (!protocol.pdfUrl) {
+      alert('Arquivo PDF não disponível para download.');
+      return;
+    }
+
+    // Create a temporary anchor element to trigger download
+    const a = document.createElement('a');
+    a.href = protocol.pdfUrl;
+    a.download = protocol.pdfFileName || `${protocol.id}.pdf`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+  };
+
+  const formatFileSize = (bytes?: number): string => {
+    if (!bytes) return '';
+    if (bytes === 0) return '0 Bytes';
+    const k = 1024;
+    const sizes = ['Bytes', 'KB', 'MB'];
+    const i = Math.floor(Math.log(bytes) / Math.log(k));
+    return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+  };
+
 
   return (
     <div className="max-w-4xl mx-auto pb-12">
@@ -26,13 +50,25 @@ const ProtocolDetail: React.FC = () => {
           <ArrowLeftIcon className="w-4 h-4 mr-1" />
           Voltar
         </Link>
-        <button 
-          onClick={() => window.print()}
-          className="flex items-center px-3 py-1.5 text-sm bg-white border border-slate-200 rounded-lg hover:bg-slate-50 text-slate-600 transition-colors" 
-        >
-           <PrinterIcon className="w-4 h-4 mr-2" />
-           Imprimir
-        </button>
+        <div className="flex items-center gap-2">
+          {protocol.pdfUrl && (
+            <button
+              onClick={handleDownloadPdf}
+              className="flex items-center px-3 py-1.5 text-sm bg-green-50 border border-green-200 rounded-lg hover:bg-green-100 text-green-700 transition-colors"
+              title={`Download: ${protocol.pdfFileName || 'protocolo.pdf'} (${formatFileSize(protocol.pdfSize)})`}
+            >
+              <ArrowDownTrayIcon className="w-4 h-4 mr-2" />
+              Baixar PDF
+            </button>
+          )}
+          <button
+            onClick={() => window.print()}
+            className="flex items-center px-3 py-1.5 text-sm bg-white border border-slate-200 rounded-lg hover:bg-slate-50 text-slate-600 transition-colors"
+          >
+            <PrinterIcon className="w-4 h-4 mr-2" />
+            Imprimir
+          </button>
+        </div>
       </div>
 
       <article className="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden print:shadow-none print:border-none">

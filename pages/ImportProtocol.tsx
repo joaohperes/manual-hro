@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { DocumentArrowUpIcon, SparklesIcon, ClipboardDocumentIcon, CheckIcon, PlayCircleIcon, DocumentTextIcon } from '@heroicons/react/24/outline';
 import { generateProtocolFromPdf, generateProtocolFromText, GeneratedProtocolData } from '../services/geminiService';
+import { uploadPdfToStorage, isFirebaseConfigured } from '../services/pdfStorageService';
 import { getProtocolsFromStorage, saveProtocolsToStorage } from '../utils/localStorage';
 import { MOCK_PROTOCOLS } from '../data/mockContent';
 import { Protocol } from '../types';
@@ -14,6 +15,7 @@ const ImportProtocol: React.FC = () => {
   const [error, setError] = useState<string | null>(null);
   const [generatedData, setGeneratedData] = useState<GeneratedProtocolData | null>(null);
   const [copied, setCopied] = useState(false);
+  const [uploadedFile, setUploadedFile] = useState<File | null>(null);
 
   const handleFileUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
@@ -35,6 +37,7 @@ const ImportProtocol: React.FC = () => {
     setIsLoading(true);
     setError(null);
     setGeneratedData(null);
+    setUploadedFile(file); // Store the file for later upload
 
     try {
       const base64 = await new Promise<string>((resolve, reject) => {
@@ -105,30 +108,57 @@ ${safeContent}
     setTimeout(() => setCopied(false), 2000);
   };
 
-  const handleTestInApp = () => {
+  const handleTestInApp = async () => {
     if (!generatedData) return;
-    const newProtocol: Protocol = {
-      id: generatedData.id,
-      title: generatedData.title,
-      category: generatedData.category,
-      lastUpdated: new Date().toISOString().split('T')[0],
-      tags: generatedData.tags,
-      content: generatedData.content
-    };
 
-    // Get existing protocols from storage or use mock data
-    const storedProtocols = getProtocolsFromStorage();
-    const allProtocols = storedProtocols || [...MOCK_PROTOCOLS];
+    try {
+      setIsLoading(true);
 
-    // Check if protocol already exists
-    const existingIndex = allProtocols.findIndex((p: Protocol) => p.id === newProtocol.id);
-    if (existingIndex === -1) {
-      // Add new protocol at the beginning
-      allProtocols.unshift(newProtocol);
-      saveProtocolsToStorage(allProtocols);
+      const newProtocol: Protocol = {
+        id: generatedData.id,
+        title: generatedData.title,
+        category: generatedData.category,
+        lastUpdated: new Date().toISOString().split('T')[0],
+        tags: generatedData.tags,
+        content: generatedData.content
+      };
+
+      // Upload PDF to Firebase if available and file exists
+      if (uploadedFile && isFirebaseConfigured()) {
+        try {
+          console.log('📤 Uploading PDF to Firebase Storage...');
+          const pdfUrl = await uploadPdfToStorage(uploadedFile, newProtocol.id);
+          newProtocol.pdfUrl = pdfUrl;
+          newProtocol.pdfFileName = uploadedFile.name;
+          newProtocol.pdfSize = uploadedFile.size;
+          console.log('✅ PDF uploaded successfully');
+        } catch (uploadError) {
+          console.warn('⚠️ PDF upload failed, continuing without PDF download:', uploadError);
+          // Continue without PDF - it's not critical
+        }
+      } else if (uploadedFile) {
+        console.warn('⚠️ Firebase not configured, PDF download will not be available');
+      }
+
+      // Get existing protocols from storage or use mock data
+      const storedProtocols = getProtocolsFromStorage();
+      const allProtocols = storedProtocols || [...MOCK_PROTOCOLS];
+
+      // Check if protocol already exists
+      const existingIndex = allProtocols.findIndex((p: Protocol) => p.id === newProtocol.id);
+      if (existingIndex === -1) {
+        // Add new protocol at the beginning
+        allProtocols.unshift(newProtocol);
+        saveProtocolsToStorage(allProtocols);
+      }
+
+      navigate(`/protocolos/${newProtocol.id}`);
+    } catch (err) {
+      setError('Erro ao salvar protocolo. Tente novamente.');
+      console.error(err);
+    } finally {
+      setIsLoading(false);
     }
-
-    navigate(`/protocolos/${newProtocol.id}`);
   };
 
   return (

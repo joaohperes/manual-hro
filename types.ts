@@ -5,6 +5,9 @@ export interface Protocol {
   lastUpdated: string;
   content: string; // Markdown or HTML string
   tags: string[];
+  pdfUrl?: string; // URL for downloading the full PDF
+  pdfFileName?: string; // Original PDF file name
+  pdfSize?: number; // File size in bytes
 }
 
 export interface Contact {
