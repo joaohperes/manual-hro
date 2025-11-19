@@ -2,7 +2,7 @@ import { GoogleGenerativeAI } from "@google/generative-ai";
 import { MOCK_PROTOCOLS, MOCK_CONTACTS } from '../data/mockContent';
 
 // Initialize the client with proper Vite environment variable
-const apiKey = (import.meta.env.VITE_GEMINI_API_KEY as string) || '';
+const apiKey = (import.meta as any).env?.VITE_GEMINI_API_KEY || '';
 if (!apiKey) {
   console.warn('⚠️ VITE_GEMINI_API_KEY not configured in .env.local');
 }
