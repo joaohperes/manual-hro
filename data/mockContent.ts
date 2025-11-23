@@ -20,43 +20,156 @@ export const MOCK_PROTOCOLS: Protocol[] = [
 ## PASSO 1: Avaliação Inicial
 
 ### Anamnese Focada
-*   **Dor**: Início, qualidade, irradiação, localização e tempo.
-*   **Sintomas**: Náuseas, vômitos (vômito *após* dor sugere obstrução), distensão, parada de eliminação de gases/fezes.
-*   **Histórico**: Cirurgias prévias, comorbidades.
-*   **Idosos**: Atenção redobrada! Podem apresentar sintomas atípicos e menor intensidade de dor, mesmo em quadros graves.
+
+**Dor**
+
+Início, qualidade, irradiação, localização e tempo.
+
+<br/>
+
+**Sintomas**
+
+Náuseas, vômitos (vômito *após* dor sugere obstrução), distensão, parada de eliminação de gases/fezes.
+
+<br/>
+
+**Histórico**
+
+Cirurgias prévias, comorbidades.
+
+<br/>
+
+**Idosos - Atenção Redobrada**
+
+Podem apresentar sintomas atípicos e menor intensidade de dor, mesmo em quadros graves.
+
+<br/>
+
+---
 
 ### Exame Físico
-*   **Sinais Vitais**: Instabilidade sugere choque ou sepse.
-*   **Inspeção**: Distensão, cicatrizes, peristaltismo visível.
-*   **Ausculta**: Mínimo 3 minutos. Ausência (peritonite) ou sons metálicos (obstrução).
-*   **Palpação**: Defesa voluntária vs. **Rigidez involuntária** (irritação peritoneal).
+
+**Sinais Vitais**
+
+Instabilidade sugere choque ou sepse.
+
+<br/>
+
+**Inspeção**
+
+Distensão, cicatrizes, peristaltismo visível.
+
+<br/>
+
+**Ausculta**
+
+Mínimo 3 minutos. Ausência (peritonite) ou sons metálicos (obstrução).
+
+<br/>
+
+**Palpação**
+
+Defesa voluntária vs. **Rigidez involuntária** (irritação peritoneal).
+
+<br/>
+
+---
 
 ### 🚩 Sinais de Alerta
-*   Dor de **início súbito e máxima intensidade** (ruptura, isquemia, perfuração).
-*   Dor constante durando **> 6 horas**.
-*   Idosos ou imunocomprometidos sem febre (não exclui infecção).
+
+**Dor de Início Súbito e Máxima Intensidade**
+
+Ruptura, isquemia, perfuração.
+
+<br/>
+
+**Dor Constante Durando > 6 Horas**
+
+Requer investigação urgente.
+
+<br/>
+
+**Idosos ou Imunocomprometidos Sem Febre**
+
+Não exclui infecção.
 
 ## PASSO 2: Tipos de Abdome Agudo
 
-*   **Inflamatório** (Apendicite, Colecistite): Dor progressiva, febre, peritonite.
-    *   *Alvarado ≥ 7*: Alta chance de apendicite.
-*   **Perfurativo** (Úlcera): Dor súbita, intensa, "abdome em tábua".
-*   **Obstrutivo** (Bridas, Neoplasia): Cólica, distensão, paradas de gases.
-*   **Vascular** (Isquemia Mesentérica): Dor desproporcional ao exame físico, acidose metabólica.
-*   **Hemorrágico** (Gravidez Ectópica): Choque, dor súbita.
+**Abdome Inflamatório**
+
+Apendicite, Colecistite: Dor progressiva, febre, peritonite. (Alvarado ≥ 7 = Alta chance de apendicite)
+
+<br/>
+
+**Abdome Perfurativo**
+
+Úlcera: Dor súbita, intensa, "abdome em tábua".
+
+<br/>
+
+**Abdome Obstrutivo**
+
+Bridas, Neoplasia: Cólica, distensão, paradas de gases.
+
+<br/>
+
+**Abdome Vascular**
+
+Isquemia Mesentérica: Dor desproporcional ao exame físico, acidose metabólica.
+
+<br/>
+
+**Abdome Hemorrágico**
+
+Gravidez Ectópica: Choque, dor súbita.
 
 ## PASSO 3: Exames Complementares
 
 ### Laboratório
-*   **Hemograma**: Leucocitose (atenção: normal não exclui diagnóstico).
-*   **B-HCG**: **Obrigatório** em mulheres em idade fértil.
-*   **Amilase/Lipase**: Suspeita de pancreatite.
-*   **Função Renal/Eletrólitos/Gasometria**: Avaliar gravidade sistêmica.
+
+**Hemograma**
+
+Leucocitose (atenção: normal não exclui diagnóstico).
+
+<br/>
+
+**B-HCG**
+
+**Obrigatório** em mulheres em idade fértil.
+
+<br/>
+
+**Amilase/Lipase**
+
+Suspeita de pancreatite.
+
+<br/>
+
+**Função Renal/Eletrólitos/Gasometria**
+
+Avaliar gravidade sistêmica.
+
+<br/>
+
+---
 
 ### Imagem
-*   **RX Abdome/Tórax**: Pneumoperitônio (ar livre), níveis hidroaéreos (obstrução).
-*   **USG Abdomen**: Colecistite, apendicite (crianças/grávidas), ginecológico.
-*   **TC de Abdome**: Padrão-ouro para a maioria dos casos de dor abdominal indiferenciada no adulto/idoso.
+
+**RX Abdome/Tórax**
+
+Pneumoperitônio (ar livre), níveis hidroaéreos (obstrução).
+
+<br/>
+
+**USG Abdomen**
+
+Colecistite, apendicite (crianças/grávidas), ginecológico.
+
+<br/>
+
+**TC de Abdome**
+
+Padrão-ouro para a maioria dos casos de dor abdominal indiferenciada no adulto/idoso.
 `
   },
   {
@@ -75,33 +188,107 @@ Objetivo: Diagnóstico rápido e preservação do membro. Tempo é músculo.
 
 A suspeita é clínica. Não aguarde exames para acionar a especialidade se o quadro for clássico.
 
-*   **P**ain (Dor): Intensa, súbita, não alivia com analgésicos comuns.
-*   **P**allor (Palidez): Membro cadaverico/branco.
-*   **P**ulselessness (Ausência de Pulso): Distal à obstrução.
-*   **P**oikilothermia (Friotermia): Membro frio comparado ao contralateral.
-*   **P**aresthesia (Parestesia): Formigamento/dormência (sinal de sofrimento nervoso).
-*   **P**aralysis (Paralisia): Perda motora (sinal grave/tardio).
+**P**ain (Dor)
+
+Intensa, súbita, não alivia com analgésicos comuns.
+
+<br/>
+
+**P**allor (Palidez)
+
+Membro cadaverico/branco.
+
+<br/>
+
+**P**ulselessness (Ausência de Pulso)
+
+Distal à obstrução.
+
+<br/>
+
+**P**oikilothermia (Friotermia)
+
+Membro frio comparado ao contralateral.
+
+<br/>
+
+**P**aresthesia (Parestesia)
+
+Formigamento/dormência (sinal de sofrimento nervoso).
+
+<br/>
+
+**P**aralysis (Paralisia)
+
+Perda motora (sinal grave/tardio).
+
+<br/>
+
+---
 
 ## 2. Classificação de Rutherford (Viabilidade)
 
-*   **I. Viável**: Sem deficiência sensitiva ou motora. Doppler audível.
-    *   *Conduta*: Imagem + Tratamento planejado.
-*   **IIa. Ameaça Marginal**: Parestesia leve (dedos), sem paralisia.
-    *   *Conduta*: Revascularização urgente.
-*   **IIb. Ameaça Imediata**: Dor em repouso, perda sensitiva além dos dedos, fraqueza muscular leve/moderada.
-    *   *Conduta*: **Revascularização de EMERGÊNCIA**. Não perder tempo com exames complexos se atrasarem a cirurgia.
-*   **III. Irreversível**: Anestesia completa, paralisia (rigidez), ausência de fluxo ao Doppler.
-    *   *Conduta*: Amputação primária.
+**I. Viável**
+
+Sem deficiência sensitiva ou motora. Doppler audível.
+
+Conduta: Imagem + Tratamento planejado.
+
+<br/>
+
+**IIa. Ameaça Marginal**
+
+Parestesia leve (dedos), sem paralisia.
+
+Conduta: Revascularização urgente.
+
+<br/>
+
+**IIb. Ameaça Imediata**
+
+Dor em repouso, perda sensitiva além dos dedos, fraqueza muscular leve/moderada.
+
+Conduta: **Revascularização de EMERGÊNCIA**. Não perder tempo com exames complexos se atrasarem a cirurgia.
+
+<br/>
+
+**III. Irreversível**
+
+Anestesia completa, paralisia (rigidez), ausência de fluxo ao Doppler.
+
+Conduta: Amputação primária.
+
+<br/>
+
+---
 
 ## 3. Conduta Imediata no PS
 
-1.  **Aquecer o paciente** (mas não o membro isquêmico diretamente com calor intenso).
-2.  **Membro em posição neutra ou levemente pendente** (nunca elevar).
-3.  **Analgesia potente** (Opioides).
-4.  **Anticoagulação Plena (Imediata)**:
-    *   **Heparina Sódica (Não fracionada)**: Bolus de **80 UI/kg** IV + Manutenção **18 UI/kg/h**.
-    *   Objetivo: Evitar propagação do trombo.
-5.  **Acionar Cirurgia Vascular** imediatamente.
+**Aquecer o Paciente**
+
+Mas não o membro isquêmico diretamente com calor intenso.
+
+<br/>
+
+**Membro em Posição Neutra ou Levemente Pendente**
+
+Nunca elevar.
+
+<br/>
+
+**Analgesia Potente**
+
+Opioides.
+
+<br/>
+
+**Anticoagulação Plena (Imediata)**
+
+Heparina Sódica (Não fracionada): Bolus de **80 UI/kg** IV + Manutenção **18 UI/kg/h**. Objetivo: Evitar propagação do trombo.
+
+<br/>
+
+**Acionar Cirurgia Vascular Imediatamente**
 `
   },
   {
@@ -118,34 +305,95 @@ Garantir que o cuidado seja prestado à pessoa certa é a barreira #1 contra err
 
 ## Regras de Ouro
 
-1.  **Dois Identificadores**: Sempre confirme **Nome Completo** e **Data de Nascimento**. Nunca use o número do leito.
-2.  **Conferência Ativa**: Peça para o paciente dizer o nome (se consciente). Não pergunte "Você é o Sr. João?".
-3.  **Pulseira Obrigatória**: Todo paciente em área assistencial deve estar com pulseira.
+**Dois Identificadores**
+
+Sempre confirme **Nome Completo** e **Data de Nascimento**. Nunca use o número do leito.
+
+<br/>
+
+**Conferência Ativa**
+
+Peça para o paciente dizer o nome (se consciente). Não pergunte "Você é o Sr. João?".
+
+<br/>
+
+**Pulseira Obrigatória**
+
+Todo paciente em área assistencial deve estar com pulseira.
+
+<br/>
+
+---
 
 ## Padrões de Cores (Pulseiras)
 
-*   ⚪ **Branca**: Identificação Padrão (Internação/PS).
-*   🔴 **Vermelha**: Alergia (Medicamentosa ou Alimentar).
-*   🟡 **Amarela**: Risco de Queda.
-*   🟣 **Roxa**: Ordem de Não Reanimar (conforme protocolo de cuidados paliativos).
-*   🔵 **Azul**: Risco de Lesão por Pressão.
+⚪ **Branca** - Identificação Padrão (Internação/PS).
+
+<br/>
+
+🔴 **Vermelha** - Alergia (Medicamentosa ou Alimentar).
+
+<br/>
+
+🟡 **Amarela** - Risco de Queda.
+
+<br/>
+
+🟣 **Roxa** - Ordem de Não Reanimar (conforme protocolo de cuidados paliativos).
+
+<br/>
+
+🔵 **Azul** - Risco de Lesão por Pressão.
+
+<br/>
+
+---
 
 ## Rotinas por Setor
 
 ### Admissão / Internação
-*   Pulseira colocada no ato da admissão.
-*   Conferir dados com documento oficial.
-*   Local preferencial: Punho direito.
+
+**Pulseira Colocada no Ato da Admissão**
+
+Conferir dados com documento oficial.
+
+<br/>
+
+**Local Preferencial**: Punho direito.
+
+<br/>
+
+---
 
 ### Recém-Nascidos (RN)
-*   Identificação **imediata** após nascimento (sala de parto).
-*   **Duas pulseiras**: Uma no punho, uma no tornozelo.
-*   Dados: "RN de [Nome da Mãe]", Data e Hora do parto, Sexo.
+
+**Identificação Imediata Após Nascimento**
+
+Sala de parto.
+
+<br/>
+
+**Duas Pulseiras** - Uma no punho, uma no tornozelo.
+
+<br/>
+
+**Dados**: "RN de [Nome da Mãe]", Data e Hora do parto, Sexo.
+
+<br/>
+
+---
 
 ### Pacientes Sem Identificação (Desconhecidos)
-*   Usar nomenclatura padrão: "DESCONHECIDO [GÊNERO] [DATA/HORA]".
-*   Exemplo: "DESCONHECIDO MASCULINO 18/11/24 14:30".
-*   Atualizar assim que identificação civil for confirmada.
+
+**Usar Nomenclatura Padrão**
+
+"DESCONHECIDO [GÊNERO] [DATA/HORA]".
+
+Exemplo: "DESCONHECIDO MASCULINO 18/11/24 14:30".
+
+<br/>
+
+**Atualizar** assim que identificação civil for confirmada.
 `
   },
   {
@@ -170,16 +418,26 @@ O foco inicial é a **estabilidade hemodinâmica** do paciente, não o diagnóst
 ### Abordagem Sistemática (ABCDE)
 
 **Vias Aéreas, Boa Ventilação, Circulação**
-- Abordagem sistemática padrão.
+
+Abordagem sistemática padrão.
+
+<br/>
 
 **Acesso Venoso Periférico**
-- Garantir 2 acessos calibrosos imediatamente (Jelco 14 ou 16).
+
+Garantir 2 acessos calibrosos imediatamente (Jelco 14 ou 16).
+
+<br/>
 
 **Reposição Volêmica**
-- Iniciar com cristaloide aquecido.
+
+Iniciar com cristaloide aquecido.
+
+<br/>
 
 **Toque Retal** ❗ **OBRIGATÓRIO**
-- Avaliar presença de sangue vivo, melena (sugere HDA ou trânsito lento), massas palpáveis ou doença orificial visível.
+
+Avaliar presença de sangue vivo, melena (sugere HDA ou trânsito lento), massas palpáveis ou doença orificial visível.
 
 ---
 
@@ -188,16 +446,26 @@ O foco inicial é a **estabilidade hemodinâmica** do paciente, não o diagnóst
 Pacientes com qualquer um dos sinais abaixo são considerados de **ALTO RISCO** e requerem monitoramento intensivo:
 
 **Pressão Arterial Sistólica (PAS)**
-- < 100 mmHg
+
+< 100 mmHg
+
+<br/>
 
 **Frequência Cardíaca (FC)**
-- > 100 bpm (taquicardia)
+
+> 100 bpm (taquicardia)
+
+<br/>
 
 **Clínica**
-- História de síncope
+
+História de síncope
+
+<br/>
 
 **Laboratório**
-- Queda de Hemoglobina (Hb) > 2g/dL
+
+Queda de Hemoglobina (Hb) > 2g/dL
 
 ---
 
@@ -212,10 +480,14 @@ A estratégia diagnóstica depende fundamentalmente da **estabilidade hemodinâm
 **Se Instabilidade Hemodinâmica**: Passar **Sonda Nasogástrica (SNG)** para lavado.
 
 **Lavado com sangue/borra de café**
-- Forte indício de HDA → Solicitar **EDA (Endoscopia) URGENTE** antes da colonoscopia.
+
+Forte indício de HDA → Solicitar **EDA (Endoscopia) URGENTE** antes da colonoscopia.
+
+<br/>
 
 **Lavado com bile** (líquido claro/amarelo/verde)
-- HDA improvável → Prosseguir investigação de HDB.
+
+HDA improvável → Prosseguir investigação de HDB.
 
 ---
 
@@ -271,43 +543,126 @@ Prioridade: Interromper o processo de queimadura, garantir vias aéreas e reposi
 ## 1. Avaliação Primária (ABCDE)
 
 ### A (Airway) - Vias Aéreas
-*   **Suspeita de Inalação**: Queimadura em face, vibrissas chamuscadas, escarro carbonáceo, rouquidão, estridor.
-*   **Conduta**: **Intubação Precoce**. O edema de glote progride rápido. Não espere o paciente descompensar.
+
+**Suspeita de Inalação**
+
+Queimadura em face, vibrissas chamuscadas, escarro carbonáceo, rouquidão, estridor.
+
+<br/>
+
+**Conduta**: **Intubação Precoce**
+
+O edema de glote progride rápido. Não espere o paciente descompensar.
+
+<br/>
+
+---
 
 ### B (Breathing) - Respiração
-*   Ofertarde O2 100%.
-*   Avaliar queimadura circunferencial em tórax (risco de restrição expansiva) -> Considerar escarotomia.
+
+**Ofertar O2 100%**
+
+<br/>
+
+**Queimadura Circunferencial em Tórax**
+
+Risco de restrição expansiva → Considerar escarotomia.
+
+<br/>
+
+---
 
 ### C (Circulation) - Circulação
-*   Acesso venoso calibroso em área **não queimada** (se possível).
-*   **Fórmula de Parkland (Atualizada - ATLS)**:
-    *   **2 ml de Ringer Lactato** x **Peso (kg)** x **% SCQ (Superfície Corporal Queimada)**.
-    *   *Obs: Queimaduras elétricas usar 4 ml.*
-*   **Administração**:
-    *   50% do volume nas primeiras **8 horas** (contadas a partir da hora da *queimadura*, não da chegada).
-    *   50% nas 16 horas seguintes.
-*   **Meta**: Diurese > 0,5 ml/kg/h (Adulto) e > 1 ml/kg/h (Criança). **Sondagem Vesical Obrigatória**.
+
+**Acesso Venoso Calibroso**
+
+Em área **não queimada** (se possível).
+
+<br/>
+
+**Fórmula de Parkland (Atualizada - ATLS)**
+
+**2 ml de Ringer Lactato** x **Peso (kg)** x **% SCQ (Superfície Corporal Queimada)**.
+
+Obs: Queimaduras elétricas usar 4 ml.
+
+<br/>
+
+**Administração**
+
+50% do volume nas primeiras **8 horas** (contadas a partir da hora da *queimadura*, não da chegada).
+
+50% nas 16 horas seguintes.
+
+<br/>
+
+**Meta**: Diurese > 0,5 ml/kg/h (Adulto) e > 1 ml/kg/h (Criança). **Sondagem Vesical Obrigatória**.
+
+<br/>
+
+---
 
 ### E (Exposure) - Exposição
-*   Remover roupas e adornos (anéis, pulseiras causam garroteamento com edema).
-*   Cobrir com lençóis limpos e secos para evitar hipotermia.
-*   **NÃO USAR** pomadas ou cremes na emergência (dificulta avaliação do cirurgião plástico).
+
+**Remover Roupas e Adornos**
+
+Anéis, pulseiras causam garroteamento com edema.
+
+<br/>
+
+**Cobrir com Lençóis Limpos e Secos**
+
+Para evitar hipotermia.
+
+<br/>
+
+**NÃO USAR Pomadas ou Cremes**
+
+Na emergência, dificulta avaliação do cirurgião plástico.
+
+<br/>
+
+---
 
 ## 2. Cálculo da Superfície Corporal (Regra dos 9)
 
-*   Cabeça e Pescoço: 9%
-*   Tronco Anterior: 18%
-*   Tronco Posterior: 18%
-*   Membros Superiores: 9% cada
-*   Membros Inferiores: 18% cada
-*   Genitália: 1%
+**Cabeça e Pescoço**: 9%
+
+**Tronco Anterior**: 18%
+
+**Tronco Posterior**: 18%
+
+**Membros Superiores**: 9% cada
+
+**Membros Inferiores**: 18% cada
+
+**Genitália**: 1%
+
+<br/>
+
+---
 
 ## 3. Critérios de Transferência (Centro de Queimados)
-*   Queimadura 2º grau > 10% SCQ.
-*   Queimaduras em face, mãos, pés, genitália, períneo ou grandes articulações.
-*   Qualquer queimadura de 3º grau.
-*   Queimaduras Elétricas ou Químicas.
-*   Lesão por inalação.
+
+**Queimadura 2º Grau > 10% SCQ**
+
+<br/>
+
+**Queimaduras em Áreas Críticas**
+
+Face, mãos, pés, genitália, períneo ou grandes articulações.
+
+<br/>
+
+**Qualquer Queimadura de 3º Grau**
+
+<br/>
+
+**Queimaduras Elétricas ou Químicas**
+
+<br/>
+
+**Lesão por Inalação**
 `
   },
   {
@@ -323,40 +678,110 @@ Prioridade: Interromper o processo de queimadura, garantir vias aéreas e reposi
 Foco na identificação do perfil hemodinâmico para guiar a terapia.
 
 ## 1. Avaliação Inicial (CHAMP)
+
 Identificar causas reversíveis imediatas que exigem terapia específica:
-*   **C** - Coronariana (SCA).
-*   **H** - Hipertensão (Emergência Hipertensiva).
-*   **A** - Arritmia.
-*   **M** - Mecânica (Valvopatia aguda).
-*   **P** - Pulmonar (TEP).
 
-## 2. Perfil Hemodinâmico (A beira leito)
+**C** - Coronariana (SCA).
 
-### Perfil B: Quente e Úmido (Mais comum - Edema Agudo de Pulmão)
-*   **Sinais**: Boa perfusão, mas congestão pulmonar (crepitações, dispneia, ortopneia).
-*   **Tratamento**:
-    *   **VNI (Ventilação Não Invasiva)**: Precoce! Melhora sobrevida.
-    *   **Diurético**: Furosemida EV (bolus). Se já usa em casa, dobrar a dose da manhã.
-    *   **Vasodilatador**: Nitroglicerina ou Nitroprussiato (se PAS > 110 mmHg). Alivia pós-carga.
+**H** - Hipertensão (Emergência Hipertensiva).
+
+**A** - Arritmia.
+
+**M** - Mecânica (Valvopatia aguda).
+
+**P** - Pulmonar (TEP).
+
+<br/>
+
+---
+
+## 2. Perfil Hemodinâmico (À Beira Leito)
+
+### Perfil B: Quente e Úmido (Mais Comum - Edema Agudo de Pulmão)
+
+**Sinais**: Boa perfusão, mas congestão pulmonar (crepitações, dispneia, ortopneia).
+
+<br/>
+
+**VNI (Ventilação Não Invasiva)**
+
+Precoce! Melhora sobrevida.
+
+<br/>
+
+**Diurético**
+
+Furosemida EV (bolus). Se já usa em casa, dobrar a dose da manhã.
+
+<br/>
+
+**Vasodilatador**
+
+Nitroglicerina ou Nitroprussiato (se PAS > 110 mmHg). Alivia pós-carga.
+
+<br/>
+
+---
 
 ### Perfil C: Frio e Úmido (Choque Cardiogênico)
-*   **Sinais**: Má perfusão (frio, hipotenso, oligúrico) e congestão.
-*   **Tratamento**:
-    *   **Inotrópico**: Dobutamina (primeira escolha).
-    *   **Vasopressor**: Noradrenalina (se hipotensão grave PAS < 70-80 mmHg).
-    *   *Cuidado com diuréticos antes da estabilização hemodinâmica.*
+
+**Sinais**: Má perfusão (frio, hipotenso, oligúrico) e congestão.
+
+<br/>
+
+**Inotrópico**
+
+Dobutamina (primeira escolha).
+
+<br/>
+
+**Vasopressor**
+
+Noradrenalina (se hipotensão grave PAS < 70-80 mmHg).
+
+<br/>
+
+**Cuidado com Diuréticos** antes da estabilização hemodinâmica.
+
+<br/>
+
+---
 
 ### Perfil L: Frio e Seco (Hipovolêmico/Baixo Débito)
-*   **Sinais**: Má perfusão, sem congestão pulmonar.
-*   **Tratamento**:
-    *   Prova de volume cuidadosa (250ml SF).
-    *   Se não responder: Inotrópico.
+
+**Sinais**: Má perfusão, sem congestão pulmonar.
+
+<br/>
+
+**Prova de Volume Cuidadosa**
+
+250ml SF.
+
+<br/>
+
+**Se Não Responder**: Inotrópico.
+
+<br/>
+
+---
 
 ## 3. Medicamentos Chave
 
-*   **Furosemida**: Ampola 20mg. Dose inicial 0,5 a 1mg/kg EV.
-*   **Morfina**: **EVITAR** rotina em IC descompensada (aumenta necessidade de IOT e mortalidade). Usar apenas em dor refratária ou ansiedade extrema incontrolável.
-*   **Nitroglicerina (Tridil)**: Iniciar 5-10 mcg/min. Titular a cada 5 min.
+**Furosemida**
+
+Ampola 20mg. Dose inicial 0,5 a 1mg/kg EV.
+
+<br/>
+
+**Morfina**
+
+**EVITAR** rotina em IC descompensada (aumenta necessidade de IOT e mortalidade). Usar apenas em dor refratária ou ansiedade extrema incontrolável.
+
+<br/>
+
+**Nitroglicerina (Tridil)**
+
+Iniciar 5-10 mcg/min. Titular a cada 5 min.
 `
   },
   {
@@ -373,54 +798,128 @@ Emergência oncológica. Risco iminente de sepse grave. O tempo porta-agulha (in
 
 ## 1. Definições
 
-*   **Neutropenia**: Neutrófilos < 500/mm³ (ou < 1000 com previsão de queda).
-*   **Febre**: Tax ≥ 38,3ºC (única) ou ≥ 38,0ºC sustentada por 1 hora.
-*   **Atenção**: Sinais inflamatórios podem estar ausentes devido à falta de leucócitos.
+**Neutropenia**
 
-## 2. Avaliação Inicial (Na primeira hora)
+Neutrófilos < 500/mm³ (ou < 1000 com previsão de queda).
 
-1.  **Hemoculturas**: 2 pares periféricos (ou 1 periférico + 1 de cateter central).
-2.  **Exames**: Hemograma, Creatinina, Ureia, TGO/TGP, Bilirrubinas, Eletrólitos.
-3.  **Raio-X de Tórax**: Se sintomas respiratórios.
-4.  **Cultura de Urina e Sítios Suspeitos**.
+<br/>
+
+**Febre**
+
+Tax ≥ 38,3ºC (única) ou ≥ 38,0ºC sustentada por 1 hora.
+
+<br/>
+
+**Atenção**
+
+Sinais inflamatórios podem estar ausentes devido à falta de leucócitos.
+
+<br/>
+
+---
+
+## 2. Avaliação Inicial (Na Primeira Hora)
+
+**Hemoculturas**
+
+2 pares periféricos (ou 1 periférico + 1 de cateter central).
+
+<br/>
+
+**Exames**
+
+Hemograma, Creatinina, Ureia, TGO/TGP, Bilirrubinas, Eletrólitos.
+
+<br/>
+
+**Raio-X de Tórax**
+
+Se sintomas respiratórios.
+
+<br/>
+
+**Cultura de Urina e Sítios Suspeitos**
+
+<br/>
+
+---
 
 ## 3. Estratificação de Risco (Escore MASCC)
 
 Avalia se o paciente pode tratar em casa ou precisa internar.
 
-*   **Baixo Risco (MASCC ≥ 21)**: Pode ser elegível para tratamento ambulatorial (VO).
-*   **Alto Risco (MASCC < 21)**: Internação Obrigatória + ATB Endovenoso.
+**Baixo Risco (MASCC ≥ 21)**
+
+Pode ser elegível para tratamento ambulatorial (VO).
+
+<br/>
+
+**Alto Risco (MASCC < 21)**
+
+Internação Obrigatória + ATB Endovenoso.
+
+<br/>
 
 **Critérios de Alto Risco Clínico (Internação Imediata):**
-*   Instabilidade hemodinâmica.
-*   Pneumonia ou infecção de cateter.
-*   Alteração neurológica.
-*   Mucosite grave ou diarreia.
+
+- Instabilidade hemodinâmica.
+- Pneumonia ou infecção de cateter.
+- Alteração neurológica.
+- Mucosite grave ou diarreia.
+
+<br/>
+
+---
 
 ## 4. Antibioticoterapia Empírica
 
 Deve cobrir *Pseudomonas aeruginosa*.
 
 ### Pacientes Alto Risco (Endovenoso)
-*   **Monoterapia (Padrão)**:
-    *   **Cefepime** 2g IV 8/8h
-    *   OU **Piperacilina-Tazobactam** 4,5g IV 6/6h
-    *   OU **Meropenem** 1g IV 8/8h (reservar para casos graves/histórico de ESBL).
+
+**Monoterapia (Padrão)**:
+
+- **Cefepime** 2g IV 8/8h
+- **OU Piperacilina-Tazobactam** 4,5g IV 6/6h
+- **OU Meropenem** 1g IV 8/8h (reservar para casos graves/histórico de ESBL).
+
+<br/>
+
+---
 
 ### Indicações de Vancomicina Inicial
-*Não usar de rotina! Apenas se:*
-*   Instabilidade hemodinâmica (Choque).
-*   Suspeita de infecção de cateter (CVC).
-*   Infecção de pele e partes moles.
-*   Pneumonia grave.
-*   Histórico de MRSA.
 
-### Pacientes Baixo Risco (Oral - Apenas com supervisão)
-*   Ciprofloxacino 500mg 12/12h + Amoxicilina-Clavulanato 875mg 12/12h.
+Não usar de rotina! Apenas se:
+
+- Instabilidade hemodinâmica (Choque).
+- Suspeita de infecção de cateter (CVC).
+- Infecção de pele e partes moles.
+- Pneumonia grave.
+- Histórico de MRSA.
+
+<br/>
+
+---
+
+### Pacientes Baixo Risco (Oral - Apenas com Supervisão)
+
+Ciprofloxacino 500mg 12/12h + Amoxicilina-Clavulanato 875mg 12/12h.
+
+<br/>
+
+---
 
 ## 5. Reavaliação
-*   Se febre persistir após 48-72h em paciente estável: Manter esquema.
-*   Se instabilidade: Escalonar antibiótico (cobrir Gram+, Gram- resistentes, Fungal).
+
+**Se Febre Persistir Após 48-72h em Paciente Estável**
+
+Manter esquema.
+
+<br/>
+
+**Se Instabilidade**
+
+Escalonar antibiótico (cobrir Gram+, Gram- resistentes, Fungal).
 `
   },
   {
@@ -436,34 +935,112 @@ Deve cobrir *Pseudomonas aeruginosa*.
 ## 1. Hemorragia Digestiva Alta (HDA)
 
 ### Estabilização Inicial
-*   **Vias Aéreas**: Considerar IOT se rebaixamento (Glasgow < 8) ou hematêmese maciça.
-*   **Acesso**: 2 acessos venosos periféricos calibrosos (14G/16G).
-*   **Exames**: Hemograma, Coagulograma, Função Renal/Hepática.
-*   **Transfusão**: Alvo Hb > 7.0 (se coronariopata > 9.0). Plaquetas se < 50.000.
+
+**Vias Aéreas**
+
+Considerar IOT se rebaixamento (Glasgow < 8) ou hematêmese maciça.
+
+<br/>
+
+**Acesso**
+
+2 acessos venosos periféricos calibrosos (14G/16G).
+
+<br/>
+
+**Exames**
+
+Hemograma, Coagulograma, Função Renal/Hepática.
+
+<br/>
+
+**Transfusão**
+
+Alvo Hb > 7.0 (se coronariopata > 9.0). Plaquetas se < 50.000.
+
+<br/>
+
+---
 
 ### Tratamento Farmacológico (Imediato)
-*   **IBP (Omeprazol)**: Bolus 80mg EV + 8mg/h em BIC (se alto risco/estigmas na EDA).
-*   **Terlipressina ou Octreotide**: Em suspeita de **Varizes Esofágicas**.
-    *   *Octreotide*: Bolus 50mcg + 50mcg/h.
-*   **Antibiótico**: Ceftriaxona 1g EV 24/24h (Profilaxia em cirróticos).
+
+**IBP (Omeprazol)**
+
+Bolus 80mg EV + 8mg/h em BIC (se alto risco/estigmas na EDA).
+
+<br/>
+
+**Terlipressina ou Octreotide**
+
+Em suspeita de **Varizes Esofágicas**.
+
+Octreotide: Bolus 50mcg + 50mcg/h.
+
+<br/>
+
+**Antibiótico**
+
+Ceftriaxona 1g EV 24/24h (Profilaxia em cirróticos).
+
+<br/>
+
+---
 
 ### Endoscopia (EDA)
-*   Realizar nas primeiras **24 horas** (12h se varizes).
-*   Classificação de Forrest define risco de ressangramento.
+
+**Timing**
+
+Realizar nas primeiras **24 horas** (12h se varizes).
+
+<br/>
+
+**Classificação de Forrest**
+
+Define risco de ressangramento.
+
+<br/>
 
 ---
 
 ## 2. Hemorragia Digestiva Baixa (HDB)
 
 ### Abordagem
-1.  **Estabilizar** o paciente primeiro.
-2.  **Excluir HDA**: 15% das hematoquezias maciças vêm de HDA. Instável? Passar SNG. Se vier sangue/bile, é alto.
-3.  **Toque Retal**: Obrigatório (fissuras, massas).
+
+**Estabilizar o Paciente Primeiro**
+
+<br/>
+
+**Excluir HDA**
+
+15% das hematoquezias maciças vêm de HDA. Instável? Passar SNG. Se vier sangue/bile, é alto.
+
+<br/>
+
+**Toque Retal**
+
+Obrigatório (fissuras, massas).
+
+<br/>
+
+---
 
 ### Diagnóstico
-*   **Colonoscopia**: Exame de escolha. Requer preparo.
-*   **AngioTC**: Se sangramento ativo e impossibilidade de preparo (instabilidade mantida). Sensível para 0.3-0.5 ml/min.
-*   **Arteriografia**: Diagnóstica e Terapêutica (Embolização).
+
+**Colonoscopia**
+
+Exame de escolha. Requer preparo.
+
+<br/>
+
+**AngioTC**
+
+Se sangramento ativo e impossibilidade de preparo (instabilidade mantida). Sensível para 0.3-0.5 ml/min.
+
+<br/>
+
+**Arteriografia**
+
+Diagnóstica e Terapêutica (Embolização).
 `
   },
   {
@@ -486,37 +1063,97 @@ Deve cobrir *Pseudomonas aeruginosa*.
 
 Suspeita de infecção + **Sinais de Disfunção Orgânica**:
 
-*   **Hipotensão**: PAS < 100 mmHg.
-*   **Alteração Mental**: Agitação, sonolência, confusão (Glasgow < 15).
-*   **Taquipneia**: FR ≥ 22 irpm.
-*   *Outros*: Oligúria, queda de plaquetas, aumento de bilirrubinas.
+**Hipotensão**
 
-*Se suspeita forte: Abrir Protocolo de Sepse.*
+PAS < 100 mmHg.
+
+<br/>
+
+**Alteração Mental**
+
+Agitação, sonolência, confusão (Glasgow < 15).
+
+<br/>
+
+**Taquipneia**
+
+FR ≥ 22 irpm.
+
+<br/>
+
+**Outros Sinais**
+
+Oligúria, queda de plaquetas, aumento de bilirrubinas.
+
+<br/>
+
+**Se Suspeita Forte**: Abrir Protocolo de Sepse.
+
+<br/>
+
+---
 
 ## 2. Pacote da 1ª Hora (Time is Life)
 
 Ações simultâneas a serem iniciadas imediatamente:
 
-1.  **Lactato Arterial**: Coletar imediatamente.
-    *   Se alterado (> 2 mmol/L), repetir em 2-4h para guiar ressuscitação.
-2.  **Hemoculturas**: 2 pares (aeróbio/anaeróbio) de sítios diferentes.
-    *   *Importante*: Coletar **ANTES** do antibiótico.
-    *   *Exceção*: Se acesso difícil (> 45 min), não atrasar o ATB.
-3.  **Antibiótico Amplo Espectro**: Iniciar na **primeira hora**.
-    *   A escolha depende do foco (Pulmonar, Urinário, Abdominal).
-    *   Na dúvida ou foco indeterminado: Cobrir Gram- e Gram+.
-4.  **Reposição Volêmica**: Se hipotensão (PAS < 90 mmHg) ou Lactato ≥ 4 mmol/L.
-    *   **30 ml/kg** de cristaloide (Ringer Lactato ou SF 0,9%) em bolus (até 3 horas).
+**Lactato Arterial**
+
+Coletar imediatamente.
+
+Se alterado (> 2 mmol/L), repetir em 2-4h para guiar ressuscitação.
+
+<br/>
+
+**Hemoculturas**
+
+2 pares (aeróbio/anaeróbio) de sítios diferentes.
+
+Importante: Coletar **ANTES** do antibiótico.
+
+Exceção: Se acesso difícil (> 45 min), não atrasar o ATB.
+
+<br/>
+
+**Antibiótico Amplo Espectro**
+
+Iniciar na **primeira hora**.
+
+A escolha depende do foco (Pulmonar, Urinário, Abdominal).
+
+Na dúvida ou foco indeterminado: Cobrir Gram- e Gram+.
+
+<br/>
+
+**Reposição Volêmica**
+
+Se hipotensão (PAS < 90 mmHg) ou Lactato ≥ 4 mmol/L.
+
+**30 ml/kg** de cristaloide (Ringer Lactato ou SF 0,9%) em bolus (até 3 horas).
+
+<br/>
+
+---
 
 ## 3. Manejo do Choque Séptico
 
 Definição: Hipotensão persistente necessitando de vasopressor para manter PAM ≥ 65 mmHg E Lactato > 2 mmol/L, mesmo após volume adequado.
 
 ### Conduta Imediata
-1.  **Vasopressor**: Iniciar **Noradrenalina** se não responder ao volume inicial.
-    *   Pode iniciar em acesso periférico calibroso (curto prazo) enquanto providencia central.
-    *   Alvo: **PAM ≥ 65 mmHg**.
-2.  **Corticoide**: Hidrocortisona 200mg/dia (50mg 6/6h) apenas se instabilidade refratária a volume e vasoativos em altas doses.
+
+**Vasopressor**
+
+Iniciar **Noradrenalina** se não responder ao volume inicial.
+
+Pode iniciar em acesso periférico calibroso (curto prazo) enquanto providencia central.
+
+Alvo: **PAM ≥ 65 mmHg**.
+
+<br/>
+
+**Corticoide**
+
+Hidrocortisona 200mg/dia (50mg 6/6h) apenas se instabilidade refratária a volume e vasoativos em altas doses.
 `
   },
     {
@@ -541,30 +1178,106 @@ Este protocolo fornece diretrizes para o diagnóstico, isolamento e tratamento d
 *   Achados radiológicos (RX/TC de tórax): consolidações em ápices, cavitações, infiltrado micronodular bilateral.
 
 **Ação Imediata:**
-*   **INSTITUIR ISOLAMENTO POR AEROSSÓIS IMEDIATAMENTE.**
-*   **COMUNICAR SCIRAS** (Serviço de Controle de Infecções Relacionadas à Assistência à Saúde).
+
+**INSTITUIR ISOLAMENTO POR AEROSSÓIS IMEDIATAMENTE.**
+
+**COMUNICAR SCIRAS** (Serviço de Controle de Infecções Relacionadas à Assistência à Saúde).
+
+<br/>
+
+---
 
 ## 2. Diagnóstico Laboratorial
 
 ### 2.1. Coleta de Amostras
-*   **Escarro/Escarro Induzido:** Coletar pela **manhã**, logo após o paciente acordar, para melhor rendimento do teste.
-*   **Pacientes intubados:** Coletar amostra via **aspirado traqueal**. Manter sistema de aspiração fechado até o diagnóstico.
-*   **Tosse pouco produtiva:** Considerar **escarro induzido** por nebulização com solução salina a 3%, realizado no quarto privativo.
+
+**Escarro/Escarro Induzido**
+
+Coletar pela **manhã**, logo após o paciente acordar, para melhor rendimento do teste.
+
+<br/>
+
+**Pacientes Intubados**
+
+Coletar amostra via **aspirado traqueal**. Manter sistema de aspiração fechado até o diagnóstico.
+
+<br/>
+
+**Tosse Pouco Produtiva**
+
+Considerar **escarro induzido** por nebulização com solução salina a 3%, realizado no quarto privativo.
+
+<br/>
+
+---
 
 ### 2.2. Teste Rápido Molecular (RT-PCR-TB) - HRO
-*   **Prioridade para casos novos** devido à maior sensibilidade e menor tempo para definição diagnóstica e decisão de isolamento.
-*   **Amostras processadas no HRO:** Escarro e escarro induzido.
-*   **Amostras para LACEN:** Lavado Broncoalveolar (LBA) ou materiais de biópsia (pleura, linfonodo).
-*   **Sensibilidade:** Cerca de **90%** para TB pulmonar em escarro. Detecta resistência à Rifampicina com **95%** de sensibilidade.
+
+**Prioridade para Casos Novos**
+
+Devido à maior sensibilidade e menor tempo para definição diagnóstica e decisão de isolamento.
+
+<br/>
+
+**Amostras Processadas no HRO**
+
+Escarro e escarro induzido.
+
+<br/>
+
+**Amostras para LACEN**
+
+Lavado Broncoalveolar (LBA) ou materiais de biópsia (pleura, linfonodo).
+
+<br/>
+
+**Sensibilidade**
+
+Cerca de **90%** para TB pulmonar em escarro. Detecta resistência à Rifampicina com **95%** de sensibilidade.
+
+<br/>
+
+---
 
 **Fluxograma RT-PCR-TB (HRO):**
-1.  **Suspeita de TB** → Instituir isolamento aerossóis + Comunicar SCIRAS.
-2.  Solicitar **RT-PCR *Mycobacterium tuberculosis*** em **1 amostra de escarro** (coletada pela manhã).
-3.  **Resultados:**
-    *   **RT-PCR Detectado + Resistência à Rifampicina:** Notificar caso, iniciar tratamento (esquema básico), discutir com infectologista (SCIRAS/DIVE), **MANTER ISOLAMENTO AEROSSÓIS.**
-    *   **RT-PCR Detectado + SEM Resistência à Rifampicina:** Notificar caso, iniciar tratamento (esquema básico), **MANTER ISOLAMENTO AEROSSÓIS.** Solicitar nova amostra para BAAR de seguimento e cultura (LACEN).
-    *   **RT-PCR Não Detectado + Clínica/Imagem Sugestiva:** Prosseguir investigação (cultura, LBA), considerar diagnósticos alternativos, iniciar tratamento empírico (até resultado da cultura). Discutir manutenção do isolamento com infectologista/SCIRAS.
-    *   **RT-PCR Não Detectado + Baixa Suspeita Clínica/Radiológica:** **SUSPENDER ISOLAMENTO AEROSSÓIS** (avaliação individualizada).
+
+**Passo 1: Suspeita de TB**
+
+Instituir isolamento aerossóis + Comunicar SCIRAS.
+
+<br/>
+
+**Passo 2: Solicitar RT-PCR**
+
+RT-PCR *Mycobacterium tuberculosis* em **1 amostra de escarro** (coletada pela manhã).
+
+<br/>
+
+---
+
+**Passo 3: Interpretação de Resultados**
+
+**RT-PCR Detectado + Resistência à Rifampicina**
+
+Notificar caso, iniciar tratamento (esquema básico), discutir com infectologista (SCIRAS/DIVE), **MANTER ISOLAMENTO AEROSSÓÍS.**
+
+<br/>
+
+**RT-PCR Detectado + SEM Resistência à Rifampicina**
+
+Notificar caso, iniciar tratamento (esquema básico), **MANTER ISOLAMENTO AEROSSÓÍS.** Solicitar nova amostra para BAAR de seguimento e cultura (LACEN).
+
+<br/>
+
+**RT-PCR Não Detectado + Clínica/Imagem Sugestiva**
+
+Prosseguir investigação (cultura, LBA), considerar diagnósticos alternativos, iniciar tratamento empírico (até resultado da cultura). Discutir manutenção do isolamento com infectologista/SCIRAS.
+
+<br/>
+
+**RT-PCR Não Detectado + Baixa Suspeita Clínica/Radiológica**
+
+**SUSPENDER ISOLAMENTO AEROSSÓÍS** (avaliação individualizada).
 `
   },
     {
@@ -578,14 +1291,44 @@ Este protocolo fornece diretrizes para o diagnóstico, isolamento e tratamento d
 **Considerações Gerais:**
 
 ## Passo 1: Avaliação Inicial
-*   Avaliar **sinais e sintomas**, **foco suspeito** e necessidade de **culturas (preferencialmente antes do antimicrobiano)**.
-*   Evitar culturas desnecessárias (ex: urocultura em sepse de foco respiratório).
+
+**Avaliar Sinais, Sintomas e Foco**
+
+Sinais e sintomas, foco suspeito e necessidade de culturas (preferencialmente antes do antimicrobiano).
+
+<br/>
+
+**Evitar Culturas Desnecessárias**
+
+Ex: urocultura em sepse de foco respiratório.
+
+<br/>
+
+---
 
 ## Passo 2: Escolha do Antimicrobiano
-*   Considerar **penetração da droga no sítio infeccioso**. Diferenciar **colonização de infecção**.
-*   Optar pelo **menor espectro possível**.
-*   Doses neste guia são para **função renal normal** (ajustes conforme TFG em protocolo específico).
-*   Preferir **ciclos curtos** em infecções não complicadas e com foco drenado. **Avaliar diariamente a possibilidade de suspensão**.
+
+**Penetração da Droga no Sítio Infeccioso**
+
+Considerar penetração. Diferenciar colonização de infecção.
+
+<br/>
+
+**Menor Espectro Possível**
+
+Optar pelo menor espectro possível.
+
+<br/>
+
+**Doses e Função Renal**
+
+Doses neste guia são para **função renal normal** (ajustes conforme TFG em protocolo específico).
+
+<br/>
+
+**Ciclos Curtos**
+
+Preferir **ciclos curtos** em infecções não complicadas e com foco drenado. **Avaliar diariamente a possibilidade de suspensão**.
 
 ## Vias Aéreas Superiores
 
