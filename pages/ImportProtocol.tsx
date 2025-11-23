@@ -16,6 +16,7 @@ const ImportProtocol: React.FC = () => {
   const [generatedData, setGeneratedData] = useState<GeneratedProtocolData | null>(null);
   const [copied, setCopied] = useState(false);
   const [uploadedFile, setUploadedFile] = useState<File | null>(null);
+  const [googleDriveFileId, setGoogleDriveFileId] = useState<string>('');
 
   const handleFileUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
@@ -122,6 +123,12 @@ ${safeContent}
         tags: generatedData.tags,
         content: generatedData.content
       };
+
+      // Add Google Drive File ID if provided
+      if (googleDriveFileId.trim()) {
+        newProtocol.googleDriveFileId = googleDriveFileId.trim();
+        console.log('📁 Google Drive File ID saved:', googleDriveFileId);
+      }
 
       // Upload PDF to Firebase if available and file exists
       if (uploadedFile && isFirebaseConfigured()) {
@@ -261,6 +268,30 @@ ${safeContent}
         )}
         {error && <p className="mt-6 text-center text-red-500 text-sm bg-red-50 p-2 rounded inline-block w-full">{error}</p>}
       </div>
+
+      {/* Google Drive File ID Input */}
+      {generatedData && (
+        <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+          <label className="block mb-3">
+            <span className="text-sm font-medium text-slate-900">
+              📁 Google Drive File ID (Opcional)
+            </span>
+            <p className="text-xs text-slate-500 mt-1">
+              Cole o ID do arquivo no Google Drive se tiver um link para compartilhar (ex: 1NjJRgPvoCIyH-4ypfsOpJRkUAvJzLd9_)
+            </p>
+          </label>
+          <input
+            type="text"
+            placeholder="1NjJRgPvoCIyH-4ypfsOpJRkUAvJzLd9_"
+            value={googleDriveFileId}
+            onChange={(e) => setGoogleDriveFileId(e.target.value)}
+            className="w-full px-4 py-2 rounded-lg border border-slate-200 focus:border-hro-500 focus:ring-2 focus:ring-hro-200 outline-none text-sm font-mono"
+          />
+          <p className="text-xs text-slate-500 mt-2">
+            Extraído de: https://drive.google.com/file/d/<strong>ID_AQUI</strong>/view
+          </p>
+        </div>
+      )}
 
       {/* Result Area */}
       {generatedData && (

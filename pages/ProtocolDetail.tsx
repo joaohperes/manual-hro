@@ -33,6 +33,17 @@ const ProtocolDetail: React.FC = () => {
     document.body.removeChild(a);
   };
 
+  const handleDownloadFromGoogleDrive = () => {
+    if (!protocol.googleDriveFileId) {
+      alert('Arquivo no Google Drive não disponível.');
+      return;
+    }
+
+    // Open Google Drive download link in a new tab
+    const downloadUrl = `https://drive.google.com/uc?export=download&id=${protocol.googleDriveFileId}`;
+    window.open(downloadUrl, '_blank');
+  };
+
   const formatFileSize = (bytes?: number): string => {
     if (!bytes) return '';
     if (bytes === 0) return '0 Bytes';
@@ -59,6 +70,16 @@ const ProtocolDetail: React.FC = () => {
             >
               <ArrowDownTrayIcon className="w-4 h-4 mr-2" />
               Baixar PDF
+            </button>
+          )}
+          {protocol.googleDriveFileId && (
+            <button
+              onClick={handleDownloadFromGoogleDrive}
+              className="flex items-center px-3 py-1.5 text-sm bg-blue-50 border border-blue-200 rounded-lg hover:bg-blue-100 text-blue-700 transition-colors"
+              title="Baixar do Google Drive"
+            >
+              <ArrowDownTrayIcon className="w-4 h-4 mr-2" />
+              Google Drive
             </button>
           )}
           <button

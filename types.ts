@@ -5,6 +5,7 @@ export interface Protocol {
   lastUpdated: string;
   content: string; // Markdown or HTML string
   tags: string[];
+  googleDriveFileId?: string; // Google Drive File ID for PDF download
   pdfUrl?: string; // URL for downloading the full PDF
   pdfFileName?: string; // Original PDF file name
   pdfSize?: number; // File size in bytes
