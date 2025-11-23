@@ -7,6 +7,7 @@ export const MOCK_PROTOCOLS: Protocol[] = [
     category: 'Emergência',
     lastUpdated: '2025-11-18',
     tags: ['Dor abdominal', 'Abdome agudo', 'Idoso', 'Emergência', 'Cirurgia'],
+    googleDriveFileId: '1xd99dJPp2Uz6nqrNGGCEGSKwwDImxapO',
     content: `
 # RESUMO EXECUTIVO: DOR ABDOMINAL AGUDA
 
@@ -105,6 +106,7 @@ A suspeita é clínica. Não aguarde exames para acionar a especialidade se o qu
     category: 'Segurança do Paciente',
     lastUpdated: '2025-11-18',
     tags: ['Segurança', 'Identificação', 'Pulseira', 'Risco'],
+    googleDriveFileId: '1x7ifNHJkNUxX8ye2C17Ik5geMkfeQNlD',
     content: `
 # IDENTIFICAÇÃO DO PACIENTE - METAS DE SEGURANÇA
 
@@ -148,6 +150,7 @@ Garantir que o cuidado seja prestado à pessoa certa é a barreira #1 contra err
     category: 'Emergência',
     lastUpdated: '2025-11-18',
     tags: ['HDB', 'Sangramento', 'Gastroenterologia', 'Colonoscopia'],
+    googleDriveFileId: '1J9hce27qo4Rd9_WoJudEFluSUv6RrDRZ',
     content: `
 # MANEJO DA HEMORRAGIA DIGESTIVA BAIXA
 
@@ -197,6 +200,7 @@ Sangramento abaixo do ângulo de Treitz. Geralmente autolimitado (80%), mas caso
     category: 'Trauma',
     lastUpdated: '2025-11-18',
     tags: ['Queimadura', 'Parkland', 'Trauma', 'Emergência'],
+    googleDriveFileId: '1Z-uxV2Cojcgvc4zJX7dgD15odsBQPcGw',
     content: `
 # ATENDIMENTO AO GRANDE QUEIMADO
 
@@ -250,6 +254,7 @@ Prioridade: Interromper o processo de queimadura, garantir vias aéreas e reposi
     category: 'Cardiologia',
     lastUpdated: '2025-11-18',
     tags: ['IC', 'Edema Agudo', 'Lasix', 'Cardiologia'],
+    googleDriveFileId: '1LGT4Juza9BbO0asxzmEWfcMFbEZfQYXp',
     content: `
 # INSUFICIÊNCIA CARDÍACA AGUDA (ICA)
 
@@ -298,6 +303,7 @@ Identificar causas reversíveis imediatas que exigem terapia específica:
     category: 'Oncologia',
     lastUpdated: '2025-11-18',
     tags: ['Neutropenia', 'Sepse', 'Câncer', 'Antibiótico', 'Emergência'],
+    googleDriveFileId: '1w7IAncqL6ewFBX457KFeau0YZ4e_dNHB',
     content: `
 # MANEJO DA NEUTROPENIA FEBRIL
 
@@ -361,6 +367,7 @@ Deve cobrir *Pseudomonas aeruginosa*.
     category: 'Emergência',
     lastUpdated: '2025-11-18',
     tags: ['HDA', 'HDB', 'Endoscopia', 'Sangramento', 'Coagulopatia'],
+    googleDriveFileId: '1ibMP30LxqD_0wccKT2BYX6LBSufmv_Fo',
     content: `
 # MANEJO DE HEMORRAGIA DIGESTIVA
 
