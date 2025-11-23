@@ -107,6 +107,19 @@ const ProtocolDetail: React.FC = () => {
           </div>
         </div>
 
+        {/* PDF Embed (if available) */}
+        {protocol.googleDriveFileId && (
+          <div className="w-full bg-slate-50 border-b border-slate-100">
+            <iframe
+              src={`https://drive.google.com/file/d/${protocol.googleDriveFileId}/preview`}
+              width="100%"
+              height="800"
+              allow="autoplay"
+              className="border-0 block"
+            />
+          </div>
+        )}
+
         {/* Content Body */}
         <div className="p-6 md:p-10 text-slate-700">
             <MarkdownRenderer content={protocol.content} />
