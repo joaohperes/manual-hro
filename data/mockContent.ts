@@ -75,7 +75,9 @@ Defesa voluntária vs. **Rigidez involuntária** (irritação peritoneal).
 
 ---
 
-### 🚩 Sinais de Alerta
+<br/>
+
+### Sinais de Alerta
 
 **Dor de Início Súbito e Máxima Intensidade**
 
@@ -92,6 +94,12 @@ Requer investigação urgente.
 **Idosos ou Imunocomprometidos Sem Febre**
 
 Não exclui infecção.
+
+<br/>
+
+---
+
+<br/>
 
 ## PASSO 2: Tipos de Abdome Agudo
 
@@ -152,6 +160,8 @@ Avaliar gravidade sistêmica.
 <br/>
 
 ---
+
+<br/>
 
 ### Imagem
 
@@ -226,6 +236,8 @@ Perda motora (sinal grave/tardio).
 
 ---
 
+<br/>
+
 ## 2. Classificação de Rutherford (Viabilidade)
 
 **I. Viável**
@@ -261,6 +273,8 @@ Conduta: Amputação primária.
 <br/>
 
 ---
+
+<br/>
 
 ## 3. Conduta Imediata no PS
 
@@ -325,6 +339,8 @@ Todo paciente em área assistencial deve estar com pulseira.
 
 ---
 
+<br/>
+
 ## Padrões de Cores (Pulseiras)
 
 ⚪ **Branca** - Identificação Padrão (Internação/PS).
@@ -349,6 +365,8 @@ Todo paciente em área assistencial deve estar com pulseira.
 
 ---
 
+<br/>
+
 ## Rotinas por Setor
 
 ### Admissão / Internação
@@ -364,6 +382,8 @@ Conferir dados com documento oficial.
 <br/>
 
 ---
+
+<br/>
 
 ### Recém-Nascidos (RN)
 
@@ -382,6 +402,8 @@ Sala de parto.
 <br/>
 
 ---
+
+<br/>
 
 ### Pacientes Sem Identificação (Desconhecidos)
 
@@ -409,9 +431,13 @@ Exemplo: "DESCONHECIDO MASCULINO 18/11/24 14:30".
 > **Definição**: Sangramento originado abaixo do ângulo de Treitz
 > **Prognóstico**: Geralmente autolimitado (80% dos casos), porém casos graves exigem ação imediata
 
+<br/>
+
 ---
 
-## 1. Avaliação Inicial e Estabilização 🚑
+<br/>
+
+## 1. Avaliação Inicial e Estabilização
 
 O foco inicial é a **estabilidade hemodinâmica** do paciente, não o diagnóstico da causa.
 
@@ -435,13 +461,17 @@ Iniciar com cristaloide aquecido.
 
 <br/>
 
-**Toque Retal** ❗ **OBRIGATÓRIO**
+**Toque Retal - OBRIGATÓRIO**
 
 Avaliar presença de sangue vivo, melena (sugere HDA ou trânsito lento), massas palpáveis ou doença orificial visível.
 
+<br/>
+
 ---
 
-## 2. Estratificação de Risco (Sinais de Alarme) 🚨
+<br/>
+
+## 2. Estratificação de Risco (Sinais de Alarme)
 
 Pacientes com qualquer um dos sinais abaixo são considerados de **ALTO RISCO** e requerem monitoramento intensivo:
 
@@ -467,13 +497,17 @@ História de síncope
 
 Queda de Hemoglobina (Hb) > 2g/dL
 
+<br/>
+
 ---
 
-## 3. Investigação Diagnóstica 🔍
+<br/>
+
+## 3. Investigação Diagnóstica
 
 A estratégia diagnóstica depende fundamentalmente da **estabilidade hemodinâmica** do paciente.
 
-### ⚠️ Passo Crucial: Excluir Hemorragia Digestiva Alta (HDA)
+### Passo Crucial: Excluir Hemorragia Digestiva Alta (HDA)
 
 **Atenção**: Cerca de **15% dos casos de hematoquezia** (sangue vivo via retal) são, na verdade, **HDA maciça** com trânsito intestinal acelerado.
 
@@ -489,9 +523,13 @@ Forte indício de HDA → Solicitar **EDA (Endoscopia) URGENTE** antes da colono
 
 HDA improvável → Prosseguir investigação de HDB.
 
+<br/>
+
 ---
 
-### 🥇 Colonoscopia (Padrão-Ouro)
+<br/>
+
+### Colonoscopia (Padrão-Ouro)
 
 **Pacientes Estáveis**
 - Realizar preparo intestinal adequado e exame eletivo (idealmente nas primeiras 12-24h da admissão).
@@ -558,6 +596,8 @@ O edema de glote progride rápido. Não espere o paciente descompensar.
 
 ---
 
+<br/>
+
 ### B (Breathing) - Respiração
 
 **Ofertar O2 100%**
@@ -571,6 +611,8 @@ Risco de restrição expansiva → Considerar escarotomia.
 <br/>
 
 ---
+
+<br/>
 
 ### C (Circulation) - Circulação
 
@@ -602,6 +644,8 @@ Obs: Queimaduras elétricas usar 4 ml.
 
 ---
 
+<br/>
+
 ### E (Exposure) - Exposição
 
 **Remover Roupas e Adornos**
@@ -624,6 +668,8 @@ Na emergência, dificulta avaliação do cirurgião plástico.
 
 ---
 
+<br/>
+
 ## 2. Cálculo da Superfície Corporal (Regra dos 9)
 
 **Cabeça e Pescoço**: 9%
@@ -641,6 +687,8 @@ Na emergência, dificulta avaliação do cirurgião plástico.
 <br/>
 
 ---
+
+<br/>
 
 ## 3. Critérios de Transferência (Centro de Queimados)
 
@@ -695,6 +743,8 @@ Identificar causas reversíveis imediatas que exigem terapia específica:
 
 ---
 
+<br/>
+
 ## 2. Perfil Hemodinâmico (À Beira Leito)
 
 ### Perfil B: Quente e Úmido (Mais Comum - Edema Agudo de Pulmão)
@@ -723,6 +773,8 @@ Nitroglicerina ou Nitroprussiato (se PAS > 110 mmHg). Alivia pós-carga.
 
 ---
 
+<br/>
+
 ### Perfil C: Frio e Úmido (Choque Cardiogênico)
 
 **Sinais**: Má perfusão (frio, hipotenso, oligúrico) e congestão.
@@ -747,6 +799,8 @@ Noradrenalina (se hipotensão grave PAS < 70-80 mmHg).
 
 ---
 
+<br/>
+
 ### Perfil L: Frio e Seco (Hipovolêmico/Baixo Débito)
 
 **Sinais**: Má perfusão, sem congestão pulmonar.
@@ -764,6 +818,8 @@ Noradrenalina (se hipotensão grave PAS < 70-80 mmHg).
 <br/>
 
 ---
+
+<br/>
 
 ## 3. Medicamentos Chave
 
@@ -818,6 +874,8 @@ Sinais inflamatórios podem estar ausentes devido à falta de leucócitos.
 
 ---
 
+<br/>
+
 ## 2. Avaliação Inicial (Na Primeira Hora)
 
 **Hemoculturas**
@@ -843,6 +901,8 @@ Se sintomas respiratórios.
 <br/>
 
 ---
+
+<br/>
 
 ## 3. Estratificação de Risco (Escore MASCC)
 
@@ -871,6 +931,8 @@ Internação Obrigatória + ATB Endovenoso.
 
 ---
 
+<br/>
+
 ## 4. Antibioticoterapia Empírica
 
 Deve cobrir *Pseudomonas aeruginosa*.
@@ -887,6 +949,8 @@ Deve cobrir *Pseudomonas aeruginosa*.
 
 ---
 
+<br/>
+
 ### Indicações de Vancomicina Inicial
 
 Não usar de rotina! Apenas se:
@@ -901,6 +965,8 @@ Não usar de rotina! Apenas se:
 
 ---
 
+<br/>
+
 ### Pacientes Baixo Risco (Oral - Apenas com Supervisão)
 
 Ciprofloxacino 500mg 12/12h + Amoxicilina-Clavulanato 875mg 12/12h.
@@ -908,6 +974,8 @@ Ciprofloxacino 500mg 12/12h + Amoxicilina-Clavulanato 875mg 12/12h.
 <br/>
 
 ---
+
+<br/>
 
 ## 5. Reavaliação
 
@@ -962,6 +1030,8 @@ Alvo Hb > 7.0 (se coronariopata > 9.0). Plaquetas se < 50.000.
 
 ---
 
+<br/>
+
 ### Tratamento Farmacológico (Imediato)
 
 **IBP (Omeprazol)**
@@ -986,6 +1056,8 @@ Ceftriaxona 1g EV 24/24h (Profilaxia em cirróticos).
 
 ---
 
+<br/>
+
 ### Endoscopia (EDA)
 
 **Timing**
@@ -1001,6 +1073,8 @@ Define risco de ressangramento.
 <br/>
 
 ---
+
+<br/>
 
 ## 2. Hemorragia Digestiva Baixa (HDB)
 
@@ -1023,6 +1097,8 @@ Obrigatório (fissuras, massas).
 <br/>
 
 ---
+
+<br/>
 
 ### Diagnóstico
 
@@ -1093,6 +1169,8 @@ Oligúria, queda de plaquetas, aumento de bilirrubinas.
 
 ---
 
+<br/>
+
 ## 2. Pacote da 1ª Hora (Time is Life)
 
 Ações simultâneas a serem iniciadas imediatamente:
@@ -1134,6 +1212,8 @@ Se hipotensão (PAS < 90 mmHg) ou Lactato ≥ 4 mmol/L.
 <br/>
 
 ---
+
+<br/>
 
 ## 3. Manejo do Choque Séptico
 
@@ -1187,6 +1267,8 @@ Este protocolo fornece diretrizes para o diagnóstico, isolamento e tratamento d
 
 ---
 
+<br/>
+
 ## 2. Diagnóstico Laboratorial
 
 ### 2.1. Coleta de Amostras
@@ -1210,6 +1292,8 @@ Considerar **escarro induzido** por nebulização com solução salina a 3%, rea
 <br/>
 
 ---
+
+<br/>
 
 ### 2.2. Teste Rápido Molecular (RT-PCR-TB) - HRO
 
