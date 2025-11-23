@@ -410,6 +410,7 @@ Deve cobrir *Pseudomonas aeruginosa*.
     category: 'Emergência',
     lastUpdated: '2025-11-18',
     tags: ['sepse', 'choque séptico', 'antibiótico', 'noradrenalina', 'emergência'],
+    googleDriveFileId: '17ZF5SngBk-yKYm39jPJYd9UGsydZPQ7o',
     content: `
 # RESUMO EXECUTIVO: SEPSE
 
@@ -456,6 +457,7 @@ Definição: Hipotensão persistente necessitando de vasopressor para manter PAM
     category: 'Infectologia',
     lastUpdated: '2025-11-18',
     tags: ['Tuberculose', 'Diagnóstico', 'Isolamento', 'Tratamento', 'RT-PCR'],
+    googleDriveFileId: '1GEae0kc7K3c_9InoHegynEwJy8MxIAKU',
     content: `
 # Protocolo Tuberculose Pulmonar HRO: Diagnóstico, Isolamento e Tratamento Rápido
 
@@ -503,6 +505,7 @@ Este protocolo fornece diretrizes para o diagnóstico, isolamento e tratamento d
     category: 'Infectologia',
     lastUpdated: '2025-11-18',
     tags: ['Infecções', 'Antibióticos', 'Adulto', 'Função Renal', 'Protocolo Hospitalar'],
+    googleDriveFileId: '1QhGcjeYurXBCnJO9JRWvOzWncPmdM5hO',
     content: `
 **Considerações Gerais:**
 
