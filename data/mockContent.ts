@@ -437,6 +437,16 @@ Exemplo: "DESCONHECIDO MASCULINO 18/11/24 14:30".
 
 <br/>
 
+## Fluxograma Visual
+
+![Fluxograma HDB](/fluxogramas/hdb-fluxograma.png)
+
+<br/>
+
+---
+
+<br/>
+
 ## 1. Avaliação Inicial e Estabilização
 
 O foco inicial é a **estabilidade hemodinâmica** do paciente, não o diagnóstico da causa.
