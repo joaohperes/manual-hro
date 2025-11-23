@@ -60,6 +60,7 @@ Este protocolo guia a avaliação inicial de dor abdominal aguda em adultos e id
     category: 'Emergência',
     lastUpdated: '2025-11-18',
     tags: ['Vascular', 'Isquemia', 'Trombose', 'Embolia', 'Membro'],
+    googleDriveFileId: '1NjJRgPvoCIyH-4ypfsOpJRkUAvJzLd9_',
     content: `
 # MANEJO DA OCLUSÃO ARTERIAL AGUDA
 
