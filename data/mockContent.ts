@@ -156,46 +156,71 @@ Garantir que o cuidado seja prestado à pessoa certa é a barreira #1 contra err
     tags: ['HDB', 'Sangramento', 'Gastroenterologia', 'Colonoscopia'],
     googleDriveFileId: '1J9hce27qo4Rd9_WoJudEFluSUv6RrDRZ',
     content: `
-# MANEJO DA HEMORRAGIA DIGESTIVA BAIXA
+# HEMORRAGIA DIGESTIVA BAIXA - GUIA RÁPIDO
 
-Sangramento abaixo do ângulo de Treitz. Geralmente autolimitado (80%), mas casos graves exigem ação rápida.
+> **Definição**: Sangramento originado abaixo do ângulo de Treitz
+> **Prognóstico**: Geralmente autolimitado (80% dos casos), porém casos graves exigem ação imediata
 
-## 1. Avaliação Inicial e Estabilização
+---
 
-*   **ABCDE**: Vias aéreas, ventilação, circulação.
-*   **Acesso Venoso**: 2 acessos calibrosos (Jelco 14 ou 16).
-*   **Reposição Volêmica**: Cristaloide aquecido.
-*   **Toque Retal**: **OBRIGATÓRIO**. Avaliar presença de sangue vivo, melena, massas ou doença orificial.
+## 1. Avaliação Inicial e Estabilização 🚑
 
-## 2. Estratificação de Risco
+O foco inicial é a **estabilidade hemodinâmica** do paciente, não o diagnóstico da causa.
 
-**Sinais de Instabilidade (Alto Risco):**
-*   PAS < 100 mmHg.
-*   FC > 100 bpm.
-*   Síncope.
-*   Queda de Hb > 2g/dL.
+### Abordagem Sistemática (ABCDE)
+*   **Vias Aéreas, Boa Ventilação, Circulação**: Abordagem sistemática padrão.
+*   **Acesso Venoso Periférico**: Garantir 2 acessos calibrosos imediatamente (Jelco 14 ou 16).
+*   **Reposição Volêmica**: Iniciar com cristaloide aquecido.
+*   **Toque Retal**: ❗ **OBRIGATÓRIO**
+    *   Avaliar presença de sangue vivo, melena (sugere HDA ou trânsito lento), massas palpáveis ou doença orificial visível.
 
-## 3. Investigação Diagnóstica
+---
 
-### Excluir HDA (Hemorragia Alta)
-*   15% das hematoquezias (sangue vivo) vêm de HDA maciça.
-*   Se instabilidade hemodinâmica: **Passar SNG**.
-    *   Lavado com sangue/borra de café: Solicitar **EDA (Endoscopia)** antes da Colonoscopia.
-    *   Lavado com bile: HDA improvável.
+## 2. Estratificação de Risco (Sinais de Alarme) 🚨
 
-### Colonoscopia (Padrão-Ouro)
-*   **Pacientes Estáveis**: Preparo e exame eletivo (12-24h).
-*   **Pacientes Instáveis**: Estabilizar primeiro. Colonoscopia de urgência após preparo rápido (se possível) ou AngioTC.
+Pacientes com qualquer um dos sinais abaixo são considerados de **ALTO RISCO** e requerem monitoramento intensivo:
 
-### Angiotomografia
-*   Indicada se sangramento ativo maciço e impossibilidade de preparo para colonoscopia.
-*   Sensível para detectar o local do sangramento (0,3-0,5 ml/min).
+*   **Pressão Arterial Sistólica (PAS)**: < 100 mmHg
+*   **Frequência Cardíaca (FC)**: > 100 bpm (taquicardia)
+*   **Clínica**: História de síncope
+*   **Laboratório**: Queda de Hemoglobina (Hb) > 2g/dL
 
-## 4. Etiologias Comuns
-1.  **Doença Diverticular** (Mais comum).
-2.  Angiodisplasias.
-3.  Neoplasias / Pólipos.
-4.  Doenças Orificiais (Hemorróidas/Fissuras).
+---
+
+## 3. Investigação Diagnóstica 🔍
+
+A estratégia diagnóstica depende fundamentalmente da **estabilidade hemodinâmica** do paciente.
+
+### ⚠️ Passo Crucial: Excluir Hemorragia Digestiva Alta (HDA)
+
+**Atenção**: Cerca de **15% dos casos de hematoquezia** (sangue vivo via retal) são, na verdade, **HDA maciça** com trânsito intestinal acelerado.
+
+**Se Instabilidade Hemodinâmica**: Passar **Sonda Nasogástrica (SNG)** para lavado.
+
+*   **Lavado com sangue/borra de café**: Forte indício de HDA → Solicitar **EDA (Endoscopia) URGENTE** antes da colonoscopia.
+*   **Lavado com bile** (líquido claro/amarelo/verde): HDA improvável → Prosseguir investigação de HDB.
+
+### 🥇 Colonoscopia (Padrão-Ouro)
+
+*   **Pacientes Estáveis**: Realizar preparo intestinal adequado e exame eletivo (idealmente nas primeiras 12-24h da admissão).
+*   **Pacientes Instáveis**: A prioridade é estabilizar. Colonoscopia de urgência é realizada após estabilização e preparo rápido (se as condições permitirem).
+
+### Angiotomografia (AngioTC)
+
+**Indicação Principal**: Sangramento ativo maciço com instabilidade contínua E impossibilidade de realizar preparo para colonoscopia.
+
+**Vantagem**: Exame rápido e sensível para detectar o local do sangramento (detecta fluxos de 0,3-0,5 ml/min), permitindo planejamento de intervenção (radiologia intervencionista ou cirurgia).
+
+---
+
+## 4. Etiologias Comuns da HDB
+
+As causas variam com a idade, mas as mais frequentes incluem:
+
+*   **Doença Diverticular dos Cólons** (Causa mais comum)
+*   **Angiodisplasias** (Malformações vasculares)
+*   **Neoplasias** (Câncer colorretal) e **Pólipos**
+*   **Doenças Orificiais** (Hemorróidas e Fissuras anais)
 `
   },
   {
