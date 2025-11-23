@@ -168,11 +168,18 @@ Garantir que o cuidado seja prestado à pessoa certa é a barreira #1 contra err
 O foco inicial é a **estabilidade hemodinâmica** do paciente, não o diagnóstico da causa.
 
 ### Abordagem Sistemática (ABCDE)
-*   **Vias Aéreas, Boa Ventilação, Circulação**: Abordagem sistemática padrão.
-*   **Acesso Venoso Periférico**: Garantir 2 acessos calibrosos imediatamente (Jelco 14 ou 16).
-*   **Reposição Volêmica**: Iniciar com cristaloide aquecido.
-*   **Toque Retal**: ❗ **OBRIGATÓRIO**
-    *   Avaliar presença de sangue vivo, melena (sugere HDA ou trânsito lento), massas palpáveis ou doença orificial visível.
+
+**Vias Aéreas, Boa Ventilação, Circulação**
+- Abordagem sistemática padrão.
+
+**Acesso Venoso Periférico**
+- Garantir 2 acessos calibrosos imediatamente (Jelco 14 ou 16).
+
+**Reposição Volêmica**
+- Iniciar com cristaloide aquecido.
+
+**Toque Retal** ❗ **OBRIGATÓRIO**
+- Avaliar presença de sangue vivo, melena (sugere HDA ou trânsito lento), massas palpáveis ou doença orificial visível.
 
 ---
 
@@ -180,10 +187,17 @@ O foco inicial é a **estabilidade hemodinâmica** do paciente, não o diagnóst
 
 Pacientes com qualquer um dos sinais abaixo são considerados de **ALTO RISCO** e requerem monitoramento intensivo:
 
-*   **Pressão Arterial Sistólica (PAS)**: < 100 mmHg
-*   **Frequência Cardíaca (FC)**: > 100 bpm (taquicardia)
-*   **Clínica**: História de síncope
-*   **Laboratório**: Queda de Hemoglobina (Hb) > 2g/dL
+**Pressão Arterial Sistólica (PAS)**
+- < 100 mmHg
+
+**Frequência Cardíaca (FC)**
+- > 100 bpm (taquicardia)
+
+**Clínica**
+- História de síncope
+
+**Laboratório**
+- Queda de Hemoglobina (Hb) > 2g/dL
 
 ---
 
@@ -197,19 +211,31 @@ A estratégia diagnóstica depende fundamentalmente da **estabilidade hemodinâm
 
 **Se Instabilidade Hemodinâmica**: Passar **Sonda Nasogástrica (SNG)** para lavado.
 
-*   **Lavado com sangue/borra de café**: Forte indício de HDA → Solicitar **EDA (Endoscopia) URGENTE** antes da colonoscopia.
-*   **Lavado com bile** (líquido claro/amarelo/verde): HDA improvável → Prosseguir investigação de HDB.
+**Lavado com sangue/borra de café**
+- Forte indício de HDA → Solicitar **EDA (Endoscopia) URGENTE** antes da colonoscopia.
+
+**Lavado com bile** (líquido claro/amarelo/verde)
+- HDA improvável → Prosseguir investigação de HDB.
+
+---
 
 ### 🥇 Colonoscopia (Padrão-Ouro)
 
-*   **Pacientes Estáveis**: Realizar preparo intestinal adequado e exame eletivo (idealmente nas primeiras 12-24h da admissão).
-*   **Pacientes Instáveis**: A prioridade é estabilizar. Colonoscopia de urgência é realizada após estabilização e preparo rápido (se as condições permitirem).
+**Pacientes Estáveis**
+- Realizar preparo intestinal adequado e exame eletivo (idealmente nas primeiras 12-24h da admissão).
+
+**Pacientes Instáveis**
+- A prioridade é estabilizar. Colonoscopia de urgência é realizada após estabilização e preparo rápido (se as condições permitirem).
+
+---
 
 ### Angiotomografia (AngioTC)
 
-**Indicação Principal**: Sangramento ativo maciço com instabilidade contínua E impossibilidade de realizar preparo para colonoscopia.
+**Indicação Principal**
+- Sangramento ativo maciço com instabilidade contínua E impossibilidade de realizar preparo para colonoscopia.
 
-**Vantagem**: Exame rápido e sensível para detectar o local do sangramento (detecta fluxos de 0,3-0,5 ml/min), permitindo planejamento de intervenção (radiologia intervencionista ou cirurgia).
+**Vantagem**
+- Exame rápido e sensível para detectar o local do sangramento (detecta fluxos de 0,3-0,5 ml/min), permitindo planejamento de intervenção (radiologia intervencionista ou cirurgia).
 
 ---
 
@@ -217,10 +243,17 @@ A estratégia diagnóstica depende fundamentalmente da **estabilidade hemodinâm
 
 As causas variam com a idade, mas as mais frequentes incluem:
 
-*   **Doença Diverticular dos Cólons** (Causa mais comum)
-*   **Angiodisplasias** (Malformações vasculares)
-*   **Neoplasias** (Câncer colorretal) e **Pólipos**
-*   **Doenças Orificiais** (Hemorróidas e Fissuras anais)
+**Doença Diverticular dos Cólons**
+- Causa mais comum
+
+**Angiodisplasias**
+- Malformações vasculares
+
+**Neoplasias**
+- Câncer colorretal e Pólipos
+
+**Doenças Orificiais**
+- Hemorróidas e Fissuras anais
 `
   },
   {
