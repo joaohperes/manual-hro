@@ -9,9 +9,13 @@ export const MOCK_PROTOCOLS: Protocol[] = [
     tags: ['Dor abdominal', 'Abdome agudo', 'Idoso', 'Emergência', 'Cirurgia'],
     googleDriveFileId: '1xd99dJPp2Uz6nqrNGGCEGSKwwDImxapO',
     content: `
-# RESUMO EXECUTIVO: DOR ABDOMINAL AGUDA
+# DOR ABDOMINAL AGUDA - GUIA RÁPIDO
 
-Este protocolo guia a avaliação inicial de dor abdominal aguda em adultos e idosos no pronto-socorro, focando na identificação de **abdome agudo cirúrgico**.
+> **Objetivo**: Diagnóstico e estratificação de risco para **abdome agudo cirúrgico**
+
+**Para não esquecer**: Em idosos, os sintomas podem ser atípicos e menos intensos. Não deixe de investigar!
+
+---
 
 ## PASSO 1: Avaliação Inicial
 
@@ -412,7 +416,13 @@ Deve cobrir *Pseudomonas aeruginosa*.
     tags: ['sepse', 'choque séptico', 'antibiótico', 'noradrenalina', 'emergência'],
     googleDriveFileId: '17ZF5SngBk-yKYm39jPJYd9UGsydZPQ7o',
     content: `
-# RESUMO EXECUTIVO: SEPSE
+# SEPSE E CHOQUE SÉPTICO - GUIA RÁPIDO
+
+> **Objetivo**: Reconhecer, estratificar e tratar sepse em < 3 horas (golden hour)
+
+**Tempo = Vida**: A cada hora de atraso no antibiótico aumenta mortalidade em ~8%
+
+---
 
 ## 1. Identificação (Sinais de Alerta)
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { ArrowLeftIcon, CalendarDaysIcon, PrinterIcon, ArrowDownTrayIcon } from '@heroicons/react/24/outline';
+import { ArrowLeftIcon, CalendarDaysIcon, ArrowDownTrayIcon } from '@heroicons/react/24/outline';
 import MarkdownRenderer from '../components/MarkdownRenderer';
 import { useProtocols } from '../contexts/ProtocolContext';
 
@@ -82,13 +82,6 @@ const ProtocolDetail: React.FC = () => {
               Google Drive
             </button>
           )}
-          <button
-            onClick={() => window.print()}
-            className="flex items-center px-3 py-1.5 text-sm bg-white border border-slate-200 rounded-lg hover:bg-slate-50 text-slate-600 transition-colors"
-          >
-            <PrinterIcon className="w-4 h-4 mr-2" />
-            Imprimir
-          </button>
         </div>
       </div>
 
