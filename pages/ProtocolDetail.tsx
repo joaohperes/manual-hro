@@ -10,6 +10,19 @@ const ProtocolDetail: React.FC = () => {
   const protocol = id ? getProtocol(id) : undefined;
   const [zoomedImage, setZoomedImage] = useState<string | null>(null);
 
+  React.useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        setZoomedImage(null);
+      }
+    };
+
+    if (zoomedImage) {
+      document.addEventListener('keydown', handleKeyDown);
+      return () => document.removeEventListener('keydown', handleKeyDown);
+    }
+  }, [zoomedImage]);
+
   if (!protocol) {
     return (
       <div className="text-center py-20">
@@ -115,15 +128,17 @@ const ProtocolDetail: React.FC = () => {
 
         {/* PDF Embed (if available) - After content */}
         {protocol.googleDriveFileId && (
-          <div className="w-full bg-slate-50 border-t border-slate-100 flex justify-center overflow-hidden">
-            <div className="w-full" style={{ maxHeight: '800px', overflow: 'hidden' }}>
+          <div className="w-full bg-white border-t border-slate-100 flex justify-center overflow-hidden">
+            <div className="w-full" style={{ maxHeight: '800px', overflow: 'hidden', margin: '0', padding: '0' }}>
               <iframe
-                src={`https://drive.google.com/file/d/${protocol.googleDriveFileId}/preview?usp=embed_facebook`}
+                src={`https://drive.google.com/file/d/${protocol.googleDriveFileId}/preview`}
                 style={{
                   width: '100%',
                   height: '800px',
                   border: 'none',
                   display: 'block',
+                  margin: '0',
+                  padding: '0',
                 }}
                 allow="autoplay"
               />
@@ -152,22 +167,23 @@ const ProtocolDetail: React.FC = () => {
       {/* Image Zoom Modal */}
       {zoomedImage && (
         <div
-          className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4 print:hidden"
+          className="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50 p-2 print:hidden"
           onClick={() => setZoomedImage(null)}
         >
-          <div className="relative max-w-4xl max-h-[90vh] flex flex-col" onClick={(e) => e.stopPropagation()}>
+          <div className="relative w-full h-full flex flex-col items-center justify-center" onClick={(e) => e.stopPropagation()}>
             <button
               onClick={() => setZoomedImage(null)}
-              className="absolute top-4 right-4 bg-white rounded-full p-2 hover:bg-slate-100 transition-colors z-10"
-              title="Fechar"
+              className="absolute top-6 right-6 bg-white rounded-full p-2 hover:bg-slate-200 transition-colors z-10 shadow-lg"
+              title="Fechar (Esc)"
             >
               <XMarkIcon className="w-6 h-6 text-slate-900" />
             </button>
             <img
               src={zoomedImage}
-              alt="Fluxograma ampliado"
-              className="max-w-full max-h-[90vh] object-contain rounded-lg"
+              alt="Imagem ampliada"
+              className="max-w-[95vw] max-h-[95vh] object-contain rounded-lg shadow-2xl"
             />
+            <p className="text-white text-sm mt-4 text-center">Clique fora ou pressione Esc para fechar</p>
           </div>
         </div>
       )}
