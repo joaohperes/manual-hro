@@ -1,12 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import DOMPurify from 'dompurify';
 import { marked } from 'marked';
 
 interface MarkdownRendererProps {
   content: string;
+  onImageClick?: (imageSrc: string) => void;
 }
 
-const MarkdownRenderer: React.FC<MarkdownRendererProps> = ({ content }) => {
+const MarkdownRenderer: React.FC<MarkdownRendererProps> = ({ content, onImageClick }) => {
   // Configure marked options
   marked.setOptions({
     breaks: true,
@@ -28,6 +29,31 @@ const MarkdownRenderer: React.FC<MarkdownRendererProps> = ({ content }) => {
     ALLOWED_ATTR: ['href', 'title', 'target', 'rel', 'src', 'alt', 'class'],
     ALLOW_DATA_ATTR: false,
   });
+
+  // Add click handlers to images
+  useEffect(() => {
+    const container = document.querySelector('.prose-slate > div');
+    if (container && onImageClick) {
+      const images = container.querySelectorAll('img');
+      const handleImageClick = (e: Event) => {
+        const img = e.target as HTMLImageElement;
+        if (img && img.src) {
+          onImageClick(img.src);
+        }
+      };
+
+      images.forEach(img => {
+        img.style.cursor = 'pointer';
+        img.addEventListener('click', handleImageClick);
+      });
+
+      return () => {
+        images.forEach(img => {
+          img.removeEventListener('click', handleImageClick);
+        });
+      };
+    }
+  }, [cleanHtml, onImageClick]);
 
   return (
     <div className="prose prose-slate max-w-none">

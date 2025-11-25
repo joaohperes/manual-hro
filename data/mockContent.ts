@@ -428,8 +428,9 @@ Exemplo: "DESCONHECIDO MASCULINO 18/11/24 14:30".
     content: `
 # HEMORRAGIA DIGESTIVA BAIXA - GUIA RÁPIDO
 
-> **Definição**: Sangramento originado abaixo do ângulo de Treitz
-> **Prognóstico**: Geralmente autolimitado (80% dos casos), porém casos graves exigem ação imediata
+## Fluxograma Visual
+
+![Fluxograma HDB](/fluxogramas/hdb-fluxograma.png)
 
 <br/>
 
@@ -437,9 +438,8 @@ Exemplo: "DESCONHECIDO MASCULINO 18/11/24 14:30".
 
 <br/>
 
-## Fluxograma Visual
-
-![Fluxograma HDB](/fluxogramas/hdb-fluxograma.png)
+> **Definição**: Sangramento originado abaixo do ângulo de Treitz
+> **Prognóstico**: Geralmente autolimitado (80% dos casos), porém casos graves exigem ação imediata
 
 <br/>
 

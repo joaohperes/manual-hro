@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { ArrowLeftIcon, CalendarDaysIcon, ArrowDownTrayIcon } from '@heroicons/react/24/outline';
+import { ArrowLeftIcon, CalendarDaysIcon, ArrowDownTrayIcon, XMarkIcon } from '@heroicons/react/24/outline';
 import MarkdownRenderer from '../components/MarkdownRenderer';
 import { useProtocols } from '../contexts/ProtocolContext';
 
@@ -8,6 +8,7 @@ const ProtocolDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const { getProtocol } = useProtocols();
   const protocol = id ? getProtocol(id) : undefined;
+  const [zoomedImage, setZoomedImage] = useState<string | null>(null);
 
   if (!protocol) {
     return (
@@ -107,22 +108,26 @@ const ProtocolDetail: React.FC = () => {
           </div>
         </div>
 
-        {/* PDF Embed (if available) */}
+        {/* PDF Embed (if available) - Remove black margins with fitToPage and trimMargin */}
         {protocol.googleDriveFileId && (
-          <div className="w-full bg-slate-50 border-b border-slate-100">
+          <div className="w-full bg-slate-50 border-b border-slate-100 flex justify-center" style={{ marginLeft: 0, marginRight: 0 }}>
             <iframe
-              src={`https://drive.google.com/file/d/${protocol.googleDriveFileId}/preview`}
-              width="100%"
-              height="800"
+              src={`https://drive.google.com/file/d/${protocol.googleDriveFileId}/preview?usp=embed_facebook`}
+              style={{
+                width: '100vw',
+                height: '800px',
+                border: 'none',
+                marginLeft: 'calc(-50vw + 50%)',
+                marginRight: 'calc(-50vw + 50%)',
+              }}
               allow="autoplay"
-              className="border-0 block"
             />
           </div>
         )}
 
         {/* Content Body */}
         <div className="p-6 md:p-10 text-slate-700">
-            <MarkdownRenderer content={protocol.content} />
+            <MarkdownRenderer content={protocol.content} onImageClick={setZoomedImage} />
         </div>
 
         {/* Footer Disclaimer */}
@@ -142,6 +147,29 @@ const ProtocolDetail: React.FC = () => {
           </div>
         </div>
       </article>
+
+      {/* Image Zoom Modal */}
+      {zoomedImage && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4 print:hidden"
+          onClick={() => setZoomedImage(null)}
+        >
+          <div className="relative max-w-4xl max-h-[90vh] flex flex-col" onClick={(e) => e.stopPropagation()}>
+            <button
+              onClick={() => setZoomedImage(null)}
+              className="absolute top-4 right-4 bg-white rounded-full p-2 hover:bg-slate-100 transition-colors z-10"
+              title="Fechar"
+            >
+              <XMarkIcon className="w-6 h-6 text-slate-900" />
+            </button>
+            <img
+              src={zoomedImage}
+              alt="Fluxograma ampliado"
+              className="max-w-full max-h-[90vh] object-contain rounded-lg"
+            />
+          </div>
+        </div>
+      )}
     </div>
   );
 };
