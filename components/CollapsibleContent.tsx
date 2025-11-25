@@ -32,7 +32,7 @@ const CollapsibleContent: React.FC<CollapsibleContentProps> = ({
       </button>
 
       {expanded && (
-        <div className="p-6 bg-white text-slate-700 space-y-3 prose prose-slate max-w-none prose-p:text-sm animate-in fade-in duration-200">
+        <div className="p-6 bg-white text-slate-700 animate-in fade-in duration-200 prose prose-slate max-w-none prose-p:text-sm prose-p:leading-relaxed prose-p:mb-4 prose-h2:mt-6 prose-h2:mb-3 prose-h3:mt-5 prose-h3:mb-2 prose-ul:my-3 prose-li:my-1 prose-blockquote:border-l-4 prose-blockquote:pl-4 prose-blockquote:py-2 prose-blockquote:my-3 prose-code:bg-slate-100 prose-code:px-2 prose-code:py-1 prose-code:rounded prose-pre:bg-slate-900 prose-pre:text-emerald-400 prose-table:border-collapse prose-table:w-full prose-td:border prose-td:border-slate-200 prose-td:px-3 prose-td:py-2 prose-th:bg-slate-100 prose-th:border prose-th:border-slate-200 prose-th:px-3 prose-th:py-2">
           <MarkdownRenderer content={content} onImageClick={onImageClick} />
         </div>
       )}
