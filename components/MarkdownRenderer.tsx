@@ -58,9 +58,7 @@ const MarkdownRenderer: React.FC<MarkdownRendererProps> = ({ content, onImageCli
   }, [onImageClick]);
 
   return (
-    <div className="prose prose-slate max-w-none">
-      <div dangerouslySetInnerHTML={{ __html: cleanHtml }} />
-    </div>
+    <div dangerouslySetInnerHTML={{ __html: cleanHtml }} />
   );
 };
 
