@@ -3,6 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import { ArrowLeftIcon, CalendarDaysIcon, ArrowDownTrayIcon, XMarkIcon } from '@heroicons/react/24/outline';
 import MarkdownRenderer from '../components/MarkdownRenderer';
 import CollapsibleContent from '../components/CollapsibleContent';
+import PDFViewer from '../components/PDFViewer';
 import { useProtocols } from '../contexts/ProtocolContext';
 
 const ProtocolDetail: React.FC = () => {
@@ -177,21 +178,11 @@ const ProtocolDetail: React.FC = () => {
             })()}
         </div>
 
-        {/* PDF Embed (if available) - After content */}
+        {/* PDF Viewer (if available) - After content */}
         {protocol.googleDriveFileId && (
-          <div className="w-full border-t border-slate-100 flex justify-center mt-8" style={{ maxHeight: '800px', overflow: 'hidden', margin: '0 auto', padding: '0', background: '#fff' }}>
-            <iframe
-              src={`https://drive.google.com/file/d/${protocol.googleDriveFileId}/preview`}
-              style={{
-                width: '100%',
-                height: '800px',
-                border: 'none',
-                display: 'block',
-                margin: '0',
-                padding: '0',
-              }}
-              allow="autoplay"
-            />
+          <div className="mt-8">
+            <h2 className="text-2xl font-bold text-slate-900 mb-4">Documento Completo</h2>
+            <PDFViewer googleDriveFileId={protocol.googleDriveFileId} />
           </div>
         )}
 
