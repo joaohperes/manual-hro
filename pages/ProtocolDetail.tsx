@@ -18,9 +18,16 @@ const ProtocolDetail: React.FC = () => {
 
     if (fluxogramMatch) {
       const fluxogramSection = fluxogramMatch[0];
-      const contentAfterFluxogram = content.replace(fluxogramSection, '').trim();
+      // Remove the "## Fluxograma Visual" heading, keep only the image
+      const fluxogramImageOnly = fluxogramSection.replace(/## Fluxograma Visual\s*\n/, '').trim();
+      let contentAfterFluxogram = content.replace(fluxogramSection, '').trim();
+
+      // Remove the main title (# HEMORRAGIA DIGESTIVA BAIXA - GUIA RÁPIDO) and separators
+      contentAfterFluxogram = contentAfterFluxogram.replace(/^#\s+.*?[\n\r]+/m, '').trim();
+      contentAfterFluxogram = contentAfterFluxogram.replace(/^---\s*[\n\r]+/m, '').trim();
+
       return {
-        fluxogram: fluxogramSection.trim(),
+        fluxogram: fluxogramImageOnly,
         restOfContent: contentAfterFluxogram.trim(),
       };
     }
@@ -151,7 +158,9 @@ const ProtocolDetail: React.FC = () => {
                 <>
                   {/* Fluxogram section - always visible */}
                   {fluxogram && (
-                    <MarkdownRenderer content={fluxogram} onImageClick={setZoomedImage} />
+                    <div className="mb-8">
+                      <MarkdownRenderer content={fluxogram} onImageClick={setZoomedImage} />
+                    </div>
                   )}
 
                   {/* Collapsible detailed content section */}
@@ -170,7 +179,7 @@ const ProtocolDetail: React.FC = () => {
 
         {/* PDF Embed (if available) - After content */}
         {protocol.googleDriveFileId && (
-          <div className="w-full bg-black border-t border-slate-100 flex justify-center" style={{ maxHeight: '800px', overflow: 'hidden', margin: '0', padding: '0' }}>
+          <div className="w-full border-t border-slate-100 flex justify-center mt-8" style={{ maxHeight: '800px', overflow: 'hidden', margin: '0 auto', padding: '0', background: '#fff' }}>
             <iframe
               src={`https://drive.google.com/file/d/${protocol.googleDriveFileId}/preview`}
               style={{
@@ -178,7 +187,7 @@ const ProtocolDetail: React.FC = () => {
                 height: '800px',
                 border: 'none',
                 display: 'block',
-                margin: '-40px',
+                margin: '0',
                 padding: '0',
               }}
               allow="autoplay"
