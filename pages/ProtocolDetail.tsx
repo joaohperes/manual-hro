@@ -28,7 +28,7 @@ const ProtocolDetail: React.FC = () => {
     return (
       <div className="text-center py-20">
         <h2 className="text-2xl font-bold text-slate-900">Protocolo não encontrado</h2>
-        <Link to="/protocolos" className="text-hro-600 mt-4 inline-block hover:underline">Voltar para lista</Link>
+        <Link to="/protocolos" className="text-blue-600 mt-4 inline-block hover:underline">Voltar para lista</Link>
       </div>
     );
   }
@@ -72,7 +72,7 @@ const ProtocolDetail: React.FC = () => {
   return (
     <div className="max-w-4xl mx-auto pb-12">
       <div className="mb-6 flex items-center justify-between print:hidden">
-        <Link to="/protocolos" className="flex items-center text-slate-500 hover:text-hro-600 transition-colors">
+        <Link to="/protocolos" className="flex items-center text-slate-500 hover:text-blue-600 transition-colors">
           <ArrowLeftIcon className="w-4 h-4 mr-1" />
           Voltar
         </Link>
@@ -105,7 +105,7 @@ const ProtocolDetail: React.FC = () => {
         <div className="p-6 md:p-10 border-b border-slate-100 bg-slate-50/50 print:bg-white">
           <div className="flex items-center gap-2 mb-4">
             <span className={`px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wide print:border print:border-slate-300 ${
-                protocol.category === 'Normativa' ? 'bg-slate-200 text-slate-700' : 'bg-hro-100 text-hro-700'
+                protocol.category === 'Normativa' ? 'bg-green-100 text-green-700' : 'bg-blue-100 text-blue-700'
             }`}>
               {protocol.category}
             </span>

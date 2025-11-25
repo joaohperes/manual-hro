@@ -171,19 +171,19 @@ ${safeContent}
   return (
     <div className="space-y-8 pb-12">
       <div>
-        <h1 className="text-2xl font-bold text-slate-900">Importar Conteúdo via IA</h1>
-        <p className="text-slate-500 mt-1">
-          Gere resumos estruturados a partir de PDFs ou Texto Bruto (Normativas).
+        <h1 className="text-3xl font-bold text-slate-900">Importar Conteúdo via IA</h1>
+        <p className="text-slate-600 mt-2">
+          Gere resumos estruturados a partir de PDFs ou Texto Bruto (Normativas) usando inteligência artificial.
         </p>
       </div>
 
       {/* Input Type Toggle */}
-      <div className="bg-white p-1 rounded-xl border border-slate-200 inline-flex">
+      <div className="bg-white p-1 rounded-xl border border-slate-200 inline-flex shadow-sm">
         <button
             onClick={() => { setImportType('pdf'); setError(null); setGeneratedData(null); }}
             className={`px-4 py-2 text-sm font-medium rounded-lg transition-all ${
-                importType === 'pdf' 
-                ? 'bg-hro-600 text-white shadow-sm' 
+                importType === 'pdf'
+                ? 'bg-blue-600 text-white shadow-sm'
                 : 'text-slate-500 hover:bg-slate-50'
             }`}
         >
@@ -195,25 +195,25 @@ ${safeContent}
         <button
             onClick={() => { setImportType('text'); setError(null); setGeneratedData(null); }}
             className={`px-4 py-2 text-sm font-medium rounded-lg transition-all ${
-                importType === 'text' 
-                ? 'bg-hro-600 text-white shadow-sm' 
+                importType === 'text'
+                ? 'bg-blue-600 text-white shadow-sm'
                 : 'text-slate-500 hover:bg-slate-50'
             }`}
         >
             <div className="flex items-center">
                 <DocumentTextIcon className="w-4 h-4 mr-2" />
-                Colar Texto (Normativas)
+                Colar Texto
             </div>
         </button>
       </div>
 
       {/* Upload/Input Area */}
-      <div className="bg-white p-8 rounded-2xl border-2 border-dashed border-slate-300 hover:border-hro-400 transition-colors">
-        
+      <div className="bg-white p-8 rounded-2xl border-2 border-dashed border-slate-300 hover:border-blue-400 transition-colors shadow-sm">
+
         {isLoading ? (
             <div className="text-center py-8">
-                <div className="w-16 h-16 bg-hro-50 rounded-full flex items-center justify-center mx-auto mb-4">
-                     <SparklesIcon className="w-8 h-8 text-hro-600 animate-pulse" />
+                <div className="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-4">
+                     <SparklesIcon className="w-8 h-8 text-blue-600 animate-pulse" />
                 </div>
                 <h3 className="text-lg font-medium text-slate-900">Analisando Conteúdo...</h3>
                 <p className="text-slate-500 max-w-md mx-auto text-sm mt-2">
@@ -224,14 +224,14 @@ ${safeContent}
             <>
                 {importType === 'pdf' ? (
                     <div className="text-center">
-                        <div className="w-16 h-16 bg-hro-50 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <DocumentArrowUpIcon className="w-8 h-8 text-hro-600" />
+                        <div className="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <DocumentArrowUpIcon className="w-8 h-8 text-blue-600" />
                         </div>
                         <h3 className="text-lg font-medium text-slate-900">Selecione o Arquivo PDF</h3>
                         <p className="text-slate-500 mb-6 max-w-md mx-auto text-sm">
                             Ideal para protocolos clínicos já diagramados.
                         </p>
-                        <label className="inline-flex items-center px-6 py-3 bg-hro-600 text-white font-medium rounded-lg cursor-pointer hover:bg-hro-700 transition-colors shadow-sm">
+                        <label className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-medium rounded-lg cursor-pointer hover:bg-blue-700 transition-colors shadow-sm">
                             <span>Escolher Arquivo</span>
                             <input type="file" accept="application/pdf" className="hidden" onChange={handleFileUpload} />
                         </label>
@@ -239,25 +239,25 @@ ${safeContent}
                 ) : (
                     <div className="max-w-3xl mx-auto">
                         <div className="flex items-start mb-4">
-                            <div className="w-10 h-10 bg-hro-50 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
-                                <DocumentTextIcon className="w-5 h-5 text-hro-600" />
+                            <div className="w-10 h-10 bg-blue-50 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                                <DocumentTextIcon className="w-5 h-5 text-blue-600" />
                             </div>
                             <div>
                                 <h3 className="text-lg font-medium text-slate-900">Cole o Texto da Normativa</h3>
                                 <p className="text-sm text-slate-500">Cole o texto completo abaixo. A IA irá formatar títulos, listas e regras.</p>
                             </div>
                         </div>
-                        <textarea 
-                            className="w-full h-64 p-4 rounded-xl border border-slate-200 focus:border-hro-500 focus:ring-2 focus:ring-hro-200 outline-none text-sm text-slate-700 font-mono"
+                        <textarea
+                            className="w-full h-64 p-4 rounded-xl border border-slate-200 focus:border-blue-600 focus:ring-2 focus:ring-blue-200 outline-none text-sm text-slate-700 font-mono"
                             placeholder="Ex: PORTARIA Nº 123/2024 - Dispõe sobre o uso de uniformes..."
                             value={textInput}
                             onChange={(e) => setTextInput(e.target.value)}
                         />
                         <div className="mt-4 flex justify-end">
-                            <button 
+                            <button
                                 onClick={handleTextSubmit}
                                 disabled={!textInput.trim()}
-                                className="px-6 py-2.5 bg-hro-600 text-white font-medium rounded-lg hover:bg-hro-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                                className="px-6 py-2.5 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
                             >
                                 Processar Texto
                             </button>
@@ -266,7 +266,7 @@ ${safeContent}
                 )}
             </>
         )}
-        {error && <p className="mt-6 text-center text-red-500 text-sm bg-red-50 p-2 rounded inline-block w-full">{error}</p>}
+        {error && <p className="mt-6 text-center text-red-500 text-sm bg-red-50 p-3 rounded w-full font-medium">{error}</p>}
       </div>
 
       {/* Google Drive File ID Input */}
@@ -285,7 +285,7 @@ ${safeContent}
             placeholder="1NjJRgPvoCIyH-4ypfsOpJRkUAvJzLd9_"
             value={googleDriveFileId}
             onChange={(e) => setGoogleDriveFileId(e.target.value)}
-            className="w-full px-4 py-2 rounded-lg border border-slate-200 focus:border-hro-500 focus:ring-2 focus:ring-hro-200 outline-none text-sm font-mono"
+            className="w-full px-4 py-2 rounded-lg border border-slate-200 focus:border-blue-600 focus:ring-2 focus:ring-blue-200 outline-none text-sm font-mono"
           />
           <p className="text-xs text-slate-500 mt-2">
             Extraído de: https://drive.google.com/file/d/<strong>ID_AQUI</strong>/view
@@ -301,9 +301,9 @@ ${safeContent}
                  <h2 className="text-lg font-bold text-slate-900">Conteúdo Gerado</h2>
                  <span className="text-xs bg-green-100 text-green-700 px-2 py-1 rounded-full font-medium">Pronto</span>
              </div>
-             <button 
+             <button
                 onClick={handleTestInApp}
-                className="flex items-center text-sm font-medium text-hro-600 hover:text-hro-800 bg-hro-50 px-3 py-1.5 rounded-lg transition-colors border border-hro-100"
+                className="flex items-center text-sm font-medium text-blue-600 hover:text-blue-800 bg-blue-50 px-3 py-1.5 rounded-lg transition-colors border border-blue-100"
              >
                 <PlayCircleIcon className="w-4 h-4 mr-1.5" />
                 Visualizar no App

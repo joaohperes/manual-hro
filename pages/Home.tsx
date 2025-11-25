@@ -21,82 +21,77 @@ const Home: React.FC = () => {
   return (
     <div className="space-y-8">
       {/* Welcome Section */}
-      <div className="bg-white rounded-2xl p-8 shadow-sm border border-slate-200 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-64 h-64 bg-hro-50 rounded-full -mr-16 -mt-16 opacity-50"></div>
-        <div className="relative z-10">
-          <h1 className="text-3xl font-bold text-slate-900 mb-2">Bem-vindo ao Manual HRO</h1>
-          <p className="text-slate-600 max-w-2xl">
-            Acesso centralizado aos protocolos clínicos, fluxos administrativos e contatos do Hospital Regional do Oeste. Use o chat inteligente para tirar dúvidas rápidas.
-          </p>
-          
-          <div className="mt-6 flex flex-wrap gap-3">
-            <Link to={PageRoute.PROTOCOLS} className="inline-flex items-center px-4 py-2 bg-hro-600 text-white text-sm font-medium rounded-lg hover:bg-hro-700 transition-colors shadow-sm shadow-hro-200">
-              <BookOpenIcon className="w-4 h-4 mr-2" />
-              Acessar Protocolos
-            </Link>
-            <Link to={PageRoute.CONTACTS} className="inline-flex items-center px-4 py-2 bg-white text-slate-700 border border-slate-300 text-sm font-medium rounded-lg hover:bg-slate-50 transition-colors">
-              <PhoneIcon className="w-4 h-4 mr-2" />
-              Lista de Ramais
-            </Link>
-          </div>
+      <div className="bg-gradient-to-br from-blue-600 to-blue-800 text-white rounded-xl p-8 shadow-lg">
+        <h1 className="text-4xl font-bold mb-3">Bem-vindo ao Manual HRO</h1>
+        <p className="text-blue-100 max-w-2xl mb-8 text-lg">
+          Acesso centralizado aos protocolos clínicos, fluxos administrativos e contatos do Hospital Regional do Oeste.
+        </p>
+
+        <div className="flex flex-wrap gap-3">
+          <Link to={PageRoute.PROTOCOLS} className="inline-flex items-center px-6 py-3 bg-white text-blue-600 font-semibold rounded-lg hover:bg-blue-50 transition-colors shadow-lg">
+            <BookOpenIcon className="w-5 h-5 mr-2" />
+            Acessar Protocolos
+          </Link>
+          <Link to={PageRoute.CONTACTS} className="inline-flex items-center px-6 py-3 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors shadow-lg">
+            <PhoneIcon className="w-5 h-5 mr-2" />
+            Lista de Ramais
+          </Link>
         </div>
       </div>
 
-      {/* Quick Stats/Grid */}
+      {/* Stats Grid */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow group">
-          <div className="w-10 h-10 bg-blue-50 rounded-lg flex items-center justify-center mb-4 group-hover:bg-blue-100 transition-colors">
-            <ClockIcon className="w-6 h-6 text-blue-600" />
+        <div className="bg-white rounded-lg p-6 shadow-md hover:shadow-xl transition-shadow border-l-4 border-blue-600">
+          <div className="flex items-center justify-between mb-4">
+            <h3 className="font-bold text-slate-900 text-lg">Protocolos</h3>
+            <BookOpenIcon className="w-8 h-8 text-blue-600" />
           </div>
-          <h3 className="font-semibold text-slate-900">Escala Médica</h3>
-          <p className="text-sm text-slate-500 mt-1 mb-3">Confira a escala atualizada dos profissionais de plantão hoje.</p>
-          <a href="https://escala-hro.vercel.app/" target="_blank" rel="noreferrer" className="text-sm font-medium text-blue-600 hover:text-blue-800">Ver Escala &rarr;</a>
+          <p className="text-3xl font-bold text-slate-900 mb-1">{protocols.length}</p>
+          <p className="text-sm text-slate-600">Protocolos clínicos disponíveis</p>
         </div>
 
-        <div className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow group">
-          <div className="w-10 h-10 bg-green-50 rounded-lg flex items-center justify-center mb-4 group-hover:bg-green-100 transition-colors">
-            <BookOpenIcon className="w-6 h-6 text-green-600" />
+        <div className="bg-white rounded-lg p-6 shadow-md hover:shadow-xl transition-shadow border-l-4 border-green-600">
+          <div className="flex items-center justify-between mb-4">
+            <h3 className="font-bold text-slate-900 text-lg">Escala</h3>
+            <ClockIcon className="w-8 h-8 text-green-600" />
           </div>
-          <h3 className="font-semibold text-slate-900">Protocolos Atualizados</h3>
-          <p className="text-sm text-slate-500 mt-1 mb-3">{protocols.length} protocolos clínicos disponíveis para consulta.</p>
-          <Link to={PageRoute.PROTOCOLS} className="text-sm font-medium text-green-600 hover:text-green-800">Buscar Protocolo &rarr;</Link>
+          <p className="text-slate-600 text-sm mb-3">Acesse a escala médica atualizada</p>
+          <a href="https://escala-hro.vercel.app/" target="_blank" rel="noreferrer" className="text-sm font-semibold text-green-600 hover:text-green-800">Ver Escala →</a>
         </div>
 
-        <div className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow group">
-          <div className="w-10 h-10 bg-amber-50 rounded-lg flex items-center justify-center mb-4 group-hover:bg-amber-100 transition-colors">
-            <ExclamationTriangleIcon className="w-6 h-6 text-amber-600" />
+        <div className="bg-white rounded-lg p-6 shadow-md hover:shadow-xl transition-shadow border-l-4 border-blue-500">
+          <div className="flex items-center justify-between mb-4">
+            <h3 className="font-bold text-slate-900 text-lg">Status</h3>
+            <span className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></span>
           </div>
-          <h3 className="font-semibold text-slate-900">Notificações</h3>
-          <p className="text-sm text-slate-500 mt-1 mb-3">Nenhum aviso crítico ativo no momento para a unidade.</p>
-          <span className="text-sm text-slate-400 cursor-not-allowed">Sem alertas</span>
+          <p className="text-green-700 font-semibold mb-1">Operacional</p>
+          <p className="text-sm text-slate-600">Sistema funcionando normalmente</p>
         </div>
       </div>
 
       {/* Recent Updates */}
       <div>
-        <h2 className="text-lg font-bold text-slate-900 mb-4 flex items-center">
-          <ClockIcon className="w-5 h-5 mr-2 text-slate-400" />
+        <h2 className="text-2xl font-bold text-slate-900 mb-6 flex items-center">
+          <ClockIcon className="w-6 h-6 mr-3 text-blue-600" />
           Atualizações Recentes
         </h2>
-        <div className="bg-white rounded-xl border border-slate-200 shadow-sm divide-y divide-slate-100">
+        <div className="space-y-3">
           {recentProtocols.map((protocol) => (
-            <Link 
-              key={protocol.id} 
+            <Link
+              key={protocol.id}
               to={`/protocolos/${protocol.id}`}
-              className="flex items-center justify-between p-4 hover:bg-slate-50 transition-colors"
+              className="flex items-center gap-4 p-5 bg-white rounded-lg shadow-md hover:shadow-lg hover:border-l-4 hover:border-blue-600 transition-all border-l-4 border-transparent"
             >
-              <div className="flex items-start gap-4">
-                <div className="p-2 bg-slate-100 rounded-lg text-slate-500">
-                   <BookOpenIcon className="w-5 h-5" />
-                </div>
-                <div>
-                  <h4 className="font-medium text-slate-900">{protocol.title}</h4>
-                  <p className="text-sm text-slate-500 mt-0.5">
-                    Categoria: <span className="text-slate-700 font-medium">{protocol.category}</span> • Atualizado em {new Date(protocol.lastUpdated).toLocaleDateString('pt-BR')}
-                  </p>
-                </div>
+              <div className="p-3 bg-blue-50 rounded-lg text-blue-600">
+                <BookOpenIcon className="w-6 h-6" />
               </div>
-              <div className="hidden sm:block text-slate-400">
+              <div className="flex-1">
+                <h4 className="font-semibold text-slate-900">{protocol.title}</h4>
+                <p className="text-sm text-slate-500 mt-1">
+                  <span className="text-blue-600 font-medium">{protocol.category}</span> • {new Date(protocol.lastUpdated).toLocaleDateString('pt-BR')}
+                </p>
+              </div>
+              <div className="hidden sm:block text-slate-300">
                 <MagnifyingGlassIcon className="w-5 h-5" />
               </div>
             </Link>
