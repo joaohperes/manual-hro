@@ -18,9 +18,10 @@ const PDFViewer: React.FC<PDFViewerProps> = ({ googleDriveFileId }) => {
   const [error, setError] = useState<string | null>(null);
   const [canvasRef, setCanvasRef] = React.useState<HTMLCanvasElement | null>(null);
 
-  // Convert Google Drive ID to direct PDF URL
+  // Convert Google Drive ID to accessible PDF URL
   useEffect(() => {
-    const directUrl = `https://drive.google.com/uc?export=download&id=${googleDriveFileId}`;
+    // Use the export=pdf endpoint which is more reliable for PDF.js
+    const directUrl = `https://drive.google.com/uc?export=pdf&id=${googleDriveFileId}`;
     setPdfUrl(directUrl);
   }, [googleDriveFileId]);
 
@@ -31,10 +32,17 @@ const PDFViewer: React.FC<PDFViewerProps> = ({ googleDriveFileId }) => {
     const loadPDF = async () => {
       try {
         setLoading(true);
-        const pdf = await pdfjsLib.getDocument(pdfUrl).promise;
+
+        // Use getDocument with the URL directly
+        const loadingTask = pdfjsLib.getDocument({
+          url: pdfUrl,
+          withCredentials: false,
+        });
+
+        const pdf = await loadingTask.promise;
         setNumPages(pdf.numPages);
 
-        // Render first page
+        // Render the current page
         const page = await pdf.getPage(currentPage);
         const viewport = page.getViewport({ scale });
         canvasRef.width = viewport.width;
@@ -45,14 +53,17 @@ const PDFViewer: React.FC<PDFViewerProps> = ({ googleDriveFileId }) => {
           await page.render({
             canvasContext: context,
             viewport: viewport,
-            canvas: canvasRef,
           } as any).promise;
         }
 
         setError(null);
       } catch (err) {
-        setError('Erro ao carregar o PDF. Verifique a permissão do arquivo.');
-        console.error(err);
+        // If PDF.js fails, provide helpful error message
+        console.error('PDF loading error:', err);
+        setError(
+          'Erro ao carregar o PDF. O arquivo pode estar inacessível ou corrompido. ' +
+          'Verifique se o arquivo está compartilhado e tente novamente.'
+        );
       } finally {
         setLoading(false);
       }
