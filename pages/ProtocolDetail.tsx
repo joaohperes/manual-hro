@@ -108,27 +108,28 @@ const ProtocolDetail: React.FC = () => {
           </div>
         </div>
 
-        {/* PDF Embed (if available) - Remove black margins with fitToPage and trimMargin */}
-        {protocol.googleDriveFileId && (
-          <div className="w-full bg-slate-50 border-b border-slate-100 flex justify-center" style={{ marginLeft: 0, marginRight: 0 }}>
-            <iframe
-              src={`https://drive.google.com/file/d/${protocol.googleDriveFileId}/preview?usp=embed_facebook`}
-              style={{
-                width: '100vw',
-                height: '800px',
-                border: 'none',
-                marginLeft: 'calc(-50vw + 50%)',
-                marginRight: 'calc(-50vw + 50%)',
-              }}
-              allow="autoplay"
-            />
-          </div>
-        )}
-
-        {/* Content Body */}
+        {/* Content Body - Includes fluxogram before PDF */}
         <div className="p-6 md:p-10 text-slate-700">
             <MarkdownRenderer content={protocol.content} onImageClick={setZoomedImage} />
         </div>
+
+        {/* PDF Embed (if available) - After content */}
+        {protocol.googleDriveFileId && (
+          <div className="w-full bg-slate-50 border-t border-slate-100 flex justify-center overflow-hidden">
+            <div className="w-full" style={{ maxHeight: '800px', overflow: 'hidden' }}>
+              <iframe
+                src={`https://drive.google.com/file/d/${protocol.googleDriveFileId}/preview?usp=embed_facebook`}
+                style={{
+                  width: '100%',
+                  height: '800px',
+                  border: 'none',
+                  display: 'block',
+                }}
+                allow="autoplay"
+              />
+            </div>
+          </div>
+        )}
 
         {/* Footer Disclaimer */}
         <div className="p-6 bg-yellow-50 border-t border-yellow-100 print:hidden">
