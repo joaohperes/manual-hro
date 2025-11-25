@@ -66,11 +66,35 @@ const MarkdownRenderer: React.FC<MarkdownRendererProps> = ({ content, onImageCli
   // Split content by h2 sections
   const sections = content.split(/(?=^## )/m).filter(s => s.trim());
 
-  const renderSection = (sectionContent: string) => {
+  const renderSection = (sectionContent: string, index: number) => {
     const titleMatch = sectionContent.match(/^## (.+)/);
     const title = titleMatch ? titleMatch[1].trim() : 'Section';
 
-    const rawHtml = marked.parse(sectionContent) as string;
+    // Skip first section (usually fluxogram) - render it as-is without collapse
+    if (index === 0) {
+      const rawHtml = marked.parse(sectionContent) as string;
+      const cleanHtml = DOMPurify.sanitize(rawHtml, {
+        ALLOWED_TAGS: [
+          'h1', 'h2', 'h3', 'h4', 'h5', 'h6',
+          'p', 'br', 'strong', 'em', 'u', 'code', 'pre',
+          'ul', 'ol', 'li', 'blockquote',
+          'a', 'img', 'table', 'thead', 'tbody', 'tr', 'th', 'td',
+          'div', 'span', 'hr'
+        ],
+        ALLOWED_ATTR: ['href', 'title', 'target', 'rel', 'src', 'alt', 'class'],
+        ALLOW_DATA_ATTR: false,
+      });
+
+      return (
+        <div key={title} className="prose prose-slate max-w-none">
+          <div dangerouslySetInnerHTML={{ __html: cleanHtml }} />
+        </div>
+      );
+    }
+
+    // Remove the h2 heading from subsequent sections - it will be the collapsible title
+    const contentWithoutHeading = sectionContent.replace(/^## .+\n\n?/, '');
+    const rawHtml = marked.parse(contentWithoutHeading) as string;
     const cleanHtml = DOMPurify.sanitize(rawHtml, {
       ALLOWED_TAGS: [
         'h1', 'h2', 'h3', 'h4', 'h5', 'h6',
@@ -123,7 +147,7 @@ const MarkdownRenderer: React.FC<MarkdownRendererProps> = ({ content, onImageCli
 
   return (
     <div className="space-y-4">
-      {sections.map(renderSection)}
+      {sections.map((section, index) => renderSection(section, index))}
     </div>
   );
 };
