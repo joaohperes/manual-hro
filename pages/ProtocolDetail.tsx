@@ -11,6 +11,26 @@ const ProtocolDetail: React.FC = () => {
   const protocol = id ? getProtocol(id) : undefined;
   const [zoomedImage, setZoomedImage] = useState<string | null>(null);
 
+  // Split content: extract fluxogram section and remaining content
+  const getFluxogramAndContent = (content: string) => {
+    // Find the fluxogram section (from "## Fluxograma Visual" to the next "## " or "---")
+    const fluxogramMatch = content.match(/## Fluxograma Visual\s*\n!\[.*?\]\([^)]*\)[^#]*/);
+
+    if (fluxogramMatch) {
+      const fluxogramSection = fluxogramMatch[0];
+      const contentAfterFluxogram = content.replace(fluxogramSection, '').trim();
+      return {
+        fluxogram: fluxogramSection.trim(),
+        restOfContent: contentAfterFluxogram.trim(),
+      };
+    }
+
+    return {
+      fluxogram: '',
+      restOfContent: content,
+    };
+  };
+
   React.useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
@@ -124,18 +144,38 @@ const ProtocolDetail: React.FC = () => {
 
         {/* Content Body */}
         <div className="p-6 md:p-10 text-slate-700">
-            {/* Main content with fluxogram */}
-            <MarkdownRenderer content={protocol.content} onImageClick={setZoomedImage} />
+            {(() => {
+              const { fluxogram, restOfContent } = getFluxogramAndContent(protocol.content);
 
-            {/* Collapsible summary section */}
-            {protocol.executiveSummary && (
-              <CollapsibleContent
-                title="Conteúdo Detalhado"
-                content={protocol.executiveSummary}
-                isExpanded={false}
-                onImageClick={setZoomedImage}
-              />
-            )}
+              return (
+                <>
+                  {/* Fluxogram section - always visible */}
+                  {fluxogram && (
+                    <MarkdownRenderer content={fluxogram} onImageClick={setZoomedImage} />
+                  )}
+
+                  {/* Collapsible detailed content section */}
+                  {restOfContent && (
+                    <CollapsibleContent
+                      title="Conteúdo Detalhado"
+                      content={restOfContent}
+                      isExpanded={false}
+                      onImageClick={setZoomedImage}
+                    />
+                  )}
+
+                  {/* Executive summary if available */}
+                  {protocol.executiveSummary && (
+                    <CollapsibleContent
+                      title="Resumo Executivo"
+                      content={protocol.executiveSummary}
+                      isExpanded={false}
+                      onImageClick={setZoomedImage}
+                    />
+                  )}
+                </>
+              );
+            })()}
         </div>
 
         {/* PDF Embed (if available) - After content */}
