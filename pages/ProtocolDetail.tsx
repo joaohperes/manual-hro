@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeftIcon, CalendarDaysIcon, ArrowDownTrayIcon, XMarkIcon } from '@heroicons/react/24/outline';
 import MarkdownRenderer from '../components/MarkdownRenderer';
-import ExecutiveSummaryCard from '../components/ExecutiveSummaryCard';
+import CollapsibleContent from '../components/CollapsibleContent';
 import { useProtocols } from '../contexts/ProtocolContext';
 
 const ProtocolDetail: React.FC = () => {
@@ -124,9 +124,17 @@ const ProtocolDetail: React.FC = () => {
 
         {/* Content Body */}
         <div className="p-6 md:p-10 text-slate-700">
+            {/* Fluxogram/Visual comes first */}
             {protocol.executiveSummary && (
-              <ExecutiveSummaryCard content={protocol.executiveSummary} onImageClick={setZoomedImage} />
+              <CollapsibleContent
+                title="Conteúdo"
+                content={protocol.executiveSummary}
+                isExpanded={false}
+                onImageClick={setZoomedImage}
+              />
             )}
+
+            {/* Main content */}
             <MarkdownRenderer content={protocol.content} onImageClick={setZoomedImage} />
         </div>
 
