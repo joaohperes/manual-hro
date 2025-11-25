@@ -424,6 +424,11 @@ Exemplo: "DESCONHECIDO MASCULINO 18/11/24 14:30".
     category: 'Emergência',
     lastUpdated: '2025-11-18',
     tags: ['HDB', 'Sangramento', 'Gastroenterologia', 'Colonoscopia'],
+    executiveSummary: `**Definição**: Sangramento originado abaixo do ângulo de Treitz
+
+**Prognóstico**: Geralmente autolimitado (80% dos casos), porém casos graves exigem ação imediata
+
+**Estratégia**: A prioridade é estabilizar hemodinamicamente. A investigação diagnóstica depende da estabilidade e inclui colonoscopia como padrão-ouro nos pacientes estáveis.`,
     googleDriveFileId: '1J9hce27qo4Rd9_WoJudEFluSUv6RrDRZ',
     content: `
 # HEMORRAGIA DIGESTIVA BAIXA - GUIA RÁPIDO
@@ -431,15 +436,6 @@ Exemplo: "DESCONHECIDO MASCULINO 18/11/24 14:30".
 ## Fluxograma Visual
 
 ![Fluxograma HDB](/fluxogramas/hdb-fluxograma.png)
-
-<br/>
-
----
-
-<br/>
-
-> **Definição**: Sangramento originado abaixo do ângulo de Treitz
-> **Prognóstico**: Geralmente autolimitado (80% dos casos), porém casos graves exigem ação imediata
 
 <br/>
 

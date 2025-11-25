@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeftIcon, CalendarDaysIcon, ArrowDownTrayIcon, XMarkIcon } from '@heroicons/react/24/outline';
 import MarkdownRenderer from '../components/MarkdownRenderer';
+import CollapsibleSection from '../components/CollapsibleSection';
 import { useProtocols } from '../contexts/ProtocolContext';
 
 const ProtocolDetail: React.FC = () => {
@@ -122,27 +123,30 @@ const ProtocolDetail: React.FC = () => {
         </div>
 
         {/* Content Body - Includes fluxogram before PDF */}
-        <div className="p-6 md:p-10 text-slate-700">
+        <div className="p-6 md:p-10 text-slate-700 space-y-6">
+            {protocol.executiveSummary && (
+              <CollapsibleSection title="Sumário Executivo" defaultOpen={false}>
+                <MarkdownRenderer content={protocol.executiveSummary} onImageClick={setZoomedImage} />
+              </CollapsibleSection>
+            )}
             <MarkdownRenderer content={protocol.content} onImageClick={setZoomedImage} />
         </div>
 
         {/* PDF Embed (if available) - After content */}
         {protocol.googleDriveFileId && (
-          <div className="w-full bg-white border-t border-slate-100 flex justify-center overflow-hidden">
-            <div className="w-full" style={{ maxHeight: '800px', overflow: 'hidden', margin: '0', padding: '0' }}>
-              <iframe
-                src={`https://drive.google.com/file/d/${protocol.googleDriveFileId}/preview`}
-                style={{
-                  width: '100%',
-                  height: '800px',
-                  border: 'none',
-                  display: 'block',
-                  margin: '0',
-                  padding: '0',
-                }}
-                allow="autoplay"
-              />
-            </div>
+          <div className="w-full bg-black border-t border-slate-100 flex justify-center" style={{ maxHeight: '800px', overflow: 'hidden', margin: '0', padding: '0' }}>
+            <iframe
+              src={`https://drive.google.com/file/d/${protocol.googleDriveFileId}/preview`}
+              style={{
+                width: '100%',
+                height: '800px',
+                border: 'none',
+                display: 'block',
+                margin: '-40px',
+                padding: '0',
+              }}
+              allow="autoplay"
+            />
           </div>
         )}
 
