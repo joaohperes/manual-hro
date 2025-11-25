@@ -32,28 +32,30 @@ const MarkdownRenderer: React.FC<MarkdownRendererProps> = ({ content, onImageCli
 
   // Add click handlers to images
   useEffect(() => {
+    if (!onImageClick) return;
+
     const container = document.querySelector('.prose-slate > div');
-    if (container && onImageClick) {
-      const images = container.querySelectorAll('img');
-      const handleImageClick = (e: Event) => {
-        const img = e.target as HTMLImageElement;
-        if (img && img.src) {
-          onImageClick(img.src);
-        }
-      };
+    if (!container) return;
 
+    const images = container.querySelectorAll('img');
+    const handleImageClick = (e: Event) => {
+      const img = e.target as HTMLImageElement;
+      if (img && img.src) {
+        onImageClick(img.src);
+      }
+    };
+
+    images.forEach(img => {
+      img.style.cursor = 'pointer';
+      img.addEventListener('click', handleImageClick);
+    });
+
+    return () => {
       images.forEach(img => {
-        img.style.cursor = 'pointer';
-        img.addEventListener('click', handleImageClick);
+        img.removeEventListener('click', handleImageClick);
       });
-
-      return () => {
-        images.forEach(img => {
-          img.removeEventListener('click', handleImageClick);
-        });
-      };
-    }
-  }, [cleanHtml, onImageClick]);
+    };
+  }, [onImageClick]);
 
   return (
     <div className="prose prose-slate max-w-none">
