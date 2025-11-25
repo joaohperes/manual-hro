@@ -18,12 +18,21 @@ const PDFViewer: React.FC<PDFViewerProps> = ({ googleDriveFileId }) => {
   const [error, setError] = useState<string | null>(null);
   const [useFallback, setUseFallback] = useState(false);
   const [canvasRef, setCanvasRef] = React.useState<HTMLCanvasElement | null>(null);
+  const [urlAttemptIndex, setUrlAttemptIndex] = useState<number>(0);
+
+  // List of Google Drive endpoints to try
+  const getGoogleDriveUrls = (fileId: string) => [
+    `https://drive.google.com/uc?export=pdf&id=${fileId}`,
+    `https://drive.google.com/file/d/${fileId}/export?format=pdf`,
+    `https://docs.google.com/uc?export=pdf&id=${fileId}`,
+  ];
 
   // Convert Google Drive ID to accessible PDF URL
+  // Using multiple endpoints to maximize compatibility
   useEffect(() => {
-    // Use the export=pdf endpoint which is more reliable for PDF.js
-    const directUrl = `https://drive.google.com/uc?export=pdf&id=${googleDriveFileId}`;
-    setPdfUrl(directUrl);
+    const urls = getGoogleDriveUrls(googleDriveFileId);
+    setPdfUrl(urls[0]); // Start with first option
+    setUrlAttemptIndex(0);
   }, [googleDriveFileId]);
 
   // Load and render PDF
@@ -33,6 +42,7 @@ const PDFViewer: React.FC<PDFViewerProps> = ({ googleDriveFileId }) => {
     const loadPDF = async () => {
       try {
         setLoading(true);
+        setError(null);
 
         // Use getDocument with the URL directly
         const loadingTask = pdfjsLib.getDocument({
@@ -58,17 +68,27 @@ const PDFViewer: React.FC<PDFViewerProps> = ({ googleDriveFileId }) => {
         }
 
         setError(null);
-      } catch (err) {
-        // If PDF.js fails due to CORS, fallback to Google Drive Preview
-        console.error('PDF.js loading failed, using fallback:', err);
-        setUseFallback(true);
-        setError(null);
         setLoading(false);
+      } catch (err) {
+        // Try next endpoint if available
+        const urls = getGoogleDriveUrls(googleDriveFileId);
+        const nextIndex = urlAttemptIndex + 1;
+
+        if (nextIndex < urls.length) {
+          console.warn(`PDF.js loading failed with endpoint ${urlAttemptIndex + 1}, trying endpoint ${nextIndex + 1}...`, err);
+          setUrlAttemptIndex(nextIndex);
+          setPdfUrl(urls[nextIndex]);
+        } else {
+          // All endpoints failed, use fallback
+          console.error('All PDF.js endpoints failed, using Google Drive Preview fallback:', err);
+          setUseFallback(true);
+          setLoading(false);
+        }
       }
     };
 
     loadPDF();
-  }, [pdfUrl, currentPage, scale, canvasRef]);
+  }, [pdfUrl, currentPage, scale, canvasRef, urlAttemptIndex, googleDriveFileId]);
 
   const handlePrevPage = () => {
     if (currentPage > 1) {
