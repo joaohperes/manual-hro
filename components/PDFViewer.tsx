@@ -16,6 +16,7 @@ const PDFViewer: React.FC<PDFViewerProps> = ({ googleDriveFileId }) => {
   const [scale, setScale] = useState<number>(1);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [useFallback, setUseFallback] = useState(false);
   const [canvasRef, setCanvasRef] = React.useState<HTMLCanvasElement | null>(null);
 
   // Convert Google Drive ID to accessible PDF URL
@@ -58,13 +59,10 @@ const PDFViewer: React.FC<PDFViewerProps> = ({ googleDriveFileId }) => {
 
         setError(null);
       } catch (err) {
-        // If PDF.js fails, provide helpful error message
-        console.error('PDF loading error:', err);
-        setError(
-          'Erro ao carregar o PDF. O arquivo pode estar inacessível ou corrompido. ' +
-          'Verifique se o arquivo está compartilhado e tente novamente.'
-        );
-      } finally {
+        // If PDF.js fails due to CORS, fallback to Google Drive Preview
+        console.error('PDF.js loading failed, using fallback:', err);
+        setUseFallback(true);
+        setError(null);
         setLoading(false);
       }
     };
@@ -93,6 +91,27 @@ const PDFViewer: React.FC<PDFViewerProps> = ({ googleDriveFileId }) => {
       setScale(scale - 0.2);
     }
   };
+
+  // Fallback to Google Drive Preview if PDF.js fails
+  if (useFallback) {
+    return (
+      <div className="w-full bg-blue-50 border border-blue-200 rounded-lg overflow-hidden shadow-sm">
+        <div className="p-4 bg-blue-50 border-b border-blue-200 text-sm text-blue-700">
+          ℹ️ Usando visualização integrada do Google Drive
+        </div>
+        <iframe
+          src={`https://drive.google.com/file/d/${googleDriveFileId}/preview`}
+          className="w-full"
+          style={{
+            height: '600px',
+            border: 'none',
+            display: 'block',
+          }}
+          allow="autoplay"
+        />
+      </div>
+    );
+  }
 
   if (error) {
     return (
