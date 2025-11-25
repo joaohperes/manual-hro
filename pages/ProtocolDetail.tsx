@@ -129,7 +129,7 @@ const ProtocolDetail: React.FC = () => {
                 <MarkdownRenderer content={protocol.executiveSummary} onImageClick={setZoomedImage} />
               </CollapsibleSection>
             )}
-            <MarkdownRenderer content={protocol.content} onImageClick={setZoomedImage} />
+            <MarkdownRenderer content={protocol.content} onImageClick={setZoomedImage} collapsibleSections={true} />
         </div>
 
         {/* PDF Embed (if available) - After content */}
