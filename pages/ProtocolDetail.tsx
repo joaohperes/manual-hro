@@ -124,18 +124,18 @@ const ProtocolDetail: React.FC = () => {
 
         {/* Content Body */}
         <div className="p-6 md:p-10 text-slate-700">
-            {/* Fluxogram/Visual comes first */}
+            {/* Main content with fluxogram */}
+            <MarkdownRenderer content={protocol.content} onImageClick={setZoomedImage} />
+
+            {/* Collapsible summary section */}
             {protocol.executiveSummary && (
               <CollapsibleContent
-                title="Conteúdo"
+                title="Conteúdo Detalhado"
                 content={protocol.executiveSummary}
                 isExpanded={false}
                 onImageClick={setZoomedImage}
               />
             )}
-
-            {/* Main content */}
-            <MarkdownRenderer content={protocol.content} onImageClick={setZoomedImage} />
         </div>
 
         {/* PDF Embed (if available) - After content */}
