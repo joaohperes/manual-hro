@@ -9,7 +9,7 @@ interface MarkdownRendererProps {
 }
 
 const MarkdownRenderer: React.FC<MarkdownRendererProps> = ({ content, onImageClick }) => {
-  const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['sumario']));
+  const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set());
 
   // Configure marked options
   marked.setOptions({
@@ -20,9 +20,14 @@ const MarkdownRenderer: React.FC<MarkdownRendererProps> = ({ content, onImageCli
   // Split content by major sections (h2)
   const sections = content.split(/(?=^## )/m).filter(s => s.trim());
 
-  // Identify which sections should be collapsible
-  const isCollapsible = (sectionContent: string) => {
-    return /^## (?:Sumário|SUMÁRIO|Executivo|EXECUTIVO|Summary)/i.test(sectionContent);
+  // Identify which sections should be collapsible (Sumário, Executivo, ou primeira seção)
+  const isCollapsible = (sectionContent: string, index: number) => {
+    // Always collapsible for summary/executive sections
+    if (/^## (?:Sumário|SUMÁRIO|Executivo|EXECUTIVO|Summary)/i.test(sectionContent)) {
+      return true;
+    }
+    // Also make first section collapsible
+    return index === 0;
   };
 
   const getSectionId = (sectionContent: string) => {
@@ -45,9 +50,9 @@ const MarkdownRenderer: React.FC<MarkdownRendererProps> = ({ content, onImageCli
   };
 
   // Render each section
-  const renderSection = (sectionContent: string) => {
+  const renderSection = (sectionContent: string, index: number) => {
     const sectionId = getSectionId(sectionContent);
-    const collapsible = isCollapsible(sectionContent);
+    const collapsible = isCollapsible(sectionContent, index);
     const isExpanded = expandedSections.has(sectionId);
 
     const rawHtml = marked.parse(sectionContent) as string;
@@ -125,7 +130,7 @@ const MarkdownRenderer: React.FC<MarkdownRendererProps> = ({ content, onImageCli
 
   return (
     <div className="space-y-6">
-      {sections.map(renderSection)}
+      {sections.map((section, index) => renderSection(section, index))}
     </div>
   );
 };
