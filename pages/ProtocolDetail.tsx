@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeftIcon, CalendarDaysIcon, ArrowDownTrayIcon, XMarkIcon } from '@heroicons/react/24/outline';
 import MarkdownRenderer from '../components/MarkdownRenderer';
-import CollapsibleSection from '../components/CollapsibleSection';
+import ExecutiveSummaryCard from '../components/ExecutiveSummaryCard';
 import { useProtocols } from '../contexts/ProtocolContext';
 
 const ProtocolDetail: React.FC = () => {
@@ -122,14 +122,12 @@ const ProtocolDetail: React.FC = () => {
           </div>
         </div>
 
-        {/* Content Body - Includes fluxogram before PDF */}
-        <div className="p-6 md:p-10 text-slate-700 space-y-6">
+        {/* Content Body */}
+        <div className="p-6 md:p-10 text-slate-700">
             {protocol.executiveSummary && (
-              <CollapsibleSection title="Sumário Executivo" defaultOpen={false}>
-                <MarkdownRenderer content={protocol.executiveSummary} onImageClick={setZoomedImage} />
-              </CollapsibleSection>
+              <ExecutiveSummaryCard content={protocol.executiveSummary} onImageClick={setZoomedImage} />
             )}
-            <MarkdownRenderer content={protocol.content} onImageClick={setZoomedImage} collapsibleSections={true} />
+            <MarkdownRenderer content={protocol.content} onImageClick={setZoomedImage} />
         </div>
 
         {/* PDF Embed (if available) - After content */}
