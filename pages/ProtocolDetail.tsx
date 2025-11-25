@@ -157,18 +157,8 @@ const ProtocolDetail: React.FC = () => {
                   {/* Collapsible detailed content section */}
                   {restOfContent && (
                     <CollapsibleContent
-                      title="Conteúdo Detalhado"
-                      content={restOfContent}
-                      isExpanded={false}
-                      onImageClick={setZoomedImage}
-                    />
-                  )}
-
-                  {/* Executive summary if available */}
-                  {protocol.executiveSummary && (
-                    <CollapsibleContent
                       title="Resumo Executivo"
-                      content={protocol.executiveSummary}
+                      content={restOfContent}
                       isExpanded={false}
                       onImageClick={setZoomedImage}
                     />

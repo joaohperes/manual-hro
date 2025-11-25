@@ -437,139 +437,104 @@ Exemplo: "DESCONHECIDO MASCULINO 18/11/24 14:30".
 
 ![Fluxograma HDB](/fluxogramas/hdb-fluxograma.png)
 
-<br/>
-
 ---
-
-<br/>
 
 ## 1. Avaliação Inicial e Estabilização
 
-O foco inicial é a **estabilidade hemodinâmica** do paciente, não o diagnóstico da causa.
+**O foco inicial é a estabilidade hemodinâmica do paciente, não o diagnóstico da causa.**
 
 ### Abordagem Sistemática (ABCDE)
 
-**Vias Aéreas, Boa Ventilação, Circulação**
+#### 🫁 Vias Aéreas, Boa Ventilação, Circulação
+- Abordagem sistemática padrão
 
-Abordagem sistemática padrão.
+#### 💉 Acesso Venoso Periférico
+- Garantir **2 acessos calibrosos** imediatamente (Jelco 14 ou 16)
 
-<br/>
+#### 💧 Reposição Volêmica
+- Iniciar com **cristaloide aquecido**
 
-**Acesso Venoso Periférico**
-
-Garantir 2 acessos calibrosos imediatamente (Jelco 14 ou 16).
-
-<br/>
-
-**Reposição Volêmica**
-
-Iniciar com cristaloide aquecido.
-
-<br/>
-
-**Toque Retal - OBRIGATÓRIO**
-
-Avaliar presença de sangue vivo, melena (sugere HDA ou trânsito lento), massas palpáveis ou doença orificial visível.
-
-<br/>
+#### 🔍 Toque Retal - **OBRIGATÓRIO**
+- Avaliar presença de sangue vivo
+- Melena (sugere HDA ou trânsito lento)
+- Massas palpáveis ou doença orificial visível
 
 ---
-
-<br/>
 
 ## 2. Estratificação de Risco (Sinais de Alarme)
 
-Pacientes com qualquer um dos sinais abaixo são considerados de **ALTO RISCO** e requerem monitoramento intensivo:
+**Pacientes com QUALQUER UM dos sinais abaixo são considerados de ALTO RISCO e requerem monitoramento intensivo:**
 
-**Pressão Arterial Sistólica (PAS)**
-
-< 100 mmHg
-
-<br/>
-
-**Frequência Cardíaca (FC)**
-
-> 100 bpm (taquicardia)
-
-<br/>
-
-**Clínica**
-
-História de síncope
-
-<br/>
-
-**Laboratório**
-
-Queda de Hemoglobina (Hb) > 2g/dL
-
-<br/>
+| Parâmetro | Valor de Alarme |
+|-----------|-----------------|
+| **PAS (Pressão Arterial Sistólica)** | < 100 mmHg |
+| **FC (Frequência Cardíaca)** | > 100 bpm (taquicardia) |
+| **Clínica** | História de síncope |
+| **Laboratório** | Queda de Hemoglobina > 2 g/dL |
 
 ---
-
-<br/>
 
 ## 3. Investigação Diagnóstica
 
-A estratégia diagnóstica depende fundamentalmente da **estabilidade hemodinâmica** do paciente.
+**A estratégia diagnóstica depende fundamentalmente da estabilidade hemodinâmica do paciente.**
 
-### Passo Crucial: Excluir Hemorragia Digestiva Alta (HDA)
+### ⚠️ Passo Crucial: Excluir Hemorragia Digestiva Alta (HDA)
 
-**Atenção**: Cerca de **15% dos casos de hematoquezia** (sangue vivo via retal) são, na verdade, **HDA maciça** com trânsito intestinal acelerado.
+> **Atenção:** Cerca de **15% dos casos de hematoquezia** (sangue vivo via retal) são, na verdade, **HDA maciça com trânsito intestinal acelerado.**
 
-**Se Instabilidade Hemodinâmica**: Passar **Sonda Nasogástrica (SNG)** para lavado.
+#### Se Instabilidade Hemodinâmica: Passar Sonda Nasogástrica (SNG)
 
-**Lavado com sangue/borra de café**
+**Resultado: Sangue/Borra de Café**
+- Forte indício de HDA
+- Solicitar **EDA (Endoscopia) URGENTE** antes da colonoscopia
 
-Forte indício de HDA → Solicitar **EDA (Endoscopia) URGENTE** antes da colonoscopia.
+**Resultado: Bile (Claro/Amarelo/Verde)**
+- HDA improvável
+- Prosseguir investigação de HDB
 
-<br/>
+### 🔬 Colonoscopia (Padrão-Ouro)
 
-**Lavado com bile** (líquido claro/amarelo/verde)
+**Para Pacientes Estáveis:**
+- Realizar preparo intestinal adequado
+- Exame eletivo (idealmente nas primeiras 12-24h da admissão)
 
-HDA improvável → Prosseguir investigação de HDB.
+**Para Pacientes Instáveis:**
+- Prioridade é ESTABILIZAR primeiro
+- Colonoscopia de urgência após estabilização
+- Preparo rápido (se as condições permitirem)
 
-<br/>
+### 📊 Angiotomografia (AngioTC)
 
----
+**Indicação:**
+- Sangramento ativo maciço com instabilidade contínua
+- **E** impossibilidade de realizar preparo para colonoscopia
 
-<br/>
-
-### Colonoscopia (Padrão-Ouro)
-
-**Pacientes Estáveis**
-- Realizar preparo intestinal adequado e exame eletivo (idealmente nas primeiras 12-24h da admissão).
-
-**Pacientes Instáveis**
-- A prioridade é estabilizar. Colonoscopia de urgência é realizada após estabilização e preparo rápido (se as condições permitirem).
-
----
-
-### Angiotomografia (AngioTC)
-
-**Indicação Principal**
-- Sangramento ativo maciço com instabilidade contínua E impossibilidade de realizar preparo para colonoscopia.
-
-**Vantagem**
-- Exame rápido e sensível para detectar o local do sangramento (detecta fluxos de 0,3-0,5 ml/min), permitindo planejamento de intervenção (radiologia intervencionista ou cirurgia).
+**Vantagens:**
+- Exame rápido e sensível
+- Detecta fluxos de 0,3-0,5 ml/min
+- Permite planejamento de intervenção (radiologia intervencionista ou cirurgia)
 
 ---
 
 ## 4. Etiologias Comuns da HDB
 
-As causas variam com a idade, mas as mais frequentes incluem:
+**As causas variam com a idade, mas as mais frequentes incluem:**
 
-**Doença Diverticular dos Cólons**
-- Causa mais comum
+### 🔴 **Doença Diverticular dos Cólons** (CAUSA MAIS COMUM)
+- Principal responsável pela HDB em idosos
+- Sangramento em geral profuso mas autolimitado
 
-**Angiodisplasias**
+### 🔴 **Angiodisplasias**
 - Malformações vasculares
+- Mais frequentes em pacientes com doenças crônicas (insuficiência renal)
 
-**Neoplasias**
-- Câncer colorretal e Pólipos
+### 🔴 **Neoplasias**
+- Câncer colorretal
+- Pólipos (principalmente com componente vascular)
 
-**Doenças Orificiais**
-- Hemorróidas e Fissuras anais
+### 🔴 **Doenças Orificiais**
+- Hemorróidas
+- Fissuras anais
 `
   },
   {
