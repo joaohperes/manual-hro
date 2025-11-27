@@ -21,10 +21,14 @@ const PDFViewer: React.FC<PDFViewerProps> = ({ googleDriveFileId }) => {
   const [urlAttemptIndex, setUrlAttemptIndex] = useState<number>(0);
 
   // List of Google Drive endpoints to try
+  // Includes both direct endpoints and CORS proxy wrapped versions
   const getGoogleDriveUrls = (fileId: string) => [
+    // Direct endpoints (work if file is public or cross-origin enabled)
     `https://drive.google.com/uc?export=pdf&id=${fileId}`,
     `https://drive.google.com/file/d/${fileId}/export?format=pdf`,
-    `https://docs.google.com/uc?export=pdf&id=${fileId}`,
+    // CORS proxy versions (bypass CORS restrictions)
+    `https://cors-anywhere.herokuapp.com/https://drive.google.com/uc?export=pdf&id=${fileId}`,
+    `https://cors.bridged.cc/https://drive.google.com/uc?export=pdf&id=${fileId}`,
   ];
 
   // Convert Google Drive ID to accessible PDF URL
@@ -73,14 +77,23 @@ const PDFViewer: React.FC<PDFViewerProps> = ({ googleDriveFileId }) => {
         // Try next endpoint if available
         const urls = getGoogleDriveUrls(googleDriveFileId);
         const nextIndex = urlAttemptIndex + 1;
+        const errorMsg = err instanceof Error ? err.message : String(err);
 
         if (nextIndex < urls.length) {
-          console.warn(`PDF.js loading failed with endpoint ${urlAttemptIndex + 1}, trying endpoint ${nextIndex + 1}...`, err);
+          console.warn(
+            `❌ PDF.js endpoint ${urlAttemptIndex + 1} failed (${urls[urlAttemptIndex]})`,
+            errorMsg
+          );
+          console.log(`⏳ Trying endpoint ${nextIndex + 1}/${urls.length}: ${urls[nextIndex]}`);
           setUrlAttemptIndex(nextIndex);
           setPdfUrl(urls[nextIndex]);
         } else {
           // All endpoints failed, use fallback
-          console.error('All PDF.js endpoints failed, using Google Drive Preview fallback:', err);
+          console.error(
+            `❌ All ${urls.length} PDF.js endpoints failed. Falling back to Google Drive Preview iframe.`,
+            errorMsg
+          );
+          console.log('Tried endpoints:', urls);
           setUseFallback(true);
           setLoading(false);
         }
