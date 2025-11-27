@@ -2,8 +2,25 @@ import React, { useState, useEffect } from 'react';
 import * as pdfjsLib from 'pdfjs-dist';
 import { ChevronLeftIcon, ChevronRightIcon, MagnifyingGlassMinusIcon, MagnifyingGlassPlusIcon } from '@heroicons/react/24/outline';
 
-// Set up PDF.js worker using unpkg CDN (more reliable than cdnjs)
-pdfjsLib.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${pdfjsLib.version}/build/pdf.worker.min.js`;
+// Set up PDF.js worker with multiple CDN sources and CORS-aware approach
+// Try jsDelivr first (best CORS support), then unpkg as fallback
+const workerVersion = pdfjsLib.version;
+const cdnSources = [
+  `https://cdn.jsdelivr.net/npm/pdfjs-dist@${workerVersion}/build/pdf.worker.min.js`,
+  `https://cdn.jsdelivr.net/npm/pdfjs-dist@${workerVersion}/build/pdf.worker.js`,
+];
+
+let workerSrcSet = false;
+for (const src of cdnSources) {
+  try {
+    pdfjsLib.GlobalWorkerOptions.workerSrc = src;
+    workerSrcSet = true;
+    console.log(`PDF.js worker set to: ${src}`);
+    break;
+  } catch (e) {
+    console.warn(`Failed to set worker from ${src}:`, e);
+  }
+}
 
 interface PDFViewerProps {
   googleDriveFileId: string;
