@@ -154,6 +154,7 @@ const ProtocolDetail: React.FC = () => {
         <div className="p-6 md:p-10 text-slate-700">
             {(() => {
               const { fluxogram, restOfContent } = getFluxogramAndContent(protocol.content);
+              const isNormativa = protocol.category === 'Normativa';
 
               return (
                 <>
@@ -164,14 +165,20 @@ const ProtocolDetail: React.FC = () => {
                     </div>
                   )}
 
-                  {/* Collapsible detailed content section */}
+                  {/* Content display based on type */}
                   {restOfContent && (
-                    <CollapsibleContent
-                      title="Resumo Executivo"
-                      content={restOfContent}
-                      isExpanded={false}
-                      onImageClick={setZoomedImage}
-                    />
+                    isNormativa ? (
+                      // For normativas: show content directly without collapsible
+                      <MarkdownRenderer content={restOfContent} onImageClick={setZoomedImage} />
+                    ) : (
+                      // For protocols: show in collapsible card
+                      <CollapsibleContent
+                        title="Resumo Executivo"
+                        content={restOfContent}
+                        isExpanded={false}
+                        onImageClick={setZoomedImage}
+                      />
+                    )
                   )}
                 </>
               );
