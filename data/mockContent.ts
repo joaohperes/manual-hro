@@ -1438,6 +1438,7 @@ Preferir **ciclos curtos** em infecções não complicadas e com foco drenado. *
     category: 'Normativa',
     lastUpdated: '2025-11-18',
     tags: ['Internação', 'AIH', 'Prescrição Médica', 'Pronto-Socorro', 'Documentação Médica'],
+    googleDriveFileId: '1h1h1h1h1h1h1h1h1h1h1h1h1h1h1h1h',
     content: `
 ## Objetivo
 Padronizar os processos de **início de internação clínica via pronto-socorro**, desde a criação de AIH até a prescrição e documentação médica obrigatória no sistema.
@@ -1484,6 +1485,7 @@ Padronizar os processos de **início de internação clínica via pronto-socorro
     category: 'Normativa',
     lastUpdated: '2025-11-18',
     tags: ['Oncologia', 'Fluxo Assistencial', 'Internação', 'Pacientes Oncológicos', 'HRO'],
+    googleDriveFileId: '1i2i2i2i2i2i2i2i2i2i2i2i2i2i2i2i',
     content: `
 Esta instrução normativa estabelece o fluxo assistencial para o suporte clínico de pacientes da Oncologia Clínica internados no HRO.
 
@@ -1513,6 +1515,7 @@ Esta instrução normativa estabelece o fluxo assistencial para o suporte clíni
     category: 'Normativa',
     lastUpdated: '2025-11-18',
     tags: ['politrauma', 'fluxo de pacientes', 'pronto socorro', 'internação', 'emergência'],
+    googleDriveFileId: '1j3j3j3j3j3j3j3j3j3j3j3j3j3j3j3j',
     content: `
 ## Internações de pacientes politraumatizados no Pronto Socorro
 
@@ -1532,6 +1535,7 @@ Com o objetivo de otimizar o fluxo de atendimento aos pacientes com politrauma n
     category: 'Normativa',
     lastUpdated: '2025-11-18',
     tags: ['Internação', 'Cirurgia Geral', 'Pronto Socorro', 'Protocolo', 'Sobresaviso'],
+    googleDriveFileId: '1k4k4k4k4k4k4k4k4k4k4k4k4k4k4k4k',
     content: `
 Dispõe sobre os critérios de internação de pacientes oriundos do Pronto Socorro no serviço de **Cirurgia Geral (sobresaviso)**.
 
@@ -1592,6 +1596,7 @@ A Direção Técnica Administrativa do HRO, visando aprimorar os fluxos de atend
     category: 'Normativa',
     lastUpdated: '2025-11-18',
     tags: ['Ortopedia', 'Pronto Socorro', 'Atendimento', 'Urgência', 'Fluxo'],
+    googleDriveFileId: '1l5l5l5l5l5l5l5l5l5l5l5l5l5l5l5l',
     content: `
 Estabelece os critérios para atendimento e acompanhamento de pacientes ortopédicos no Pronto Socorro do HRO.
 
@@ -1619,6 +1624,7 @@ Estabelece os critérios para atendimento e acompanhamento de pacientes ortopéd
     category: 'Normativa',
     lastUpdated: '2025-11-18',
     tags: ['internação', 'pediatria', 'pronto socorro', 'protocolo', 'crianças'],
+    googleDriveFileId: '1m6m6m6m6m6m6m6m6m6m6m6m6m6m6m6m',
     content: `
 Esta instrução normativa estabelece critérios claros para internações de pacientes pediátricos que chegam ao Pronto Socorro do HRO.
 
@@ -1684,6 +1690,7 @@ Casos que não demandam internação imediata devem receber:
     category: 'Normativa',
     lastUpdated: '2025-11-18',
     tags: ['Otorrinolaringologia', 'Pronto Socorro', 'Atendimento', 'Internação', 'Protocolo'],
+    googleDriveFileId: '1n7n7n7n7n7n7n7n7n7n7n7n7n7n7n7n',
     content: `
 Esta instrução estabelece critérios para o atendimento de pacientes com queixas otorrinolaringológicas no Pronto Socorro do HRO.
 
@@ -1715,6 +1722,7 @@ Se houver intercorrência clínica relevante durante a internação sob responsa
     category: 'Normativa',
     lastUpdated: '2025-11-18',
     tags: ['Cirurgia Vascular', 'Pronto Socorro', 'Encaminhamento', 'Internação', 'Protocolo HRO'],
+    googleDriveFileId: '1o8o8o8o8o8o8o8o8o8o8o8o8o8o8o8o',
     content: `
 Esta instrução normativa estabelece os critérios para encaminhamento e internação de pacientes com demandas de Cirurgia Vascular no Pronto Socorro do HRO.
 
@@ -1745,6 +1753,7 @@ Esta instrução normativa estabelece os critérios para encaminhamento e intern
     category: 'Normativa',
     lastUpdated: '2025-11-18',
     tags: ['Cirurgia Torácica', 'Pronto Socorro', 'Internação', 'Protocolo Clínico', 'HRO'],
+    googleDriveFileId: '1p9p9p9p9p9p9p9p9p9p9p9p9p9p9p9p',
     content: `
 ## Objetivo
 Define os critérios para avaliação e internação de pacientes com demandas de Cirurgia Torácica no Pronto Socorro do HRO.
