@@ -99,9 +99,9 @@ const OrientacaoDetail: React.FC = () => {
       </div>
 
       <article className="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden print:shadow-none print:border-none">
-        {/* Header */}
-        <div className="p-3 md:p-4 border-b border-slate-100 bg-blue-50/50 print:bg-white">
-          <div className="flex items-center gap-2 mb-2">
+        {/* Header - Compact */}
+        <div className="p-2 md:p-3 border-b border-slate-100 bg-blue-50/50 print:bg-white">
+          <div className="flex items-center gap-2 mb-1">
             <span className="px-2 py-0.5 rounded-full text-xs font-bold uppercase tracking-wide print:border print:border-blue-300 bg-blue-100 text-blue-700">
               Orientação
             </span>
@@ -110,7 +110,7 @@ const OrientacaoDetail: React.FC = () => {
               Atualizado em {new Date(protocol.lastUpdated).toLocaleDateString('pt-BR')}
             </span>
           </div>
-          <h1 className="text-lg md:text-xl lg:text-2xl font-bold text-slate-900 mb-2 leading-tight">{protocol.title}</h1>
+          <h1 className="text-base md:text-lg lg:text-xl font-bold text-slate-900 mb-1 leading-tight">{protocol.title}</h1>
           <div className="flex flex-wrap gap-1">
              {protocol.tags.map(tag => (
                  <span key={tag} className="text-xs text-slate-500 bg-white px-1.5 py-0.5 rounded border border-slate-200">#{tag}</span>

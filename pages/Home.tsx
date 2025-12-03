@@ -19,15 +19,8 @@ const Home: React.FC = () => {
     .slice(0, 3);
 
   return (
-    <div className="space-y-6">
-      {/* Compact Welcome Bar */}
-      <div className="bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-lg p-4 shadow-md">
-        <p className="text-sm text-blue-100">
-          Acesso centralizado aos protocolos clínicos, fluxos administrativos e contatos do HRO
-        </p>
-      </div>
-
-      {/* Navigation Cards - Above the Fold */}
+    <div className="space-y-8">
+      {/* Navigation Cards - Above the Fold (Immediate Priority) */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <Link to={PageRoute.PROTOCOLS} className="bg-white rounded-lg p-6 shadow-md hover:shadow-xl transition-shadow border-l-4 border-blue-600 cursor-pointer block">
           <div className="flex items-center justify-between mb-4">
