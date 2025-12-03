@@ -98,8 +98,8 @@ const ProtocolDetail: React.FC = () => {
 
 
   return (
-    <div className="max-w-4xl mx-auto pb-12">
-      <div className="mb-6 flex items-center justify-between print:hidden">
+    <div className="max-w-4xl mx-auto pb-8">
+      <div className="mb-3 flex items-center justify-between print:hidden">
         <Link to="/protocolos" className="flex items-center text-slate-500 hover:text-blue-600 transition-colors">
           <ArrowLeftIcon className="w-4 h-4 mr-1" />
           Voltar
@@ -108,48 +108,48 @@ const ProtocolDetail: React.FC = () => {
           {protocol.pdfUrl && (
             <button
               onClick={handleDownloadPdf}
-              className="flex items-center px-3 py-1.5 text-sm bg-green-50 border border-green-200 rounded-lg hover:bg-green-100 text-green-700 transition-colors"
+              className="flex items-center px-2 py-1 text-xs bg-green-50 border border-green-200 rounded hover:bg-green-100 text-green-700 transition-colors"
               title={`Download: ${protocol.pdfFileName || 'protocolo.pdf'} (${formatFileSize(protocol.pdfSize)})`}
             >
-              <ArrowDownTrayIcon className="w-4 h-4 mr-2" />
+              <ArrowDownTrayIcon className="w-3 h-3 mr-1" />
               Baixar PDF
             </button>
           )}
           {protocol.googleDriveFileId && (
             <button
               onClick={handleDownloadFromGoogleDrive}
-              className="flex items-center px-3 py-1.5 text-sm bg-blue-50 border border-blue-200 rounded-lg hover:bg-blue-100 text-blue-700 transition-colors"
+              className="flex items-center px-2 py-1 text-xs bg-blue-50 border border-blue-200 rounded hover:bg-blue-100 text-blue-700 transition-colors"
               title="Baixar do Google Drive"
             >
-              <ArrowDownTrayIcon className="w-4 h-4 mr-2" />
+              <ArrowDownTrayIcon className="w-3 h-3 mr-1" />
               Google Drive
             </button>
           )}
         </div>
       </div>
 
-      <article className="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden print:shadow-none print:border-none">
+      <article className="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden print:shadow-none print:border-none">
         {/* Header */}
-        <div className="p-6 md:p-10 border-b border-slate-100 bg-slate-50/50 print:bg-white">
-          <div className="flex items-center gap-2 mb-4">
-            <span className="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wide print:border print:border-blue-300 bg-blue-100 text-blue-700">
+        <div className="p-3 md:p-4 border-b border-slate-100 bg-slate-50/50 print:bg-white">
+          <div className="flex items-center gap-2 mb-2">
+            <span className="px-2 py-0.5 rounded-full text-xs font-bold uppercase tracking-wide print:border print:border-blue-300 bg-blue-100 text-blue-700">
               {protocol.category}
             </span>
             <span className="flex items-center text-xs text-slate-500">
-              <CalendarDaysIcon className="w-3.5 h-3.5 mr-1" />
+              <CalendarDaysIcon className="w-3 h-3 mr-1" />
               Atualizado em {new Date(protocol.lastUpdated).toLocaleDateString('pt-BR')}
             </span>
           </div>
-          <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-slate-900 mb-4 leading-tight">{protocol.title}</h1>
-          <div className="flex flex-wrap gap-2">
+          <h1 className="text-lg md:text-xl lg:text-2xl font-bold text-slate-900 mb-2 leading-tight">{protocol.title}</h1>
+          <div className="flex flex-wrap gap-1">
              {protocol.tags.map(tag => (
-                 <span key={tag} className="text-xs text-slate-500 bg-white px-2 py-1 rounded border border-slate-200">#{tag}</span>
+                 <span key={tag} className="text-xs text-slate-500 bg-white px-1.5 py-0.5 rounded border border-slate-200">#{tag}</span>
              ))}
           </div>
         </div>
 
         {/* Content Body */}
-        <div className="p-6 md:p-10 text-slate-700">
+        <div className="p-3 md:p-4 text-slate-700">
             {(() => {
               const { fluxogram, restOfContent } = getFluxogramAndContent(protocol.content);
 
@@ -178,23 +178,23 @@ const ProtocolDetail: React.FC = () => {
 
         {/* PDF Viewer (if available) - After content */}
         {protocol.googleDriveFileId && (
-          <div className="mt-8">
-            <h2 className="text-2xl font-bold text-slate-900 mb-4">Documento Completo</h2>
+          <div className="p-3 md:p-4 border-t border-slate-100">
+            <h2 className="text-base font-bold text-slate-900 mb-2">Documento Completo</h2>
             <PDFViewer googleDriveFileId={protocol.googleDriveFileId} />
           </div>
         )}
 
         {/* Footer Disclaimer */}
-        <div className="p-6 bg-yellow-50 border-t border-yellow-100 print:hidden">
+        <div className="p-2.5 bg-yellow-50 border-t border-yellow-100 print:hidden">
           <div className="flex">
              <div className="flex-shrink-0">
-                <svg className="h-5 w-5 text-yellow-400" viewBox="0 0 20 20" fill="currentColor">
+                <svg className="h-4 w-4 text-yellow-400" viewBox="0 0 20 20" fill="currentColor">
                    <path fillRule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
                 </svg>
              </div>
-             <div className="ml-3">
-                <h3 className="text-sm font-medium text-yellow-800">Aviso Legal</h3>
-                <div className="mt-1 text-sm text-yellow-700">
+             <div className="ml-2">
+                <h3 className="text-xs font-bold text-yellow-800">Aviso Legal</h3>
+                <div className="mt-0.5 text-xs text-yellow-700">
                    <p>Este documento é um guia de referência rápida para uso interno. A decisão clínica final deve ser sempre individualizada pelo profissional responsável.</p>
                 </div>
              </div>

@@ -6,10 +6,10 @@ interface PDFViewerProps {
 
 const PDFViewer: React.FC<PDFViewerProps> = ({ googleDriveFileId }) => {
   return (
-    <div className="w-full bg-white rounded-lg border border-slate-200 shadow-sm overflow-hidden">
+    <div className="w-full bg-white rounded border border-slate-200 shadow-sm overflow-hidden">
       {/* Header */}
-      <div className="p-4 bg-slate-50 border-b border-slate-200">
-        <p className="text-sm text-slate-600 font-medium">
+      <div className="p-2 bg-slate-50 border-b border-slate-200">
+        <p className="text-xs text-slate-600 font-medium">
           Visualização do Google Drive
         </p>
       </div>
@@ -19,7 +19,7 @@ const PDFViewer: React.FC<PDFViewerProps> = ({ googleDriveFileId }) => {
         src={`https://drive.google.com/file/d/${googleDriveFileId}/preview`}
         className="w-full"
         style={{
-          height: '700px',
+          height: '400px',
           border: 'none',
           display: 'block',
         }}
@@ -28,9 +28,9 @@ const PDFViewer: React.FC<PDFViewerProps> = ({ googleDriveFileId }) => {
       />
 
       {/* Info Footer */}
-      <div className="p-4 bg-blue-50 border-t border-blue-100 text-sm text-blue-700">
-        <p className="mb-2">
-          ℹ️ O documento é visualizado diretamente do Google Drive
+      <div className="p-2 bg-blue-50 border-t border-blue-100 text-xs text-blue-700">
+        <p className="mb-1">
+          ℹ️ Documento do Google Drive
         </p>
         <a
           href={`https://drive.google.com/file/d/${googleDriveFileId}/view`}
