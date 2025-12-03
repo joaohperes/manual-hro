@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeftIcon, CalendarDaysIcon, ArrowDownTrayIcon, XMarkIcon } from '@heroicons/react/24/outline';
-import MarkdownRenderer from '../components/MarkdownRenderer';
+import StyledContent from '../components/StyledContent';
 import PDFViewer from '../components/PDFViewer';
 import { useProtocols } from '../contexts/ProtocolContext';
 
@@ -119,7 +119,7 @@ const NormativeDetail: React.FC = () => {
 
         {/* Content Body - Direct display for normativas */}
         <div className="p-6 md:p-10 text-slate-700">
-          <MarkdownRenderer content={protocol.content} onImageClick={setZoomedImage} />
+          <StyledContent content={protocol.content} onImageClick={setZoomedImage} />
         </div>
 
         {/* PDF Viewer (if available) - After content */}
