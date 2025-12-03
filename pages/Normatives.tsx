@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from 'react';
-import { Link } from 'react-router-dom';
 import { MagnifyingGlassIcon, ClipboardDocumentCheckIcon } from '@heroicons/react/24/outline';
 import { useProtocols } from '../contexts/ProtocolContext';
+import CompactContentCard from '../components/CompactContentCard';
 
 const Normatives: React.FC = () => {
   const { protocols: allProtocols } = useProtocols();
@@ -36,44 +36,26 @@ const Normatives: React.FC = () => {
         />
       </div>
 
-      {/* Normativas Grid */}
+      {/* Normativas List */}
       {normatives.length > 0 && (
         <section>
-          <div className="flex items-center gap-3 mb-6 pb-4 border-b-2 border-green-600">
-            <div className="p-2 bg-green-50 rounded-lg text-green-600">
-              <ClipboardDocumentCheckIcon className="w-6 h-6" />
-            </div>
-            <h2 className="text-2xl font-bold text-slate-900">Lista de Instruções Normativas</h2>
-            <span className="ml-auto text-sm font-semibold text-slate-600 bg-slate-100 px-3 py-1 rounded-full">
-              {normatives.length} {normatives.length === 1 ? 'documento' : 'documentos'}
+          <div className="flex items-center gap-3 mb-4 pb-3 border-b border-slate-300">
+            <ClipboardDocumentCheckIcon className="w-5 h-5 text-green-600" />
+            <h2 className="text-lg font-semibold text-slate-900">Normativas</h2>
+            <span className="ml-auto text-xs font-semibold text-slate-600 bg-slate-100 px-2 py-1 rounded-full">
+              {normatives.length}
             </span>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div className="space-y-1">
             {normatives.map(doc => (
-              <Link
+              <CompactContentCard
                 key={doc.id}
-                to={`/normativas/${doc.id}`}
-                className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:border-l-4 hover:border-green-600 transition-all border-l-4 border-transparent"
-              >
-                <div className="flex items-start justify-between mb-4">
-                  <div className="p-3 bg-green-50 text-green-600 rounded-lg">
-                    <ClipboardDocumentCheckIcon className="w-6 h-6" />
-                  </div>
-                  <span className="text-xs font-bold px-3 py-1 bg-green-100 text-green-700 rounded-full uppercase tracking-wide">
-                    Normativa
-                  </span>
-                </div>
-                <h3 className="font-bold text-lg text-slate-900 mb-3 line-clamp-2">
-                  {doc.title}
-                </h3>
-                <div className="flex flex-wrap gap-2 pt-3 border-t border-slate-100">
-                  {doc.tags.slice(0, 3).map(tag => (
-                    <span key={tag} className="text-xs text-slate-600 bg-slate-50 px-2 py-1 rounded border border-slate-200">
-                      #{tag}
-                    </span>
-                  ))}
-                </div>
-              </Link>
+                id={doc.id}
+                title={doc.title}
+                tags={doc.tags}
+                basePath="/normativas"
+                borderColor="border-green-600"
+              />
             ))}
           </div>
         </section>
