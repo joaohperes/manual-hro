@@ -38,13 +38,13 @@ const CollapsibleContent: React.FC<CollapsibleContentProps> = ({
         }}>
           <style>{`
             .prose-content p {
-              margin-bottom: 1.25rem;
+              margin-bottom: 1rem;
               line-height: 1.8;
               color: #334155;
             }
             .prose-content h2 {
-              margin-top: 1.75rem;
-              margin-bottom: 1rem;
+              margin-top: 1.5rem;
+              margin-bottom: 0.75rem;
               font-size: 1.35rem;
               font-weight: 700;
               color: #1e40af;
@@ -52,14 +52,14 @@ const CollapsibleContent: React.FC<CollapsibleContentProps> = ({
               padding-bottom: 0.5rem;
             }
             .prose-content h3 {
-              margin-top: 1.5rem;
-              margin-bottom: 0.75rem;
+              margin-top: 1.25rem;
+              margin-bottom: 0.5rem;
               font-size: 1.15rem;
               font-weight: 650;
               color: #1e40af;
             }
             .prose-content h4 {
-              margin-top: 1.25rem;
+              margin-top: 1rem;
               margin-bottom: 0.5rem;
               font-size: 1rem;
               font-weight: 600;
@@ -67,11 +67,11 @@ const CollapsibleContent: React.FC<CollapsibleContentProps> = ({
             }
             .prose-content ul,
             .prose-content ol {
-              margin: 1.25rem 0;
+              margin: 1rem 0;
               padding-left: 2rem;
             }
             .prose-content li {
-              margin-bottom: 0.75rem;
+              margin-bottom: 0.5rem;
               line-height: 1.8;
               color: #334155;
             }
@@ -82,7 +82,7 @@ const CollapsibleContent: React.FC<CollapsibleContentProps> = ({
             .prose-content blockquote {
               border-left: 4px solid #3b82f6;
               padding: 1rem 1.25rem;
-              margin: 1.5rem 0;
+              margin: 1rem 0;
               color: #1e3a8a;
               background-color: #eff6ff;
               border-radius: 4px;
@@ -102,12 +102,12 @@ const CollapsibleContent: React.FC<CollapsibleContentProps> = ({
               padding: 1rem;
               border-radius: 8px;
               overflow-x: auto;
-              margin: 1.5rem 0;
+              margin: 1rem 0;
             }
             .prose-content table {
               width: 100%;
               border-collapse: collapse;
-              margin: 1.5rem 0;
+              margin: 1rem 0;
               box-shadow: 0 1px 3px rgba(0,0,0,0.1);
               border-radius: 6px;
               overflow: hidden;
