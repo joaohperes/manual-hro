@@ -1784,6 +1784,717 @@ Deve ocorrer mediante:
 Devem ser acompanhados pela **Clínica Médica** com apoio da Cirurgia Torácica, se necessário.
     `
   },
+  {
+    id: 'normativa-plantao-noturno-intercorrencias',
+    title: 'Plantão Noturno — Intercorrências',
+    category: 'Normativa',
+    lastUpdated: '2025-12-03',
+    tags: ['Plantão', 'Intercorrências', 'TRR', 'Responsabilidade'],
+    content: `# Plantão Noturno — Intercorrências
+
+## Responsabilidades do Plantão Noturno
+
+### 1. Encaminhamento de Intercorrências
+
+**TRR (Time de Resposta Rápida):**
+- Contato imediato em casos de deterioração clínica
+- Ramais: **8040** ou **8038**
+- Disponível 24h para emergências internas
+
+**Residência de Clínica Médica:**
+- Residente de plantão pode ser acionado via ramal da clínica
+- Para apoio em casos complexos ou instáveis
+- Avisar sobre necessidade de transferência prévia
+
+### 2. Pacientes em Intercorrência
+
+**Definição:** Qualquer situação que fuja do esperado para aquele paciente naquele momento.
+
+**Exemplos:**
+- Piora de sinais vitais
+- Emergência de sintomas novos
+- Falência de órgão agudo
+- Complicações de procedimentos
+
+**Protocolo:**
+1. Avaliação imediata (pode ser breve)
+2. Ligar TRR ou residente conforme necessário
+3. Preparar transferência se indicado
+4. Documentar tudo em prontuário
+5. Comunicar família se houver tempo
+
+### 3. Atribuições do Plantonista Noturno
+
+**Não é responsabilidade:**
+- Fazer diagnósticos definitivos de novos quadros
+- Realizar procedimentos complexos sozinho
+- Tomar decisões solitárias em crises maiores
+
+**É responsabilidade:**
+- Reconhecer sinais de perigo
+- Acionar ajuda rapidamente
+- Manter estabilidade provisória
+- Documentar evento completo
+
+### 4. Transferência de Pacientes em Intercorrência
+
+Se necessário:
+1. Avisar sobreaviso ou residente ANTES de sair do PS
+2. Deixar outro médico responsável se possível
+3. Avisar enfermagem sobre destino
+4. Documentar razão e hora da transferência`
+  },
+  {
+    id: 'normativa-transferencias-pacientes-internados',
+    title: 'Transferências de pacientes internados para o HRO',
+    category: 'Normativa',
+    lastUpdated: '2025-12-03',
+    tags: ['Transferência', 'Pacientes', 'SISREG', 'NIR', 'Regulação'],
+    content: `# Transferências de pacientes internados para o HRO
+
+## Processo de Regulação e Aceite
+
+### 1. Contato Inicial
+
+**NIR (Núcleo de Informação e Regulação):**
+- Ramal: **6616**
+- Horário: 24h
+- Responsável pelo SISREG
+
+**Informações necessárias:**
+- Nome completo do paciente
+- Idade e dados demográficos
+- Diagnóstico principal
+- Motivo da transferência
+- Medicações em uso
+- Patologias prévias
+
+### 2. Solicitação no SISREG
+
+**Fluxo:**
+1. NIR registra a solicitação
+2. Sistema busca leitos disponíveis
+3. HRO é contatado para aceite
+4. Confirmação de leito e horário
+5. Organização do transporte
+
+**Papel do Médico Solicitante:**
+- Fornecer informações clínicas claras
+- Manter contato com NIR
+- Preparar paciente para transporte
+- Documentar em prontuário
+
+### 3. Critérios de Aceite
+
+**HRO aceita transferências para:**
+- Clínica Médica com múltiplas comorbidades
+- Procedimentos cirúrgicos
+- Exames complementares
+- Retaguarda de pacientes críticos
+
+**HRO NÃO aceita:**
+- Pacientes leves que podem aguardar
+- Problemas já resolvidos
+- Pacientes com exames já liberados
+
+### 4. Checklist de Preparação
+
+- [ ] Documentação do paciente preparada
+- [ ] Medicações atualizadas e em quantidade suficiente
+- [ ] Exames complementares anexados ao prontuário
+- [ ] Prescrições assinadas
+- [ ] Alergias documentadas em local visível
+- [ ] Contato de familiares atualizado`
+  },
+  {
+    id: 'normativa-internacoes-macrorregiao-grande-oeste',
+    title: 'Internações (Macrorregião Grande Oeste)',
+    category: 'Normativa',
+    lastUpdated: '2025-12-03',
+    tags: ['Internação', 'Leitos', 'Retaguarda', 'SISREG', 'Clínica Médica'],
+    content: `# Internações (Macrorregião Grande Oeste)
+
+## Política de Leitos e Internações
+
+### 1. Distribuição de Leitos HRO
+
+**Retaguarda para a Macrorregião:**
+- Clínica Médica: **X leitos** (varia conforme lotação)
+- Cirurgia: **Y leitos** (conforme disponibilidade)
+- Pediatria: **Z leitos**
+- Maternidade: **W leitos**
+
+### 2. Critérios de Internação
+
+**Indicações para Clínica Médica:**
+- Pacientes com múltiplas comorbidades
+- Infecções complexas ou graves
+- Condições crônicas descompensadas
+- Necessidade de observação prolongada
+
+**Indicações para Cirurgia:**
+- Afecções cirúrgicas agudas
+- Traumas com indicação de internação
+- Pós-operatório de cirurgias maiores
+
+### 3. Processo de Solicitação
+
+**Passo 1:** Contato com NIR (ramal 6616)
+**Passo 2:** Passar informações clínicas
+**Passo 3:** Aguardar confirmação de leito
+**Passo 4:** Solicitar transporte via SISREG
+**Passo 5:** Documentar no prontuário
+
+### 4. Cuidados na Transferência
+
+- Paciente estável para o transporte?
+- Medicações críticas trazidas?
+- Acompanhante informado?
+- Documentação completa?`
+  },
+  {
+    id: 'normativa-transferencia-leito-uti',
+    title: 'Transferência de pacientes para Leito de UTI',
+    category: 'Normativa',
+    lastUpdated: '2025-12-03',
+    tags: ['Transferência', 'UTI', 'Leito', 'Critérios', 'Estabilização'],
+    content: `# Transferência de pacientes para Leito de UTI
+
+## Critérios e Processo
+
+### 1. Critérios de Indicação para UTI
+
+**Instabilidade Hemodinâmica:**
+- PA < 90/60 mmHg refratária
+- Necessidade de vasopressor
+- Choque cardiogênico ou séptico
+
+**Insuficiência Respiratória:**
+- SpO2 < 90% em O2 alto fluxo
+- FR > 30 ou < 10
+- Indicação de intubação
+
+**Deterioração Neurológica:**
+- Glasgow < 12
+- Convulsões refratárias
+- AVC extenso
+
+**Sepse Grave/Choque Séptico:**
+- Hipotensão
+- Lactato elevado
+- Disfunção de órgão
+
+### 2. Solicitação de Leito
+
+**Plantonista da Emergência:**
+- Contato direto com UTI (ramais **8040 ou 8038**)
+- Passa informações clínicas detalhadas
+- Aguarda confirmação de disponibilidade
+
+**Se sem leito disponível:**
+- Manter estabilidade na Emergência
+- Contato com NIR para transferência para outro hospital
+- Reavaliar a cada hora
+
+### 3. Preparação para Transferência
+
+**Medicações:**
+- Todas as infusões documentadas
+- Velocidades de infusão anotadas
+- Alergias em local visível
+
+**Exames:**
+- Últimos resultados em prontuário
+- Radiografias anexadas
+- Culturascoletadas (se aplicável)
+
+**Documentação:**
+- Evolução clínica resumida
+- Diagnósticos principais
+- Comorbidades relevantes
+- Dinâmica do caso`
+  },
+  {
+    id: 'normativa-internacoes-clinicas-ps',
+    title: 'Internações clínicas oriundas do PS',
+    category: 'Normativa',
+    lastUpdated: '2025-12-03',
+    tags: ['Internação', 'Clínica Médica', 'PS', 'Procedimentos', 'Critérios'],
+    content: `# Internações clínicas oriundas do PS
+
+## Processo de Internação
+
+### 1. Avaliação de Necessidade de Internação
+
+**Indicações:**
+- Infecção grave com necessidade de IV prolongado
+- Descompensação de doença crônica
+- Investigação de novo diagnóstico complexo
+- Monitoramento de paciente instável
+
+**Não são indicações:**
+- Falta de cuidador em domicílio
+- Espera por consulta eletiva
+- Exame complementar que pode ser feito ambulatorialmente
+
+### 2. Comunicação com Clínica Médica
+
+**Processo:**
+1. Avaliação clínica completa no PS
+2. Decisão de internação pelo médico
+3. Contato com o sobreaviso de clínica médica
+4. Apresentação do caso para aceite
+5. Transferência ordenada para enfermaria
+
+**Informações Necessárias:**
+- Diagnóstico principal
+- Antecedentes relevantes
+- Medicações em uso
+- Alergias
+- Necessidades especiais
+
+### 3. Documentação para Internação
+
+**Prescrição:**
+- Completa e assinada
+- Medicações com frequência clara
+- Dieta especificada
+- Monitorização indicada
+
+**Prontuário:**
+- Anamnese
+- Exame físico
+- Hipóteses diagnósticas
+- Plano de investigação
+- Exames solicitados
+
+### 4. Transferência para Enfermaria
+
+- Passagem verbal para enfermeira da enfermaria
+- Documentação fornecida completa
+- Paciente estável para transferência
+- Acompanhante informado sobre rotina`
+  },
+  {
+    id: 'normativa-internacao-criticos-uti',
+    title: 'Internação de pacientes críticos com critério de UTI',
+    category: 'Normativa',
+    lastUpdated: '2025-12-03',
+    tags: ['Crítico', 'UTI', 'AIH', 'TRR', 'SISREG', 'Leito', 'Transferência'],
+    content: `# Internação de pacientes críticos com critério de UTI
+
+## Fluxo de Identificação e Internação
+
+### 1. Identificação do caso clínico para UTI
+
+**Médico rotineiro presente?**
+- **Sim:** Contatar para avaliação e decisão
+- **Não:** Seguir protocolo abaixo
+
+**Se sem médico rotineiro:**
+1. Fazer a AIH em nome do rotineiro
+2. Prescrever primeira dose de antibióticos ou medicações de estabilização como "AGORA"
+3. Comunicar Time de Resposta Rápida (TRR)
+4. Solicitar leito de UTI interno → Aba de formulários e ligar para plantonista da UTI (ramais 8040 ou 8038)
+
+### 2. Leito disponível?
+
+**Sim:**
+- Enfermagem realiza encaminhamentos
+- Paciente transferido para UTI
+- Médico acompanha até estabilização
+
+**Não:**
+1. Duplicar AIH com cabeçalho "AIH PARA TRANSFERÊNCIA"
+2. Contatar NIR (Ramal 6616) para inclusão no SISREG
+3. Comunicar paciente e/ou família
+4. Paciente permanece no pronto socorro
+5. Em caso de intercorrência ou desestabilização:
+   - Solicitar ajuda ao residente da clínica médica de plantão
+   - Ou acionar TRR novamente
+
+### 3. Monitorização Provisória
+
+**Se aguardando leito:**
+- Sinais vitais a cada 15-30 min
+- Reavaliar resposta ao tratamento
+- Documentar deterioração imediatamente
+- Contactar NIR a cada 1-2h para status de leito
+
+### 4. Documentação Crítica
+
+- AIH completa e assinada
+- Prescrição em prontuário eletrônico
+- Justificativa clínica para UTI documentada
+- Comunicações registradas (SISREG, TRR, familiares)`
+  },
+  {
+    id: 'normativa-municipios-referenciados-aceite',
+    title: 'Municípios Referenciados e Critérios de Aceite — HRO',
+    category: 'Normativa',
+    lastUpdated: '2025-12-03',
+    tags: ['Referência', 'Municípios', 'Critérios de Aceite', 'Especialidades', 'Ortopedia', 'Neurologia'],
+    content: `# Municípios Referenciados e Critérios de Aceite — HRO
+
+## Lista de Municípios Referenciados
+
+**HRO é referência para TODAS as especialidades e emergência nos seguintes municípios:**
+
+1. Águas de Chapecó
+2. Águas Frias
+3. Arvoredo
+4. Caibi
+5. Caxambu do Sul
+6. Chapecó
+7. Cordilheira Alta
+8. Coronel Freitas
+9. Cunhataí
+10. Formosa do Sul
+11. Guatambú
+12. Irati
+13. Jardinópolis
+14. Lajeado Grande
+15. Marema
+16. Nova Erechim
+17. Nova Itaberaba
+18. Paial
+19. Palmitos
+20. Pinhalzinho
+21. Planalto Alegre
+22. Quilombo
+23. Riqueza
+24. Santiago do Sul
+25. São Carlos
+26. Serra Alta
+27. Sul Brasil
+28. União do Oeste
+
+## Observações Especiais de Referência
+
+### ORTOPEDIA
+
+**Regra Geral:**
+- Pacientes dos municípios listados acima são sempre aceitos
+
+**Pacientes de fora da macrorregião:**
+- **Só serão aceitos APÓS liberação do sobreaviso da ortopedia**
+- **Obrigatório ligar antes**
+
+### NEUROLOGIA / NEUROCIRURGIA
+
+**Casos de alta complexidade:**
+- Pacientes que precisem de avaliação da neuroclínica ou neurocirurgia
+- Podem ser aceitos **sem necessidade de ligar para o sobreaviso antes**
+- O **plantonista pode aceitar diretamente**
+
+**Exemplos de casos aceitos:**
+- AVC isquêmico com janela terapêutica
+- Hemorragia intracraniana
+- TCE grave
+- Estado de mal convulsivo
+- Trauma raquimedular
+
+### PACIENTES DE XANXERÊ
+
+**Atenção Especial:**
+
+**NÃO somos referência para:**
+- Nenhuma especialidade geral de Xanxerê
+- APENAS para Neurocirurgia, Neurologia e Ortopedia de alta complexidade (se houver aceite do sobreaviso)
+
+**Restrições absolutas:**
+- **NÃO aceitar pacientes de Xanxerê para:**
+  - Cirurgias gerais
+  - EDA por HDA
+  - Oftalmologia
+  - Otorrinolaringologia (não temos sobreaviso)
+  - Exames complementares isolados
+
+## Verificação de Referência
+
+Antes de aceitar qualquer paciente de fora da lista:
+1. Confirmar município de origem
+2. Verificar especialidade solicitada
+3. Aplicar critérios acima
+4. Documentar decisão em prontuário`
+  },
+  {
+    id: 'normativa-transfusao-hemocomponentes',
+    title: 'Transfusão de Hemocomponentes',
+    category: 'Normativa',
+    lastUpdated: '2025-12-03',
+    tags: ['Transfusão', 'Hemocomponentes', 'G-HOSP', 'SSH', 'Hemograma', 'Anemia', 'Emergência'],
+    content: `# Transfusão de Hemocomponentes
+
+## 1. Prescrição de Hemocomponentes no G-HOSP
+
+**Frequência Recomendada:**
+- Utilize **frequência "ACM" (A Critério Médico)** ou **"SN" (Se Necessário)**
+- Evita falhas na checagem ou agendamento da enfermagem
+- Facilita implementação flexível conforme resposta clínica
+
+## 2. Prescrição da Transfusão — Campo "Cuidados"
+
+**Obrigatoriedade:**
+- O **médico assistente DEVE prescrever** a transfusão na seção "Cuidados"
+- Não deve ser apenas no pedido do laboratório
+
+**Exemplos de Prescrição:**
+- "Transfundir 1 CHAD"
+- "Transfundir 2 plaquetas após liberação"
+- "Transfusão de plasma conforme plano de tratamento"
+
+**Por quê?**
+- Formaliza a ordem médica para enfermagem e banco de sangue
+- Cria rastreabilidade completa
+- Facilita continuidade do cuidado entre plantões
+
+## 3. Observações Clínicas na Aba Hemoterapia
+
+**Campo "Notas":**
+Registre instruções adicionais importantes para toda a equipe:
+- "Infundir assim que disponível"
+- "Transfundir após chegada da prova cruzada"
+- "Urgência – Anemia grave"
+- "Paciente com reação transfusional prévia – avaliar"
+
+**Benefícios:**
+- Evita atrasos desnecessários
+- Reforça contexto clínico
+- Prioriza ação do banco de sangue
+
+## 4. Solicitação de Sangue O Negativo (Emergência)
+
+**Cenários Críticos:**
+Em situações onde não há tempo para prova cruzada convencional:
+
+**Procedimento:**
+1. Solicitar o exame: **"Prova cruzada O negativo – transfusão emergencial"**
+2. Preencher a **SSH (Solicitação de Sangue e Hemocomponentes)** no G-HOSP
+3. Para múltiplas unidades, **repetir o pedido separadamente** para cada bolsa
+
+**Meta Temporal:**
+⏱️ Transfusão deve ocorrer em **até 15 minutos** após solicitação formal
+
+## 5. Internação Exclusiva para Transfusão
+
+**Indicação:**
+Pacientes com anemia com critério transfusional devem ser **internados pelo plantonista da emergência**
+
+**Dados de Internação:**
+- **CID:** D649 (Anemia não especificada)
+- **Procedimento:** 03.01.06.008-8 (Diagnóstico e/ou atendimento de urgência em clínica médica)
+
+## 6. Hemograma Pré e Pós-Transfusão
+
+**Hemograma Pré-Transfusão:**
+- **Obrigatório SEMPRE**, mesmo se paciente trouxer exames externos
+- Garante baseline conhecida e evita interpretações erradas
+
+**Hemograma Pós-Transfusão:**
+- **Solicitar novo hemograma** após término da transfusão
+- Preferencialmente em **até 12 horas**
+- Avalia resposta terapêutica e necessidade de transfusões adicionais
+
+## 7. Passagem de Plantão e Comunicação Efetiva
+
+**Durante Passagem de Plantão:**
+O médico deve sinalizar claramente:
+- Se o paciente está internado **APENAS para transfusão**
+- Se há **outros diagnósticos e condutas em andamento**
+- Qual é o plano após a transfusão
+
+**Importante:**
+⚠️ **A transfusão não é a única conduta!**
+
+**Investigação Obrigatória:**
+- Identificar e tratar a **causa da anemia**
+  - Sangramento oculto (teste de fezes, endoscopia)
+  - Hemólise (reticulocitos, bilirrubina, DHL)
+  - Insuficiência medular (medulograma se indicado)
+  - Deficiência nutritiva (ferritina, B12, folato)
+
+---
+
+## Checklist de Transfusão
+
+- [ ] Prescrição no campo "Cuidados" completada
+- [ ] SSH preenchida no G-HOSP
+- [ ] Hemograma pré-transfusão realizado
+- [ ] Notas clínicas adicionadas à aba de hemoterapia
+- [ ] Causa da anemia sendo investigada
+- [ ] Passagem de plantão documenta contexto clínico
+- [ ] Hemograma pós-transfusão agendado`
+  },
+  {
+    id: 'normativa-passagem-plantao',
+    title: 'Passagem de plantão',
+    category: 'Normativa',
+    lastUpdated: '2025-12-03',
+    tags: ['Plantão', 'Passagem', 'Comunicação', 'Segurança do Paciente', 'SBAR', 'Priorização', 'Equipe'],
+    content: `# Passagem de plantão
+
+## GUIA PRÁTICO
+
+## 1. FUNDAMENTOS DA PASSAGEM DE PLANTÃO
+
+### 1.1 OBJETIVOS
+
+- **Continuidade do cuidado** - garantir que o paciente não seja "perdido" na troca
+- **Segurança do paciente** - prevenir eventos adversos por falha de comunicação
+- **Compartilhamento de responsabilidade** - transferência formal do cuidado
+- **Eficiência** - otimizar tempo sem comprometer qualidade
+
+### 1.2 PRINCÍPIO FUNDAMENTAL
+
+> A passagem de plantão deve seguir a MESMAinton lógica de priorização clínica que você usa durante o atendimento.
+
+Se você prioriza sala vermelha durante o plantão, deve priorizar sala vermelha na passagem.
+
+---
+
+## 2. CLASSIFICAÇÃO DE PRIORIDADE NA PASSAGEM
+
+### 🔴 PRIORIDADE 1 - PASSAGEM ATIVA OBRIGATÓRIA
+
+**Tempo: 1-3 minutos por paciente**
+
+**Quem inclui:**
+- Pacientes em sala vermelha
+- Instabilidade hemodinâmica ou ventilatória
+- Rebaixamento do nível de consciência
+- Pós-PCR recente
+- Politrauma grave
+- Choque de qualquer etiologia
+- Sepse grave/choque séptico
+- IAM com instabilidade
+- AVC em janela terapêutica
+
+### 🟡 PRIORIDADE 2 - PASSAGEM ATIVA RECOMENDADA
+
+**Tempo: 1-2 minutos por paciente**
+
+**Quem inclui:**
+- Urgências com risco de deterioração
+- Casos complexos com múltiplas comorbidades
+- Pacientes aguardando exames/procedimentos críticos
+- Situações diagnósticas indefinidas
+- Pacientes com histórico sugestivo de complicação grave
+
+### 🟢 PRIORIDADE 3 - PASSAGEM PASSIVA ACEITÁVEL
+
+**Tempo: menção breve ou prontuário**
+
+**Quem inclui:**
+- Pacientes em observação estável
+- Aguardando resultados de exames de rotina
+- Alta programada
+- Quadros benignos autolimitados
+
+---
+
+## 3. ESTRUTURA DA PASSAGEM ATIVA — MODELO SBAR
+
+**IDENTIFICAÇÃO:** Leito + nome + idade
+
+**S (Situação):**
+→ Motivo principal do atendimento atual
+→ Condição clínica no momento da passagem
+
+**B (Background):**
+→ Doenças crônicas relevantes
+→ História breve do evento atual
+→ Tratamentos prévios já realizados
+
+**A (Avaliação):**
+→ Quadro clínico com dados objetivos (sinais vitais, exame físico, exames)
+→ Diagnóstico ou hipóteses diagnósticas
+→ Gravidade do caso e riscos
+
+**R (Recomendação):**
+→ Condutas já tomadas
+→ O que está pendente ou deve ser feito no próximo plantão
+→ Pontos de atenção e necessidade de monitorização
+
+---
+
+## 4. PASSAGEM EM CENÁRIO DE PS LOTADO
+
+### Realidade do HRO
+
+Quando há múltiplos pacientes críticos simultaneamente:
+
+**É REALISTA E ACEITÁVEL:**
+- Passagens mais objetivas para casos de prioridade 2 e 3
+- Focar tempo verbal nos casos de prioridade 1
+- Orientar leitura de prontuário para casos estáveis
+- Fazer passagens mais curtas (mas completas)
+
+**NÃO É ACEITÁVEL:**
+- Omitir casos com risco de deterioração
+- Não informar pendências críticas
+- "Passar por cima" de urgências complexas
+- Assumir que colega vai "descobrir" as pendências
+
+---
+
+## 5. RECEBENDO A PASSAGEM DE PLANTÃO
+
+### 5.1 RESPONSABILIDADES DE QUEM RECEBE
+
+**DURANTE a passagem:**
+- Ouvir ativamente, sem interromper desnecessariamente
+- Anotar casos prioritários e pendências
+- Fazer perguntas pertinentes
+- Esclarecer dúvidas específicas
+
+**APÓS a passagem:**
+- Ler prontuário dos casos não passados ativamente
+- Reavaliar prioridades conforme evolução
+- **ASSUMIR RESPONSABILIDADE integral pelos pacientes**
+
+### 5.2 PRINCÍPIO FUNDAMENTAL
+
+**A partir do momento que você recebe o plantão, os pacientes são SUA responsabilidade, independente do que foi ou não foi passado verbalmente.**
+
+---
+
+## 6. CHECKLIST DA PASSAGEM IDEAL
+
+### ANTES DA PASSAGEM
+- Revisar lista de pacientes
+- Categorizar por prioridade (1, 2, 3)
+- Checar exames recém-liberados
+- Identificar pendências críticas
+
+### DURANTE A PASSAGEM (10-20 minutos)
+- **Prioridade 1:** passar todos, beira-leito se possível
+- **Prioridade 2:** passar principais casos verbalmente (SBAR)
+- **Prioridade 3:** mencionar brevemente ou orientar prontuário
+- Informar pacientes em exames/procedimentos
+- Mencionar vagas solicitadas (UTI, internação, transferência)
+- Esclarecer dúvidas
+
+### APÓS A PASSAGEM (5 minutos)
+- Documentar passagem em prontuário dos casos prioritários
+- Disponibilizar telefone para dúvidas urgentes (opcional)
+- Fazer última ronda rápida se houver tempo
+- Transferir formalmente a responsabilidade
+
+---
+
+## 7. REGRA DE OURO
+
+**"Passe o plantão da forma que você gostaria de receber: completo, honesto, realista e respeitoso."**
+
+---
+
+## 8. CONCLUSÃO
+
+**A passagem de plantão ideal equilibra completude com realismo, segurança do paciente com reconhecimento das limitações humanas, e responsabilidade individual com trabalho em equipe.**
+
+**Seja o colega que você gostaria de ter ao seu lado.**`
+  },
 ];
 
 export const MOCK_CONTACTS: Contact[] = [
