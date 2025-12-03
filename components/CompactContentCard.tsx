@@ -6,7 +6,7 @@ interface CompactContentCardProps {
   title: string;
   tags: string[];
   basePath: string;
-  borderColor: string;
+  borderColor?: string;
 }
 
 const CompactContentCard: React.FC<CompactContentCardProps> = ({
@@ -14,15 +14,26 @@ const CompactContentCard: React.FC<CompactContentCardProps> = ({
   title,
   tags,
   basePath,
-  borderColor,
+  borderColor = 'border-blue-600',
 }) => {
+  // Determine urgency color based on tags
+  const urgencyTags = ['Emergência', 'Trauma', 'Sepse', 'PCR'];
+  const hasUrgencyTag = tags.some(tag => urgencyTags.includes(tag));
+  const finalBorderColor = hasUrgencyTag ? 'border-red-500' : borderColor;
+
+  // Convert title to sentence case
+  const toSentenceCase = (text: string) => {
+    if (!text) return text;
+    return text.charAt(0).toUpperCase() + text.slice(1).toLowerCase();
+  };
+
   return (
     <Link
       to={`${basePath}/${id}`}
-      className={`flex items-center justify-between px-4 py-2.5 bg-white border-l-4 ${borderColor} rounded hover:bg-slate-50 transition-colors group`}
+      className={`flex items-center justify-between px-4 py-2.5 bg-white border-l-4 ${finalBorderColor} rounded hover:bg-slate-50 transition-colors group`}
     >
       <h3 className="font-medium text-sm text-slate-900 flex-1 line-clamp-2">
-        {title}
+        {toSentenceCase(title)}
       </h3>
       <div className="flex flex-wrap gap-1 ml-4">
         {tags.slice(0, 2).map(tag => (

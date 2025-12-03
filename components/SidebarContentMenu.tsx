@@ -70,7 +70,7 @@ const SidebarContentMenu: React.FC = () => {
             <li key={item.id}>
               <Link
                 to={`/${currentRoute}/${item.id}`}
-                className="block px-3 py-2 text-xs text-slate-700 hover:bg-slate-100 hover:text-slate-900 transition-colors rounded line-clamp-2"
+                className="block px-3 py-2 text-xs text-slate-700 hover:bg-slate-100 hover:text-slate-900 transition-colors rounded whitespace-normal break-words"
                 title={item.title}
               >
                 {item.title}

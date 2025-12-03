@@ -54,7 +54,6 @@ const Protocols: React.FC = () => {
                 title={protocol.title}
                 tags={protocol.tags}
                 basePath="/protocolos"
-                borderColor="border-blue-600"
               />
             ))}
           </div>

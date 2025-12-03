@@ -56,7 +56,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
         {/* Sidebar */}
         <aside
           className={`
-            fixed top-16 left-0 z-50 h-[calc(100vh-4rem)] w-64 bg-white border-r border-slate-200 transition-transform duration-300 ease-in-out overflow-y-auto
+            fixed top-16 left-0 z-50 h-[calc(100vh-4rem)] w-80 bg-white border-r border-slate-200 transition-transform duration-300 ease-in-out overflow-y-auto
             lg:translate-x-0 lg:static lg:inset-auto lg:block lg:top-0 lg:h-auto
             ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'}
           `}
