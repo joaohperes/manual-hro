@@ -16,6 +16,12 @@ const CompactContentCard: React.FC<CompactContentCardProps> = ({
   basePath,
   borderColor = 'border-blue-600',
 }) => {
+  // Capitalize first letter and lowercase the rest
+  const toSentenceCase = (text: string) => {
+    if (!text) return text;
+    return text.charAt(0).toUpperCase() + text.slice(1).toLowerCase();
+  };
+
   // Capitalize first letter of tag
   const capitalizeTag = (text: string) => {
     if (!text) return text;
@@ -28,7 +34,7 @@ const CompactContentCard: React.FC<CompactContentCardProps> = ({
       className={`flex items-center justify-between px-4 py-2.5 bg-white border-l-4 ${borderColor} rounded hover:bg-slate-50 transition-colors group`}
     >
       <h3 className="font-medium text-sm text-slate-900 flex-1 line-clamp-2">
-        {title}
+        {toSentenceCase(title)}
       </h3>
       <div className="flex flex-wrap gap-1 ml-4">
         {tags.slice(0, 2).map(tag => (
