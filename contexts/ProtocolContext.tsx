@@ -18,7 +18,16 @@ export const ProtocolProvider: React.FC<{ children: React.ReactNode }> = ({ chil
   // Initialize with stored protocols or mock data
   const [protocols, setProtocols] = useState<Protocol[]>(() => {
     const stored = getProtocolsFromStorage();
-    return stored || [...MOCK_PROTOCOLS];
+    if (!stored) {
+      return [...MOCK_PROTOCOLS];
+    }
+
+    // Merge stored protocols with new ones from MOCK_PROTOCOLS
+    // This ensures new protocols added in updates are included
+    const storedIds = new Set(stored.map(p => p.id));
+    const newProtocols = MOCK_PROTOCOLS.filter(p => !storedIds.has(p.id));
+
+    return [...stored, ...newProtocols];
   });
 
   // Persist protocols whenever they change
