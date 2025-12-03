@@ -5,6 +5,8 @@ import AIChatAssistant from './components/AIChatAssistant';
 import Home from './pages/Home';
 import Protocols from './pages/Protocols';
 import ProtocolDetail from './pages/ProtocolDetail';
+import Normatives from './pages/Normatives';
+import NormativeDetail from './pages/NormativeDetail';
 import Contact from './pages/Contact';
 import ImportProtocol from './pages/ImportProtocol';
 import { ProtocolProvider } from './contexts/ProtocolContext';
@@ -19,6 +21,8 @@ const App: React.FC = () => {
             <Route path={PageRoute.HOME} element={<Home />} />
             <Route path={PageRoute.PROTOCOLS} element={<Protocols />} />
             <Route path="/protocolos/:id" element={<ProtocolDetail />} />
+            <Route path="/normativas" element={<Normatives />} />
+            <Route path="/normativas/:id" element={<NormativeDetail />} />
             <Route path={PageRoute.CONTACTS} element={<Contact />} />
             <Route path={PageRoute.IMPORT} element={<ImportProtocol />} />
           </Routes>

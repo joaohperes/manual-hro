@@ -2,42 +2,14 @@ import React, { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeftIcon, CalendarDaysIcon, ArrowDownTrayIcon, XMarkIcon } from '@heroicons/react/24/outline';
 import MarkdownRenderer from '../components/MarkdownRenderer';
-import CollapsibleContent from '../components/CollapsibleContent';
 import PDFViewer from '../components/PDFViewer';
 import { useProtocols } from '../contexts/ProtocolContext';
 
-const ProtocolDetail: React.FC = () => {
+const NormativeDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const { getProtocol } = useProtocols();
   const protocol = id ? getProtocol(id) : undefined;
   const [zoomedImage, setZoomedImage] = useState<string | null>(null);
-
-  // Split content: extract fluxogram section and remaining content
-  const getFluxogramAndContent = (content: string) => {
-    // Find the fluxogram section (from "## Fluxograma Visual" to the next "## " or "---")
-    const fluxogramMatch = content.match(/## Fluxograma Visual\s*\n!\[.*?\]\([^)]*\)[^#]*/);
-
-    if (fluxogramMatch) {
-      const fluxogramSection = fluxogramMatch[0];
-      // Remove the "## Fluxograma Visual" heading, keep only the image
-      const fluxogramImageOnly = fluxogramSection.replace(/## Fluxograma Visual\s*\n/, '').trim();
-      let contentAfterFluxogram = content.replace(fluxogramSection, '').trim();
-
-      // Remove the main title (# HEMORRAGIA DIGESTIVA BAIXA - GUIA RÁPIDO) and separators
-      contentAfterFluxogram = contentAfterFluxogram.replace(/^#\s+.*?[\n\r]+/m, '').trim();
-      contentAfterFluxogram = contentAfterFluxogram.replace(/^---\s*[\n\r]+/m, '').trim();
-
-      return {
-        fluxogram: fluxogramImageOnly,
-        restOfContent: contentAfterFluxogram.trim(),
-      };
-    }
-
-    return {
-      fluxogram: '',
-      restOfContent: content,
-    };
-  };
 
   React.useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -55,8 +27,8 @@ const ProtocolDetail: React.FC = () => {
   if (!protocol) {
     return (
       <div className="text-center py-20">
-        <h2 className="text-2xl font-bold text-slate-900">Protocolo não encontrado</h2>
-        <Link to="/protocolos" className="text-blue-600 mt-4 inline-block hover:underline">Voltar para lista</Link>
+        <h2 className="text-2xl font-bold text-slate-900">Instrução Normativa não encontrada</h2>
+        <Link to="/normativas" className="text-blue-600 mt-4 inline-block hover:underline">Voltar para lista</Link>
       </div>
     );
   }
@@ -67,7 +39,6 @@ const ProtocolDetail: React.FC = () => {
       return;
     }
 
-    // Create a temporary anchor element to trigger download
     const a = document.createElement('a');
     a.href = protocol.pdfUrl;
     a.download = protocol.pdfFileName || `${protocol.id}.pdf`;
@@ -82,7 +53,6 @@ const ProtocolDetail: React.FC = () => {
       return;
     }
 
-    // Open Google Drive download link in a new tab
     const downloadUrl = `https://drive.google.com/uc?export=download&id=${protocol.googleDriveFileId}`;
     window.open(downloadUrl, '_blank');
   };
@@ -96,11 +66,10 @@ const ProtocolDetail: React.FC = () => {
     return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
   };
 
-
   return (
     <div className="max-w-4xl mx-auto pb-12">
       <div className="mb-6 flex items-center justify-between print:hidden">
-        <Link to="/protocolos" className="flex items-center text-slate-500 hover:text-blue-600 transition-colors">
+        <Link to="/normativas" className="flex items-center text-slate-500 hover:text-blue-600 transition-colors">
           <ArrowLeftIcon className="w-4 h-4 mr-1" />
           Voltar
         </Link>
@@ -109,7 +78,7 @@ const ProtocolDetail: React.FC = () => {
             <button
               onClick={handleDownloadPdf}
               className="flex items-center px-3 py-1.5 text-sm bg-green-50 border border-green-200 rounded-lg hover:bg-green-100 text-green-700 transition-colors"
-              title={`Download: ${protocol.pdfFileName || 'protocolo.pdf'} (${formatFileSize(protocol.pdfSize)})`}
+              title={`Download: ${protocol.pdfFileName || 'normativa.pdf'} (${formatFileSize(protocol.pdfSize)})`}
             >
               <ArrowDownTrayIcon className="w-4 h-4 mr-2" />
               Baixar PDF
@@ -130,10 +99,10 @@ const ProtocolDetail: React.FC = () => {
 
       <article className="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden print:shadow-none print:border-none">
         {/* Header */}
-        <div className="p-6 md:p-10 border-b border-slate-100 bg-slate-50/50 print:bg-white">
+        <div className="p-6 md:p-10 border-b border-slate-100 bg-green-50/50 print:bg-white">
           <div className="flex items-center gap-2 mb-4">
-            <span className="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wide print:border print:border-blue-300 bg-blue-100 text-blue-700">
-              {protocol.category}
+            <span className="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wide print:border print:border-green-300 bg-green-100 text-green-700">
+              Instrução Normativa
             </span>
             <span className="flex items-center text-xs text-slate-500">
               <CalendarDaysIcon className="w-3.5 h-3.5 mr-1" />
@@ -148,37 +117,14 @@ const ProtocolDetail: React.FC = () => {
           </div>
         </div>
 
-        {/* Content Body */}
+        {/* Content Body - Direct display for normativas */}
         <div className="p-6 md:p-10 text-slate-700">
-            {(() => {
-              const { fluxogram, restOfContent } = getFluxogramAndContent(protocol.content);
-
-              return (
-                <>
-                  {/* Fluxogram section - always visible */}
-                  {fluxogram && (
-                    <div className="mb-8">
-                      <MarkdownRenderer content={fluxogram} onImageClick={setZoomedImage} />
-                    </div>
-                  )}
-
-                  {/* Collapsible detailed content section */}
-                  {restOfContent && (
-                    <CollapsibleContent
-                      title="Resumo Executivo"
-                      content={restOfContent}
-                      isExpanded={false}
-                      onImageClick={setZoomedImage}
-                    />
-                  )}
-                </>
-              );
-            })()}
+          <MarkdownRenderer content={protocol.content} onImageClick={setZoomedImage} />
         </div>
 
         {/* PDF Viewer (if available) - After content */}
         {protocol.googleDriveFileId && (
-          <div className="mt-8">
+          <div className="p-6 md:p-10 border-t border-slate-100">
             <h2 className="text-2xl font-bold text-slate-900 mb-4">Documento Completo</h2>
             <PDFViewer googleDriveFileId={protocol.googleDriveFileId} />
           </div>
@@ -195,7 +141,7 @@ const ProtocolDetail: React.FC = () => {
              <div className="ml-3">
                 <h3 className="text-sm font-medium text-yellow-800">Aviso Legal</h3>
                 <div className="mt-1 text-sm text-yellow-700">
-                   <p>Este documento é um guia de referência rápida para uso interno. A decisão clínica final deve ser sempre individualizada pelo profissional responsável.</p>
+                   <p>Este documento é uma instrução normativa do HRO. Todas as orientações devem ser seguidas conforme definido pela administração.</p>
                 </div>
              </div>
           </div>
@@ -229,4 +175,4 @@ const ProtocolDetail: React.FC = () => {
   );
 };
 
-export default ProtocolDetail;
+export default NormativeDetail;
