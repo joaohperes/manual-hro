@@ -1,11 +1,13 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { MagnifyingGlassIcon, LightBulbIcon } from '@heroicons/react/24/outline';
 import { useProtocols } from '../contexts/ProtocolContext';
+import TableOfContents from '../components/TableOfContents';
 
 const Orientacoes: React.FC = () => {
   const { protocols: allProtocols } = useProtocols();
   const [searchTerm, setSearchTerm] = useState('');
+  const contentRef = useRef<HTMLDivElement>(null);
 
   // Filter only orientações
   const orientacoes = useMemo(() => {
@@ -17,12 +19,28 @@ const Orientacoes: React.FC = () => {
     });
   }, [searchTerm, allProtocols]);
 
+  const handleSelectItem = (id: string) => {
+    const element = document.getElementById(`orientacao-${id}`);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   return (
     <div className="space-y-8 pb-12">
       <div>
         <h1 className="text-3xl font-bold text-slate-900">Orientações Gerais</h1>
         <p className="text-slate-600 mt-2">Diretrizes operacionais e recomendações para o funcionamento do HRO.</p>
       </div>
+
+      {/* Table of Contents */}
+      {orientacoes.length > 0 && (
+        <TableOfContents
+          items={orientacoes}
+          onSelectItem={handleSelectItem}
+          title="Lista de Orientações"
+        />
+      )}
 
       {/* Search Bar */}
       <div className="relative">
@@ -48,13 +66,16 @@ const Orientacoes: React.FC = () => {
               {orientacoes.length} {orientacoes.length === 1 ? 'documento' : 'documentos'}
             </span>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5" ref={contentRef}>
             {orientacoes.map(doc => (
-              <Link
+              <div
                 key={doc.id}
-                to={`/orientacoes/${doc.id}`}
-                className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:border-l-4 hover:border-blue-600 transition-all border-l-4 border-transparent"
+                id={`orientacao-${doc.id}`}
               >
+                <Link
+                  to={`/orientacoes/${doc.id}`}
+                  className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:border-l-4 hover:border-blue-600 transition-all border-l-4 border-transparent block h-full"
+                >
                 <div className="flex items-start justify-between mb-4">
                   <div className="p-3 bg-blue-50 text-blue-600 rounded-lg">
                     <LightBulbIcon className="w-6 h-6" />
@@ -73,7 +94,8 @@ const Orientacoes: React.FC = () => {
                     </span>
                   ))}
                 </div>
-              </Link>
+                </Link>
+              </div>
             ))}
           </div>
         </section>

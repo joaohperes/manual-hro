@@ -1,21 +1,30 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { MagnifyingGlassIcon, DocumentTextIcon, ClipboardDocumentCheckIcon, BookOpenIcon } from '@heroicons/react/24/outline';
 import { useProtocols } from '../contexts/ProtocolContext';
+import TableOfContents from '../components/TableOfContents';
 
 const Protocols: React.FC = () => {
   const { protocols: allProtocols } = useProtocols();
   const [searchTerm, setSearchTerm] = useState('');
+  const contentRef = useRef<HTMLDivElement>(null);
 
-  // Filter only clinical protocols (not normatives)
+  // Filter only clinical protocols (not normatives or orientações)
   const protocols = useMemo(() => {
     return allProtocols.filter(p => {
-      const isNotNormativa = p.category !== 'Normativa' && !p.title.toLowerCase().startsWith('instrução normativa');
+      const isNotNormativa = p.category !== 'Normativa' && p.category !== 'Orientação' && !p.title.toLowerCase().startsWith('instrução normativa');
       const matchesSearch = p.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                             p.tags.some(t => t.toLowerCase().includes(searchTerm.toLowerCase()));
       return isNotNormativa && matchesSearch;
     });
   }, [searchTerm, allProtocols]);
+
+  const handleSelectItem = (id: string) => {
+    const element = document.getElementById(`protocolo-${id}`);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
 
   return (
     <div className="space-y-8 pb-12">
@@ -23,6 +32,15 @@ const Protocols: React.FC = () => {
         <h1 className="text-3xl font-bold text-slate-900">Protocolos Clínicos</h1>
         <p className="text-slate-600 mt-2">Consulte todos os protocolos clínicos do HRO.</p>
       </div>
+
+      {/* Table of Contents */}
+      {protocols.length > 0 && (
+        <TableOfContents
+          items={protocols}
+          onSelectItem={handleSelectItem}
+          title="Lista de Protocolos"
+        />
+      )}
 
       {/* Search Bar */}
       <div className="relative">
@@ -48,13 +66,16 @@ const Protocols: React.FC = () => {
               {protocols.length} {protocols.length === 1 ? 'protocolo' : 'protocolos'}
             </span>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5" ref={contentRef}>
             {protocols.map(protocol => (
-              <Link
+              <div
                 key={protocol.id}
-                to={`/protocolos/${protocol.id}`}
-                className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:border-l-4 hover:border-blue-600 transition-all border-l-4 border-transparent"
+                id={`protocolo-${protocol.id}`}
               >
+                <Link
+                  to={`/protocolos/${protocol.id}`}
+                  className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:border-l-4 hover:border-blue-600 transition-all border-l-4 border-transparent block h-full"
+                >
                 <div className="flex items-start justify-between mb-4">
                   <div className="p-3 bg-blue-50 text-blue-600 rounded-lg">
                     <DocumentTextIcon className="w-6 h-6" />
@@ -73,7 +94,8 @@ const Protocols: React.FC = () => {
                     </span>
                   ))}
                 </div>
-              </Link>
+                </Link>
+              </div>
             ))}
           </div>
         </section>
