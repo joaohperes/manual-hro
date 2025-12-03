@@ -16,10 +16,25 @@ const CompactContentCard: React.FC<CompactContentCardProps> = ({
   basePath,
   borderColor = 'border-blue-600',
 }) => {
-  // Capitalize first letter and lowercase the rest
+  // Convert to sentence case while preserving acronyms
   const toSentenceCase = (text: string) => {
     if (!text) return text;
-    return text.charAt(0).toUpperCase() + text.slice(1).toLowerCase();
+
+    // List of common acronyms to preserve in uppercase
+    const acronyms = ['HRO', 'UTI', 'PS', 'OAA', 'IC', 'HDB', 'HDA', 'TB', 'PCR', 'IAM', 'AVC'];
+
+    // Split by spaces and process each word
+    const words = text.split(' ');
+    const processedWords = words.map((word) => {
+      // Check if the word is an acronym (all uppercase in original)
+      if (acronyms.includes(word.toUpperCase())) {
+        return word.toUpperCase();
+      }
+      // Otherwise, apply sentence case (first letter uppercase, rest lowercase)
+      return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+    });
+
+    return processedWords.join(' ');
   };
 
   // Capitalize first letter of tag
