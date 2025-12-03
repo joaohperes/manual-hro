@@ -2,6 +2,7 @@ import React, { useState, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { MagnifyingGlassIcon, DocumentTextIcon, ClipboardDocumentCheckIcon, BookOpenIcon } from '@heroicons/react/24/outline';
 import { useProtocols } from '../contexts/ProtocolContext';
+import PageContentMenu from '../components/PageContentMenu';
 
 const Protocols: React.FC = () => {
   const { protocols: allProtocols } = useProtocols();
@@ -23,6 +24,15 @@ const Protocols: React.FC = () => {
         <h1 className="text-3xl font-bold text-slate-900">Protocolos Clínicos</h1>
         <p className="text-slate-600 mt-2">Consulte todos os protocolos clínicos do HRO.</p>
       </div>
+
+      {/* Content Menu */}
+      {protocols.length > 0 && (
+        <PageContentMenu
+          title="Protocolos Clínicos"
+          items={protocols}
+          basePath="/protocolos"
+        />
+      )}
 
       {/* Search Bar */}
       <div className="relative">

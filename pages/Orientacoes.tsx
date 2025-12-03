@@ -2,6 +2,7 @@ import React, { useState, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { MagnifyingGlassIcon, LightBulbIcon } from '@heroicons/react/24/outline';
 import { useProtocols } from '../contexts/ProtocolContext';
+import PageContentMenu from '../components/PageContentMenu';
 
 const Orientacoes: React.FC = () => {
   const { protocols: allProtocols } = useProtocols();
@@ -23,6 +24,15 @@ const Orientacoes: React.FC = () => {
         <h1 className="text-3xl font-bold text-slate-900">Orientações Gerais</h1>
         <p className="text-slate-600 mt-2">Diretrizes operacionais e recomendações para o funcionamento do HRO.</p>
       </div>
+
+      {/* Content Menu */}
+      {orientacoes.length > 0 && (
+        <PageContentMenu
+          title="Orientações Gerais"
+          items={orientacoes}
+          basePath="/orientacoes"
+        />
+      )}
 
       {/* Search Bar */}
       <div className="relative">

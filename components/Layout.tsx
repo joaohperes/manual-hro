@@ -12,7 +12,6 @@ import {
 } from '@heroicons/react/24/outline';
 import Header from './Header';
 import Footer from './Footer';
-import SidebarContentMenu from './SidebarContentMenu';
 import { PageRoute } from '../types';
 
 const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -83,11 +82,6 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
                   </li>
                 ))}
               </ul>
-
-              {/* Content Menu - shows list of items on current page */}
-              <div className="mt-4 pt-4 border-t border-slate-200">
-                <SidebarContentMenu />
-              </div>
             </div>
 
             <div>

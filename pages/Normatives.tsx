@@ -2,6 +2,7 @@ import React, { useState, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { MagnifyingGlassIcon, ClipboardDocumentCheckIcon } from '@heroicons/react/24/outline';
 import { useProtocols } from '../contexts/ProtocolContext';
+import PageContentMenu from '../components/PageContentMenu';
 
 const Normatives: React.FC = () => {
   const { protocols: allProtocols } = useProtocols();
@@ -23,6 +24,15 @@ const Normatives: React.FC = () => {
         <h1 className="text-3xl font-bold text-slate-900">Instruções Normativas</h1>
         <p className="text-slate-600 mt-2">Consulte todas as instruções normativas do HRO.</p>
       </div>
+
+      {/* Content Menu */}
+      {normatives.length > 0 && (
+        <PageContentMenu
+          title="Instruções Normativas"
+          items={normatives}
+          basePath="/normativas"
+        />
+      )}
 
       {/* Search Bar */}
       <div className="relative">
