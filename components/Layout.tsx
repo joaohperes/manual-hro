@@ -22,6 +22,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     { name: 'Início', href: PageRoute.HOME, icon: HomeIcon },
     { name: 'Protocolos', href: PageRoute.PROTOCOLS, icon: BookOpenIcon },
     { name: 'Normativas', href: '/normativas', icon: BookOpenIcon },
+    { name: 'Orientações', href: '/orientacoes', icon: BookOpenIcon },
     { name: 'Ramais & Contatos', href: PageRoute.CONTACTS, icon: PhoneIcon },
     { name: 'Importar PDF (Beta)', href: PageRoute.IMPORT, icon: DocumentPlusIcon },
   ];

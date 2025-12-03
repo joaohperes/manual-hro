@@ -7,6 +7,8 @@ import Protocols from './pages/Protocols';
 import ProtocolDetail from './pages/ProtocolDetail';
 import Normatives from './pages/Normatives';
 import NormativeDetail from './pages/NormativeDetail';
+import Orientacoes from './pages/Orientacoes';
+import OrientacaoDetail from './pages/OrientacaoDetail';
 import Contact from './pages/Contact';
 import ImportProtocol from './pages/ImportProtocol';
 import { ProtocolProvider } from './contexts/ProtocolContext';
@@ -23,6 +25,8 @@ const App: React.FC = () => {
             <Route path="/protocolos/:id" element={<ProtocolDetail />} />
             <Route path="/normativas" element={<Normatives />} />
             <Route path="/normativas/:id" element={<NormativeDetail />} />
+            <Route path="/orientacoes" element={<Orientacoes />} />
+            <Route path="/orientacoes/:id" element={<OrientacaoDetail />} />
             <Route path={PageRoute.CONTACTS} element={<Contact />} />
             <Route path={PageRoute.IMPORT} element={<ImportProtocol />} />
           </Routes>

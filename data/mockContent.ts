@@ -1787,7 +1787,7 @@ Devem ser acompanhados pela **Clínica Médica** com apoio da Cirurgia Torácica
   {
     id: 'normativa-plantao-noturno-intercorrencias',
     title: 'Plantão Noturno — Intercorrências',
-    category: 'Normativa',
+    category: 'Orientação',
     lastUpdated: '2025-12-03',
     tags: ['Plantão', 'Intercorrências', 'TRR', 'Responsabilidade'],
     content: `# Plantão Noturno — Intercorrências
@@ -1847,7 +1847,7 @@ Se necessário:
   {
     id: 'normativa-transferencias-pacientes-internados',
     title: 'Transferências de pacientes internados para o HRO',
-    category: 'Normativa',
+    category: 'Orientação',
     lastUpdated: '2025-12-03',
     tags: ['Transferência', 'Pacientes', 'SISREG', 'NIR', 'Regulação'],
     content: `# Transferências de pacientes internados para o HRO
@@ -1909,7 +1909,7 @@ Se necessário:
   {
     id: 'normativa-internacoes-macrorregiao-grande-oeste',
     title: 'Internações (Macrorregião Grande Oeste)',
-    category: 'Normativa',
+    category: 'Orientação',
     lastUpdated: '2025-12-03',
     tags: ['Internação', 'Leitos', 'Retaguarda', 'SISREG', 'Clínica Médica'],
     content: `# Internações (Macrorregião Grande Oeste)
@@ -1955,7 +1955,7 @@ Se necessário:
   {
     id: 'normativa-transferencia-leito-uti',
     title: 'Transferência de pacientes para Leito de UTI',
-    category: 'Normativa',
+    category: 'Orientação',
     lastUpdated: '2025-12-03',
     tags: ['Transferência', 'UTI', 'Leito', 'Critérios', 'Estabilização'],
     content: `# Transferência de pacientes para Leito de UTI
@@ -2017,7 +2017,7 @@ Se necessário:
   {
     id: 'normativa-internacoes-clinicas-ps',
     title: 'Internações clínicas oriundas do PS',
-    category: 'Normativa',
+    category: 'Orientação',
     lastUpdated: '2025-12-03',
     tags: ['Internação', 'Clínica Médica', 'PS', 'Procedimentos', 'Critérios'],
     content: `# Internações clínicas oriundas do PS
@@ -2078,7 +2078,7 @@ Se necessário:
   {
     id: 'normativa-internacao-criticos-uti',
     title: 'Internação de pacientes críticos com critério de UTI',
-    category: 'Normativa',
+    category: 'Orientação',
     lastUpdated: '2025-12-03',
     tags: ['Crítico', 'UTI', 'AIH', 'TRR', 'SISREG', 'Leito', 'Transferência'],
     content: `# Internação de pacientes críticos com critério de UTI
@@ -2131,7 +2131,7 @@ Se necessário:
   {
     id: 'normativa-municipios-referenciados-aceite',
     title: 'Municípios Referenciados e Critérios de Aceite — HRO',
-    category: 'Normativa',
+    category: 'Orientação',
     lastUpdated: '2025-12-03',
     tags: ['Referência', 'Municípios', 'Critérios de Aceite', 'Especialidades', 'Ortopedia', 'Neurologia'],
     content: `# Municípios Referenciados e Critérios de Aceite — HRO
@@ -2221,7 +2221,7 @@ Antes de aceitar qualquer paciente de fora da lista:
   {
     id: 'normativa-transfusao-hemocomponentes',
     title: 'Transfusão de Hemocomponentes',
-    category: 'Normativa',
+    category: 'Orientação',
     lastUpdated: '2025-12-03',
     tags: ['Transfusão', 'Hemocomponentes', 'G-HOSP', 'SSH', 'Hemograma', 'Anemia', 'Emergência'],
     content: `# Transfusão de Hemocomponentes
@@ -2329,7 +2329,7 @@ O médico deve sinalizar claramente:
   {
     id: 'normativa-passagem-plantao',
     title: 'Passagem de plantão',
-    category: 'Normativa',
+    category: 'Orientação',
     lastUpdated: '2025-12-03',
     tags: ['Plantão', 'Passagem', 'Comunicação', 'Segurança do Paciente', 'SBAR', 'Priorização', 'Equipe'],
     content: `# Passagem de plantão
