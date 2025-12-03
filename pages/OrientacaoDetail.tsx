@@ -98,7 +98,7 @@ const OrientacaoDetail: React.FC = () => {
         </div>
       </div>
 
-      <article className="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden print:shadow-none print:border-none">
+      <article className="bg-white rounded-lg shadow-md border-2 border-slate-300 overflow-hidden print:shadow-none print:border-none">
         {/* Header - Compact */}
         <div className="p-2 md:p-3 border-b border-slate-100 bg-blue-50/50 print:bg-white">
           <div className="flex items-center gap-2 mb-1">
@@ -123,13 +123,6 @@ const OrientacaoDetail: React.FC = () => {
           <StyledContent content={protocol.content} onImageClick={setZoomedImage} />
         </div>
 
-        {/* PDF Viewer (if available) */}
-        {protocol.googleDriveFileId && (
-          <div className="p-3 md:p-4 border-t border-slate-100">
-            <h2 className="text-base font-bold text-slate-900 mb-2">Documento Completo</h2>
-            <PDFViewer googleDriveFileId={protocol.googleDriveFileId} />
-          </div>
-        )}
 
         {/* Footer Disclaimer */}
         <div className="border-t border-yellow-100 bg-yellow-50/30">
